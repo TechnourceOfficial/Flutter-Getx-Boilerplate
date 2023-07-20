@@ -15,7 +15,7 @@ class SplashView extends GetView<SplashController> {
         body: SafeArea(
             child: Stack(children: [
           splashScreenBackground(),
-          splashScreenCenterComponent(),
+          splashScreenCenterComponent()
         ])));
   }
 
@@ -34,8 +34,7 @@ class SplashView extends GetView<SplashController> {
             children: [
           Padding(
               padding: const EdgeInsets.all(12.0),
-              child: Image.asset(R.assets.appLogo,
-              ))
+              child: Image.asset(R.assets.appLogo))
         ]));
   }
 }
