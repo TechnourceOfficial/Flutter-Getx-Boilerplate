@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- *  Email: info@technource.in
+ *  Email: support@technource.com
  *  Developed by Technource (https://www.technource.com)
  */
 
