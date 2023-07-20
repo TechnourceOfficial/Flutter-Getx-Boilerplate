@@ -40,7 +40,7 @@ class AppPages {
   static final routes = [
     GetPage(
         name: Routes.splash,
-        page: () => const SplashView(),
+        page: () =>  SplashView(),
         transition: Transition.downToUp,
         binding: SplashBinding())
   ];
