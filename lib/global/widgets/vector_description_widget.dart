@@ -23,26 +23,42 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-part of 'app_pages.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-abstract class Routes {
-  Routes._();
+import '../constant/resources/resources.dart';
 
-  static const splash = _Paths.splash;
-  static const selectLanguage = _Paths.selectLanguage;
-  static const loginScreen = _Paths.loginScreen;
-  static const signupScreen = _Paths.signupScreen;
-  static const forgetPasswordScreen = _Paths.forgetPasswordScreen;
-  static const homeScreen = _Paths.homeScreen;
-}
+class VectorDescriptionWidget extends StatelessWidget {
+  final String imagePath, description;
 
-abstract class _Paths {
-  _Paths._();
+  const VectorDescriptionWidget(
+      {Key? key, required this.imagePath, required this.description})
+      : super(key: key);
 
-  static const splash = '/splash';
-  static const selectLanguage = '/selectLanguage';
-  static const loginScreen = '/loginScreen';
-  static const signupScreen = '/signupScreen';
-  static const forgetPasswordScreen = '/forgetPasswordScreen';
-  static const homeScreen = '/homeScreen';
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      SizedBox(height: Get.height * 0.01),
+      showForgotPasswordVector(),
+      SizedBox(height: Get.height * 0),
+      showForgotPasswordPara(),
+      SizedBox(height: Get.height * 0.04)
+    ]);
+  }
+
+  showForgotPasswordVector({component}) {
+    return Container(
+        height: Get.height * 0.4,
+        width: Get.width * 0.7,
+        margin: const EdgeInsets.only(top: 0.0),
+        child: Image.asset(imagePath));
+  }
+
+  showForgotPasswordPara({component}) {
+    return Text(description,
+        style: R.styles.txt14sizeW700ColorPrimary
+            .copyWith(fontWeight: FontWeight.w500,color: R.colors.kcWhite),
+        textAlign: TextAlign.center,
+        textDirection: TextDirection.ltr);
+  }
 }

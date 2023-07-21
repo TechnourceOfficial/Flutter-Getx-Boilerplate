@@ -102,6 +102,8 @@ class AppStrings {
   String get ksSelectCountryCode => 'select_country_code'.toTranslate();
   String get ksSearch => 'search_text'.toTranslate();
   String get ksNoDataFound => 'no_data_found'.toTranslate();
+  String get ksForgotPasswordParaText => 'forgot_password_para'.toTranslate();
+  String get btnSend => 'btn_send'.toTranslate();
 
 }
 

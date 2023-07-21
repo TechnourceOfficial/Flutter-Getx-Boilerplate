@@ -23,26 +23,22 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-part of 'app_pages.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../../../../../global/utils/utils.dart';
 
-abstract class Routes {
-  Routes._();
 
-  static const splash = _Paths.splash;
-  static const selectLanguage = _Paths.selectLanguage;
-  static const loginScreen = _Paths.loginScreen;
-  static const signupScreen = _Paths.signupScreen;
-  static const forgetPasswordScreen = _Paths.forgetPasswordScreen;
-  static const homeScreen = _Paths.homeScreen;
-}
+class ForgotPasswordController extends GetxController {
+  static ForgotPasswordController get to => Get.find();
+  late GlobalKey<FormState> forgotPwdFormKey;
+  var emailController = TextEditingController();
 
-abstract class _Paths {
-  _Paths._();
+  validAll() {
+    if (forgotPwdFormKey.currentState!.validate()) {
+      Utils.logPrint("validate");
+    } else {
+      Utils.logPrint("invalidate");
+    }
+  }
 
-  static const splash = '/splash';
-  static const selectLanguage = '/selectLanguage';
-  static const loginScreen = '/loginScreen';
-  static const signupScreen = '/signupScreen';
-  static const forgetPasswordScreen = '/forgetPasswordScreen';
-  static const homeScreen = '/homeScreen';
 }

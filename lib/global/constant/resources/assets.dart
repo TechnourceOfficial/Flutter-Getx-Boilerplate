@@ -33,4 +33,5 @@ class Assets {
   final welcomeBg4x = "${assetFromImagesPath}img_welcome_bg.jpg";
   final passwordHide = "${assetFromIconsPath}ic_password_hide.png";
   final passwordShow = "${assetFromIconsPath}ic_password_show.png";
+  final forgotPasswordVector = "${assetFromImagesPath}img_forgot_password.png";
 }
