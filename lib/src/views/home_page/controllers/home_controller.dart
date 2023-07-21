@@ -23,21 +23,9 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter/material.dart';
-import 'package:flutter_setup/global/widgets/app_background.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/resources.dart';
-import '../controllers/splash_controller.dart';
 
-class SplashView extends GetView<SplashController> {
-  final SplashController splashController = Get.put(SplashController());
 
-  SplashView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: R.colors.kcPrimaryColor,
-        body: const SafeArea(child: AppBackground()));
-  }
+class HomeController extends GetxController {
+  static HomeController get to => Get.find();
 }

@@ -2,5 +2,18 @@
   "btn_yes": "Oui",
   "btn_no": "Non",
   "hn_select_language": "Choisir la langue",
-  "btn_next": "Suivante"
+  "btn_next": "Suivante",
+  "welcomeBack": "Content de te revoir",
+  "glad_to_see_you": "Heureux de vous revoir!",
+  "email_or_password": "E-mail ou nom d'utilisateur",
+  "password": "Mot de passe",
+  "forgot_password": "Mot de passe oublié?",
+  "or_login_with": "Ou Connectez-vous avec",
+  "dont_have_an_account": "Vous n'avez pas de compte?",
+  "sign_up": "S'inscrire",
+  "login_button_text": "Connexion",
+  "please_enter_email": "Veuillez saisir un e-mail",
+  "valid_email": "Veuillez saisir une adresse e-mail valide",
+  "please_enter_password": "Veuillez entrer le mot de passe",
+  "login_success_message": "Connexion réussie.."
 }

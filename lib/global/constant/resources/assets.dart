@@ -28,6 +28,9 @@
  */
 class Assets {
   static var assetFromImagesPath = "assets/images/";
+  static var assetFromIconsPath = "assets/icons/";
   final appLogo = "${assetFromImagesPath}img_app_logo.png";
   final welcomeBg4x = "${assetFromImagesPath}img_welcome_bg.jpg";
+  final passwordHide = "${assetFromIconsPath}ic_password_hide.png";
+  final passwordShow = "${assetFromIconsPath}ic_password_show.png";
 }

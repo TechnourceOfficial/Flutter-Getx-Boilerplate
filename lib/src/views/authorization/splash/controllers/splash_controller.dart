@@ -23,37 +23,23 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter/services.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/resources.dart';
+import '../../../../../global/preference/user_preference.dart';
 
-class Validator {
-  static RegExp alphaNumberRic =
-      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+class SplashController extends GetxController {
+  static SplashController get to => Get.find();
 
-  static List<TextInputFormatter>? nameFormatterWithSpecialChar = [
-    FilteringTextInputFormatter.allow(RegExp("[a-zA-Z0-9@#\$%^&*()_-]")),
-  ];
-
-  static List<TextInputFormatter>? mobileNumberFormatter = [
-    FilteringTextInputFormatter.allow(RegExp("[0-9-_+]"))
-  ];
-
-  static String? passwordValid(String? v) {
-    if (v!.isEmpty) {
-      return R.validation.ksEmptyPassword;
-    } else {
-      return null;
-    }
-  }
-  static String? validateEmail(String? v) {
-    if (v!.toString().trim().isEmpty) {
-      return R.validation.ksEmailError;
-    } else if (!GetUtils.isEmail(v.trim())) {
-      return R.validation.ksValidEmail;
-    } else {
-      return null;
-    }
+  @override
+  void onReady() {
+    super.onReady();
+    Future.delayed(const Duration(seconds: 3), () {
+      if (AppSession.isAuthenticationDone()) {
+        Get.offAllNamed(Routes.homeScreen);
+      } else {
+        Get.offAllNamed(Routes.selectLanguage);
+      }
+    });
   }
 }

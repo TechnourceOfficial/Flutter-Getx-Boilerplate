@@ -2,5 +2,20 @@
   "btn_yes": "Yes",
   "btn_no": "No",
   "hn_select_language": "Select language",
-  "btn_next": "Next"
+  "select_language_error": "Please select language",
+  "btn_next": "Next",
+  "welcomeBack": "Welcome Back",
+  "glad_to_see_you": "Glad to see you, Again!",
+  "email_or_password": "Email or Username",
+  "password": "Password",
+  "forgot_password": "Forgot Password?",
+  "or_login_with": "Or Login with",
+  "dont_have_an_account": "Don’t have an account?",
+  "sign_up": "Sign Up",
+  "login_button_text": "Login",
+  "please_enter_email": "Please enter email",
+  "valid_email": "Please enter valid email",
+  "please_enter_password": "Please enter password",
+  "login_success_message": "Login Successfully.."
+
 }

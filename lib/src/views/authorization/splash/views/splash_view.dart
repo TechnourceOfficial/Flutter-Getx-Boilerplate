@@ -23,37 +23,21 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_setup/global/widgets/app_background.dart';
 import 'package:get/get.dart';
+import '../../../../../global/constant/resources/resources.dart';
+import '../controllers/splash_controller.dart';
 
-import '../constant/resources/resources.dart';
+class SplashView extends GetView<SplashController> {
+  final SplashController splashController = Get.put(SplashController());
 
-class Validator {
-  static RegExp alphaNumberRic =
-      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+  SplashView({super.key});
 
-  static List<TextInputFormatter>? nameFormatterWithSpecialChar = [
-    FilteringTextInputFormatter.allow(RegExp("[a-zA-Z0-9@#\$%^&*()_-]")),
-  ];
-
-  static List<TextInputFormatter>? mobileNumberFormatter = [
-    FilteringTextInputFormatter.allow(RegExp("[0-9-_+]"))
-  ];
-
-  static String? passwordValid(String? v) {
-    if (v!.isEmpty) {
-      return R.validation.ksEmptyPassword;
-    } else {
-      return null;
-    }
-  }
-  static String? validateEmail(String? v) {
-    if (v!.toString().trim().isEmpty) {
-      return R.validation.ksEmailError;
-    } else if (!GetUtils.isEmail(v.trim())) {
-      return R.validation.ksValidEmail;
-    } else {
-      return null;
-    }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: R.colors.kcPrimaryColor,
+        body: const SafeArea(child: AppBackground()));
   }
 }

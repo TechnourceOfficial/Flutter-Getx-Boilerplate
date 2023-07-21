@@ -29,10 +29,14 @@ abstract class Routes {
   Routes._();
   static const splash = _Paths.splash;
   static const selectLanguage = _Paths.selectLanguage;
+  static const loginScreen = _Paths.loginScreen;
+  static const homeScreen = _Paths.homeScreen;
 }
 
 abstract class _Paths {
   _Paths._();
   static const splash = '/splash';
   static const selectLanguage = '/selectLanguage';
+  static const loginScreen = '/loginScreen';
+  static const homeScreen = '/homeScreen';
 }

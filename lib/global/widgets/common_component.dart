@@ -25,4 +25,17 @@
 
 
 
-class CommonComponent {}
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../constant/resources/resources.dart';
+
+class CommonComponent {
+  commonLogo() {
+    return Center(
+      child: Image.asset(R.assets.appLogo,
+          height: Get.height * 0.1, width: Get.width * 0.6),
+    );
+  }
+}
