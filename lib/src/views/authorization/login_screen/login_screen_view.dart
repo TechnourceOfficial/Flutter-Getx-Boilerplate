@@ -83,6 +83,7 @@ class LoginScreenView extends GetView<LoginScreenController> {
 
   forgotPasswordComponent() {
     return InkWell(
+        onTap: () => Get.toNamed(Routes.forgetPasswordScreen),
         child: Container(
             alignment: Alignment.topRight,
             child: Text(R.strings.ksForgotPassword,

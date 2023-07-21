@@ -34,17 +34,12 @@ import '../../../../../global/utils/utils.dart';
 class SignupScreenController extends GetxController {
   static SignupScreenController get to => Get.put(SignupScreenController());
   RxBool termAndConditionCheckBox = false.obs,
-      isRedOnlyEmail = false.obs,
       isAcceptPolicy = false.obs,
       isPwdVisible = false.obs,
-      isConPwdVisible = false.obs,
-      isCountryApiCalled = true.obs;
+      isConPwdVisible = false.obs;
   var countryList = <CountryItem>[].obs;
   Rx<CountryItem> selectedCont = CountryItem().obs;
 
-  String accessTokenFB = "", fbId = "", emailIdFB = "", gmailId = "";
-
-  late GlobalKey<FormState> forContactNumberUi;
   late GlobalKey<FormState> createAccountFormKey;
   var firstNameTextEditingController = TextEditingController(),
       lastNameTextEditingController = TextEditingController(),
@@ -54,8 +49,6 @@ class SignupScreenController extends GetxController {
       confirmPasswordTextEditingController = TextEditingController(),
       countryCodeController = TextEditingController(),
       contactNumberController = TextEditingController();
-
-  var contactNumberFocusNode = FocusNode();
 
   @override
   void onInit() {

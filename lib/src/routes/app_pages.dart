@@ -25,12 +25,14 @@
 
 // ignore_for_file: constant_identifier_names
 
+import 'package:flutter_setup/src/views/authorization/forgot_password/binding/forgot_password.dart';
 import 'package:flutter_setup/src/views/authorization/login_screen/login_screen_view.dart';
 import 'package:flutter_setup/src/views/authorization/signup_screen/binding/signup_screen.dart';
 import 'package:flutter_setup/src/views/authorization/signup_screen/signup_screen_view.dart';
 import 'package:flutter_setup/src/views/home_page/views/home_view.dart';
 import 'package:get/get.dart';
 
+import '../views/authorization/forgot_password/forgot_password_view.dart';
 import '../views/authorization/login_screen/binding/login_screen.dart';
 import '../views/authorization/select_language_screen/binding/select_language_screen.dart';
 import '../views/authorization/select_language_screen/select_language_screen_view.dart';
@@ -66,6 +68,11 @@ class AppPages {
         page: () => const SignupScreenView(),
         transition: Transition.downToUp,
         binding: SignupScreenBinding()),
+    GetPage(
+        name: Routes.forgetPasswordScreen,
+        page: () => const ForgotPasswordView(),
+        transition: Transition.downToUp,
+        binding: ForgotPasswordScreenBinding()),
     GetPage(
         name: Routes.homeScreen,
         page: () => HomeView(),

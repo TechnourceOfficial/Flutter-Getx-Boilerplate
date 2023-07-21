@@ -49,5 +49,7 @@
   "please_enter_valid_password": "Password must contain 1 upper case letter 1 lower case letter and 1 special character.",
   "change_password_valid_new_password": "Please enter new password",
   "search_text": "Search",
-  "no_data_found": "No Data Found"
+  "no_data_found": "No Data Found",
+  "forgot_password_para": "Enter the email associated with your account and we’ll send an email with instrucation to reset your password",
+  "btn_send": "Send"
 }

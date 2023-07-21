@@ -23,26 +23,14 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-part of 'app_pages.dart';
+import 'package:get/get.dart';
 
-abstract class Routes {
-  Routes._();
+import '../controller/forgot_password_controller.dart';
 
-  static const splash = _Paths.splash;
-  static const selectLanguage = _Paths.selectLanguage;
-  static const loginScreen = _Paths.loginScreen;
-  static const signupScreen = _Paths.signupScreen;
-  static const forgetPasswordScreen = _Paths.forgetPasswordScreen;
-  static const homeScreen = _Paths.homeScreen;
-}
+class ForgotPasswordScreenBinding extends Bindings{
+  @override
+  void dependencies() {
+    Get.lazyPut<ForgotPasswordController>(() => ForgotPasswordController());
+  }
 
-abstract class _Paths {
-  _Paths._();
-
-  static const splash = '/splash';
-  static const selectLanguage = '/selectLanguage';
-  static const loginScreen = '/loginScreen';
-  static const signupScreen = '/signupScreen';
-  static const forgetPasswordScreen = '/forgetPasswordScreen';
-  static const homeScreen = '/homeScreen';
 }

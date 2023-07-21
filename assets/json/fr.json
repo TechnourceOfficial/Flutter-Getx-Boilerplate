@@ -49,5 +49,7 @@
   "please_enter_valid_password": "Le mot de passe doit contenir 1 lettre majuscule 1 lettre minuscule et 1 caractère spécial.",
   "change_password_valid_new_password": "Veuillez saisir un nouveau mot de passe",
   "search_text": "Recherche",
-  "no_data_found": "Aucune donnée disponible"
+  "no_data_found": "Aucune donnée disponible",
+  "forgot_password_para": "Entrez l'e-mail associé à votre compte et nous vous enverrons un e-mail avec des instructions pour réinitialiser votre mot de passe",
+  "btn_send": "Envoyer"
 }
