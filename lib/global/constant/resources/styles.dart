@@ -25,13 +25,26 @@
 
 import 'package:flutter/material.dart';
 import 'resources.dart';
+
 /// Definer text style,decoration style, card style in this file
 class AppStyles {
+  TextStyle txt10sizeWithW700 = TextStyle(
+      fontSize: 10,
+      color: R.colors.kcPrimaryColor,
+      fontWeight: FontWeight.bold);
+
+  TextStyle txt14sizeW500CaptionLightGray = TextStyle(
+      fontSize: 14,
+      color: R.colors.kcCaptionLightGray,
+      fontWeight: FontWeight.w500);
+
+  final txt14sizeW600ckcWhite = TextStyle(
+      color: R.colors.kcWhite, fontSize: 14, fontWeight: FontWeight.w600);
+
   TextStyle txt14sizeW700ColorPrimary = TextStyle(
-    fontSize: 14,
-    color: R.colors.kcPrimaryColor,
-    fontWeight: FontWeight.w700,
-  );
+      fontSize: 14,
+      color: R.colors.kcPrimaryColor,
+      fontWeight: FontWeight.w700);
 
   final txt16sizeW600CaptionLightGray = TextStyle(
       color: R.colors.kcCaptionLightGray,

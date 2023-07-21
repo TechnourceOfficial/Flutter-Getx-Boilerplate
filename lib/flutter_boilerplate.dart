@@ -25,12 +25,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_setup/global/app_localization/app_localization.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 import 'package:overlay_support/overlay_support.dart';
 import '../../global/theme/light_theme.dart';
 import '../../global/utils/config.dart';
 import 'global/constant/resources/resources.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class FlutterBoilerPlateApp extends StatelessWidget {
   const FlutterBoilerPlateApp({super.key});
@@ -47,6 +49,18 @@ class FlutterBoilerPlateApp extends StatelessWidget {
             child: GetMaterialApp(
                 title: Config.appName,
                 enableLog: true,
+                locale: Locale(Config.setLocale.value),
+                localizationsDelegates: const [
+                  AppLocalizationsDelegate(),
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate
+                ],
+                supportedLocales: [
+                  Locale(Config.langCodeEn, Config.langCountryCodeEn),
+                  Locale(Config.langCodeRu, Config.langCountryCodeRu),
+                  Locale(Config.langCodeFr, Config.langCountryCodeFr)
+                ],
                 debugShowCheckedModeBanner: false,
                 theme: lightThemeData(context),
                 initialRoute: Routes.splash,

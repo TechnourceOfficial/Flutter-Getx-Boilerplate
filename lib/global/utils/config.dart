@@ -23,8 +23,19 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
+import 'package:get/get.dart';
+
 class Config {
 
   static var appName = "Flutter BoilerPlate";
 
+  static RxString setLocale = 'en'.obs;
+
+  static String langCodeEn = 'en';
+  static String langCodeRu = 'ru';
+  static String langCodeFr = 'fr';
+
+  static String langCountryCodeEn = 'US';
+  static String langCountryCodeRu = 'RU';
+  static String langCountryCodeFr = 'CA';
 }

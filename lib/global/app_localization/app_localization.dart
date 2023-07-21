@@ -23,48 +23,41 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
+import 'dart:convert';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_setup/global/utils/config.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/resources.dart';
+RxMap language = {}.obs;
 
-/**
- * This is comman App button that will be used in all places where it should be match the app theme
- */
-class AppButton extends StatelessWidget {
-  final double? height, width;
-  final Color? btnBgColor, borderColor;
-  final VoidCallback? onTap;
-  final String? btnText;
-  final TextStyle? buttonTextStyle;
+class AppLocalizations {
+  static AppLocalizations? of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations);
+  }
 
-  const AppButton(
-      {Key? key,
-      this.width,
-      this.height,
-      this.buttonTextStyle,
-      this.borderColor,
-      this.btnBgColor,
-      this.btnText,
-      this.onTap})
-      : super(key: key);
+  String getText(String? key) => language[key] ?? "";
+}
+
+class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+  const AppLocalizationsDelegate();
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-        height: height ?? Get.height * 0.06,
-        width: width ?? Get.width,
-        decoration: BoxDecoration(
-            color: btnBgColor ?? R.colors.kcYellow,
-            borderRadius: BorderRadius.circular(Get.height * 0.01),
-            border: Border.all(color: borderColor ?? R.colors.kcTransparent)),
-        child: InkWell(
-            onTap: onTap ?? () {},
-            child: Center(
-                child: Text(
-                    textAlign: TextAlign.center,
-                    btnText.toString(),
-                    style: buttonTextStyle ??
-                        R.styles.txt14sizeW700ColorPrimary))));
+  bool isSupported(Locale locale) {
+    return [Config.langCodeEn, Config.langCodeRu, Config.langCodeFr]
+        .contains(locale.languageCode);
   }
+
+  @override
+  Future<AppLocalizations> load(Locale locale) async {
+    final string =
+        await rootBundle.loadString('assets/json/${locale.languageCode}.json');
+    language.value = json.decode(string);
+    return SynchronousFuture<AppLocalizations>(AppLocalizations());
+  }
+
+  @override
+  bool shouldReload(AppLocalizationsDelegate old) => false;
 }

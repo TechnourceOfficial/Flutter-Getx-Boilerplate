@@ -26,6 +26,17 @@
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 
-class SplashController extends GetxController {
 
+class SplashController extends GetxController {
+  static SplashController get to => Get.find();
+
+  @override
+  void onReady() {
+    super.onReady();
+    Future.delayed(const Duration(seconds: 3), () {
+
+        Get.offAllNamed(Routes.selectLanguage);
+
+    });
+  }
 }

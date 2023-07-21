@@ -23,26 +23,6 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter_setup/global/preference/session_keys.dart';
-import 'package:get_storage/get_storage.dart';
 
-///TO manage Logged in user's session
-class AppSession {
-  static GetStorage? sessionData;
 
-  static void init() {
-    sessionData = GetStorage();
-  }
-
-  static void clearStorage() {
-    sessionData!.erase();
-    init();
-  }
-  static void setSelectedLanguageId(String? value) {
-    sessionData!.write(UserSessionDetail.kSelectedLanguageId, value);
-  }
-
-  static String getSelectedLanguageId() {
-    return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? "";
-  }
-}
+class CommonComponent {}

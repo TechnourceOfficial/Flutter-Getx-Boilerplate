@@ -11,6 +11,8 @@ dependencies:
   get_storage: ^2.0.3
   google_fonts:
   overlay_support: ^2.0.1
+  flutter_localization: ^0.1.10
+
   flutter: 
     sdk: flutter
 
@@ -23,3 +25,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/json/
