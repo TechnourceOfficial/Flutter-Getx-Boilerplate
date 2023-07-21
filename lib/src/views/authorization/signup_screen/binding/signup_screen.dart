@@ -23,22 +23,12 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-part of 'app_pages.dart';
+import 'package:flutter_setup/src/views/authorization/signup_screen/controller/signup_screen_controller.dart';
+import 'package:get/get.dart';
 
-abstract class Routes {
-  Routes._();
-  static const splash = _Paths.splash;
-  static const selectLanguage = _Paths.selectLanguage;
-  static const loginScreen = _Paths.loginScreen;
-  static const signupScreen = _Paths.signupScreen;
-  static const homeScreen = _Paths.homeScreen;
-}
-
-abstract class _Paths {
-  _Paths._();
-  static const splash = '/splash';
-  static const selectLanguage = '/selectLanguage';
-  static const loginScreen = '/loginScreen';
-  static const signupScreen = '/signupScreen';
-  static const homeScreen = '/homeScreen';
+class SignupScreenBinding extends Bindings{
+  @override
+  void dependencies() {
+    Get.lazyPut<SignupScreenController>(() => SignupScreenController());
+  }
 }

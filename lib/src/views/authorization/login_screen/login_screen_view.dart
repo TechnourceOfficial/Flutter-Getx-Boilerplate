@@ -27,6 +27,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/utils/validator.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 import '../../../../global/constant/resources/resources.dart';
 import '../../../../global/widgets/common_component.dart';
@@ -98,7 +99,10 @@ class LoginScreenView extends GetView<LoginScreenController> {
           TextSpan(
               text: R.strings.ksSignUp,
               style: R.styles.txt14sizeWithW600Underline,
-              recognizer: TapGestureRecognizer()..onTap = () {})
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  Get.toNamed(Routes.signupScreen);
+                })
         ])));
   }
 
