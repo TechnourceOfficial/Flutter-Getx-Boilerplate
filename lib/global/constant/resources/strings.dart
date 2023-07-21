@@ -23,12 +23,16 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
+import 'package:flutter_setup/global/extention/string_extensions.dart';
+
 /// All the text of the app will be defined here
 class AppStrings {
-  final btnYes = "YES";
+  String get btnYes => "btn_yes".toTranslate();
+  String get btnNo => "btn_no".toTranslate();
+  String get btnNext => "btn_next".toTranslate();
+  String get hnSelectLanguage => "hn_select_language".toTranslate();
+
 }
 
 /// Validation message will be added here
-class AppStringsValidation {
-
-}
+class AppStringsValidation {}

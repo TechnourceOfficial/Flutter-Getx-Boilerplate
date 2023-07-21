@@ -24,47 +24,22 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter_setup/global/constant/resources/resources.dart';
 
-import '../constant/resources/resources.dart';
-
-/**
- * This is comman App button that will be used in all places where it should be match the app theme
- */
-class AppButton extends StatelessWidget {
-  final double? height, width;
-  final Color? btnBgColor, borderColor;
-  final VoidCallback? onTap;
-  final String? btnText;
-  final TextStyle? buttonTextStyle;
-
-  const AppButton(
-      {Key? key,
-      this.width,
-      this.height,
-      this.buttonTextStyle,
-      this.borderColor,
-      this.btnBgColor,
-      this.btnText,
-      this.onTap})
-      : super(key: key);
+class AppBackground extends StatelessWidget {
+  const AppBackground({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: height ?? Get.height * 0.06,
-        width: width ?? Get.width,
-        decoration: BoxDecoration(
-            color: btnBgColor ?? R.colors.kcYellow,
-            borderRadius: BorderRadius.circular(Get.height * 0.01),
-            border: Border.all(color: borderColor ?? R.colors.kcTransparent)),
-        child: InkWell(
-            onTap: onTap ?? () {},
-            child: Center(
-                child: Text(
-                    textAlign: TextAlign.center,
-                    btnText.toString(),
-                    style: buttonTextStyle ??
-                        R.styles.txt14sizeW700ColorPrimary))));
+    return Stack(children: [
+      SizedBox(
+          height: double.infinity,
+          width: double.infinity,
+          child: Image.asset(R.assets.welcomeBg4x, fit: BoxFit.fill)),
+      Center(
+          child: Padding(
+              padding: const EdgeInsets.all(ksBodyVerticalSpace30),
+              child: Image.asset(R.assets.appLogo)))
+    ]);
   }
 }

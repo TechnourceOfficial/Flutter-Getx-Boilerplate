@@ -23,26 +23,14 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter_setup/global/preference/session_keys.dart';
-import 'package:get_storage/get_storage.dart';
+import 'package:get/get.dart';
 
-///TO manage Logged in user's session
-class AppSession {
-  static GetStorage? sessionData;
+import '../controller/select_language_controller.dart';
 
-  static void init() {
-    sessionData = GetStorage();
+class SelectLanguageBinding extends Bindings{
+  @override
+  void dependencies() {
+    Get.lazyPut<SelectLanguageController>(() => SelectLanguageController());
   }
 
-  static void clearStorage() {
-    sessionData!.erase();
-    init();
-  }
-  static void setSelectedLanguageId(String? value) {
-    sessionData!.write(UserSessionDetail.kSelectedLanguageId, value);
-  }
-
-  static String getSelectedLanguageId() {
-    return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? "";
-  }
 }

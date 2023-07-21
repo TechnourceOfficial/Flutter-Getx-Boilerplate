@@ -57,8 +57,6 @@ class CommonDialog extends StatelessWidget {
                     children: [
               Container(
                   margin: const EdgeInsets.symmetric(horizontal: 15),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10)),
@@ -68,16 +66,16 @@ class CommonDialog extends StatelessWidget {
                       children: [
                         buildDialogueHeader(),
                         Padding(
-                         padding:  const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                          child: Column(children: [
-                            SizedBox(height: Get.height * 0.03),
-                            buildDesc(description: description),
-                            SizedBox(height: Get.height * 0.05),
-                            buildBtn(),
-                            const SizedBox(height: 15)
-                          ])
-                        )
-
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: ksWidgetHorizontalSpace15,
+                                vertical: ksWidgetVerticalSpace15),
+                            child: Column(children: [
+                              const SizedBox(height: ksBodyVerticalSpace30),
+                              buildDesc(description: description),
+                              const SizedBox(height: ksBodyVerticalSpace30),
+                              buildBtn(),
+                              const SizedBox(height: ksWidgetVerticalSpace15)
+                            ]))
                       ]))
             ]))));
   }
@@ -97,16 +95,13 @@ class CommonDialog extends StatelessWidget {
       Expanded(
           child: AppButton(
               btnText: positiveBtnText ?? R.strings.btnYes,
-              btnBgColor: R.colors.kcYellow,
-              height: Get.height * 0.06,
               onTap: onPositiveTap)),
       SizedBox(width: Get.width * 0.08),
       Expanded(
           child: AppButton(
               btnBgColor: R.colors.kcWhite,
-              btnText: negativeBtnText ?? "",
-              height: Get.height * 0.06,
-              onTap: onNegativeTap,
+              btnText: negativeBtnText ?? R.strings.btnNo,
+              onTap: onNegativeTap ?? () => Get.back(),
               borderColor: R.colors.kcPrimaryColor))
     ]);
   }

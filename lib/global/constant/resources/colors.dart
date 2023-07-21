@@ -40,7 +40,7 @@ class AppColors {
   final kcRed = Colors.red;
   final kcTransparent = Colors.transparent;
   final kcYellow = const Color(0xffFFD933);
-  final kcInputFilled = const Color(0xffA2A8B5).withOpacity(0.2);
+  final kcInputFilled = const Color(0xffA2A8B5).withOpacity(0.3);
   final kcCaptionLightGray = const Color(0xffA2A8B5);
   final kcGrey = const Color(0xffEEEEEE);
 }

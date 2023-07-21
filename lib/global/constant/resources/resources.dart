@@ -28,9 +28,10 @@ import 'package:flutter_setup/global/constant/resources/assets.dart';
 import 'package:flutter_setup/global/constant/resources/strings.dart';
 import 'package:flutter_setup/global/constant/resources/styles.dart';
 
-const ksFormVerticalSpace30 = 30.0;
-const kDefaultHorizontalPadding=15.0;
-
+const ksBodyVerticalSpace30 = 30.0;
+const ksBodyHorizontalSpace30 = 30.0;
+const ksWidgetHorizontalSpace15 = 15.0;
+const ksWidgetVerticalSpace15 = 15.0;
 class R {
   static final assets = Assets();
   static var strings = AppStrings();

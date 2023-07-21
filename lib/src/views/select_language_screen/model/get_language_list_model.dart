@@ -23,26 +23,61 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter_setup/global/preference/session_keys.dart';
-import 'package:get_storage/get_storage.dart';
+class GetLanguageListModel {
+  GetLanguageListModel({
+    this.message,
+    this.data,
+    this.code,
+  });
 
-///TO manage Logged in user's session
-class AppSession {
-  static GetStorage? sessionData;
-
-  static void init() {
-    sessionData = GetStorage();
+  GetLanguageListModel.fromJson(dynamic json) {
+    message = json['message'];
+    if (json['data'] != null) {
+      data = [];
+      json['data'].forEach((v) {
+        data?.add(LanguageData.fromJson(v));
+      });
+    }
+    code = json['code'];
   }
 
-  static void clearStorage() {
-    sessionData!.erase();
-    init();
+  String? message;
+  List<LanguageData>? data;
+  num? code;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['message'] = message;
+    if (data != null) {
+      map['data'] = data?.map((v) => v.toJson()).toList();
+    }
+    map['code'] = code;
+    return map;
   }
-  static void setSelectedLanguageId(String? value) {
-    sessionData!.write(UserSessionDetail.kSelectedLanguageId, value);
+}
+
+class LanguageData {
+  LanguageData({
+    this.langId,
+    this.langCode,
+    this.langName,
+  });
+
+  LanguageData.fromJson(dynamic json) {
+    langId = json['lang_id'];
+    langCode = json['lang_code'];
+    langName = json['lang_name'];
   }
 
-  static String getSelectedLanguageId() {
-    return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? "";
+  String? langId;
+  String? langCode;
+  String? langName;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['lang_id'] = langId;
+    map['lang_code'] = langCode;
+    map['lang_name'] = langName;
+    return map;
   }
 }

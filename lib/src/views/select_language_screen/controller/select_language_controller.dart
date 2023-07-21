@@ -23,26 +23,17 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter_setup/global/preference/session_keys.dart';
-import 'package:get_storage/get_storage.dart';
+import 'package:get/get.dart';
 
-///TO manage Logged in user's session
-class AppSession {
-  static GetStorage? sessionData;
+import '../../../../../global/utils/config.dart';
+import '../model/get_language_list_model.dart';
 
-  static void init() {
-    sessionData = GetStorage();
-  }
-
-  static void clearStorage() {
-    sessionData!.erase();
-    init();
-  }
-  static void setSelectedLanguageId(String? value) {
-    sessionData!.write(UserSessionDetail.kSelectedLanguageId, value);
-  }
-
-  static String getSelectedLanguageId() {
-    return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? "";
-  }
+class SelectLanguageController extends GetxController {
+  RxList<LanguageData> languageList = <LanguageData>[
+    LanguageData(langId: "1", langName: "English", langCode: Config.langCodeEn),
+    LanguageData(langId: "2", langName: "French", langCode: Config.langCodeFr),
+    LanguageData(langId: "3", langName: "Russian", langCode: Config.langCodeRu)
+  ].obs;
+  var selectedLanguage = LanguageData(langId: "-1").obs;
+  RxString selectedLanguageName = "".obs;
 }

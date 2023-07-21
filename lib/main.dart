@@ -27,7 +27,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_setup/global/utils/config.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'flutter_boilerplate.dart';

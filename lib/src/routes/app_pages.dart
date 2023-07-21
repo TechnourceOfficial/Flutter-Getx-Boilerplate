@@ -25,7 +25,8 @@
 
 // ignore_for_file: constant_identifier_names
 
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_setup/src/views/select_language_screen/binding/select_language_screen.dart';
+import 'package:flutter_setup/src/views/select_language_screen/select_language_screen_view.dart';
 import 'package:flutter_setup/src/views/splash/bindings/splash_binding.dart';
 import 'package:flutter_setup/src/views/splash/views/splash_view.dart';
 import 'package:get/get.dart';
@@ -40,8 +41,13 @@ class AppPages {
   static final routes = [
     GetPage(
         name: Routes.splash,
-        page: () =>  SplashView(),
+        page: () => SplashView(),
         transition: Transition.downToUp,
-        binding: SplashBinding())
+        binding: SplashBinding()),
+    GetPage(
+        name: Routes.selectLanguage,
+        page: () => const SelectLanguageScreenView(),
+        transition: Transition.downToUp,
+        binding: SelectLanguageBinding())
   ];
 }

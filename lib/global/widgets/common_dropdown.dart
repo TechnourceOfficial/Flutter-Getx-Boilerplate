@@ -22,49 +22,47 @@
  *  Email: support@technource.com
  *  Developed by Technource (https://www.technource.com)
  */
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../constant/resources/resources.dart';
 
-/**
- * This is comman App button that will be used in all places where it should be match the app theme
- */
-class AppButton extends StatelessWidget {
-  final double? height, width;
-  final Color? btnBgColor, borderColor;
-  final VoidCallback? onTap;
-  final String? btnText;
-  final TextStyle? buttonTextStyle;
+class CommonDropDownWidget extends StatelessWidget {
+  final dynamic value;
+  final Color? dropdownBackgroundColor, dropdownIconColor;
+  final ValueChanged<dynamic>? onChanged;
+  final List<DropdownMenuItem<dynamic>>? items;
 
-  const AppButton(
+  final String? hintText;
+
+  const CommonDropDownWidget(
       {Key? key,
-      this.width,
-      this.height,
-      this.buttonTextStyle,
-      this.borderColor,
-      this.btnBgColor,
-      this.btnText,
-      this.onTap})
+      this.value,
+      this.onChanged,
+      this.items,
+      this.hintText,
+      this.dropdownBackgroundColor,
+      this.dropdownIconColor})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: height ?? Get.height * 0.06,
-        width: width ?? Get.width,
+        padding:
+            const EdgeInsets.symmetric(horizontal: ksWidgetHorizontalSpace15),
         decoration: BoxDecoration(
-            color: btnBgColor ?? R.colors.kcYellow,
-            borderRadius: BorderRadius.circular(Get.height * 0.01),
-            border: Border.all(color: borderColor ?? R.colors.kcTransparent)),
-        child: InkWell(
-            onTap: onTap ?? () {},
-            child: Center(
-                child: Text(
-                    textAlign: TextAlign.center,
-                    btnText.toString(),
-                    style: buttonTextStyle ??
-                        R.styles.txt14sizeW700ColorPrimary))));
+            borderRadius: BorderRadius.all(Radius.circular(Get.height * 0.01)),
+            color: dropdownBackgroundColor ?? R.colors.kcInputFilled),
+        child: DropdownButtonHideUnderline(
+            child: DropdownButton(
+                value: value,
+                icon: Icon(Icons.keyboard_arrow_down,
+                    color: dropdownIconColor ?? Colors.grey, size: 30),
+                isExpanded: true,
+                style: R.styles.txt10sizeWithW700,
+                onChanged: onChanged,
+                hint: Text(hintText ?? "",
+                    style: R.styles.txt16sizeW600CaptionLightGray),
+                items: items)));
   }
 }
