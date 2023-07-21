@@ -57,6 +57,52 @@ class AppStrings {
   String get scLoginMsg => "login_success_message".toTranslate();
 
   String get erSelectLanguageMsg => "select_language_error".toTranslate();
+
+  ///Signup Screen
+  String get ksWelcomeToTechnource => "welcome_to_technource".toTranslate();
+
+  String get ksCreateNewAccount => "create_new_account".toTranslate();
+
+  String get ksBySigningUpYou => "by_signing_up_you".toTranslate();
+
+  String get ksAnd => "and".toTranslate();
+
+  String get ksTermsAndConditions => "terms_and_conditions".toTranslate();
+
+  String get ksPrivacyPolicy => "privacy_policy".toTranslate();
+
+  String get ksAlreadyHaveAnAccount => "already_have_an_account".toTranslate();
+
+  String get ksLogin => "log_in".toTranslate();
+
+  String get ksSignup => "sign_up_button".toTranslate();
+
+  String get ksAcceptTermAndConditionError =>
+      'accept_privacy_policy_error_text'.toTranslate();
+
+  String get ksEmailHint => "email_hint".toTranslate();
+
+  String get ksNameHint => "name_hint".toTranslate();
+
+  String get ksLNameHint => "lastname_hint".toTranslate();
+
+  String get ksUserNameHint => "username_hint".toTranslate();
+
+  String get ksCountryCodeHint => "country_code_hint".toTranslate();
+
+  String get ksPhoneHint => "phone_hint".toTranslate();
+
+  String get ksAddressHint => "address_hint".toTranslate();
+
+  String get ksOfficeAddressHint => "office_address_hint".toTranslate();
+
+  String get ksNewPassHint => "new_pass_hint".toTranslate();
+
+  String get ksConfirmPassHint => "confirm_pass_hint".toTranslate();
+  String get ksSelectCountryCode => 'select_country_code'.toTranslate();
+  String get ksSearch => 'search_text'.toTranslate();
+  String get ksNoDataFound => 'no_data_found'.toTranslate();
+
 }
 
 /// Validation message will be added here
@@ -66,4 +112,25 @@ class AppStringsValidation {
   String get ksEmailError => "please_enter_email".toTranslate();
 
   String get ksEmptyPassword => "please_enter_password".toTranslate();
+
+  String get ksLastNameError => "empty_lastname".toTranslate();
+
+  String get ksValidLastNameError => "enter_valid_last_name".toTranslate();
+
+  String get ksValidFirstNameError => "valid_first_name".toTranslate();
+
+  String get ksFirstNameError => "empty_firstname".toTranslate();
+
+  String get ksUserNameError => "empty_username".toTranslate();
+
+  String get ksEmptyMobile => "empty_phone_number".toTranslate();
+
+  String get ksValidMobile => "valid_mobile".toTranslate();
+
+  String get ksConfirmPassError => "confirm_password_error".toTranslate();
+
+  String get ksValidPassword => "please_enter_valid_password".toTranslate();
+
+  String get ksErrorNewPassword =>
+      "change_password_valid_new_password".toTranslate();
 }

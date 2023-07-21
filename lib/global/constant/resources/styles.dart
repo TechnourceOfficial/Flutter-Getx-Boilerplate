@@ -68,4 +68,9 @@ class AppStyles {
       color: R.colors.kcPrimaryColor);
   TextStyle txt10sizeWithW500 = TextStyle(
       fontSize: 10, color: R.colors.kcWhite, fontWeight: FontWeight.w700);
+  TextStyle txt18sizeWithW600 = TextStyle(
+    fontSize: 18,
+    color: R.colors.kcCaptionLightGray,
+    fontWeight: FontWeight.w600
+  );
 }
