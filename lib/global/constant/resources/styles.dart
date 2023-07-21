@@ -55,4 +55,17 @@ class AppStyles {
       fontSize: 24,
       fontWeight: FontWeight.w600,
       color: R.colors.kcCaptionLightGray);
+  TextStyle txt32sizeWithW700 = TextStyle(
+      fontSize: 32, color: R.colors.kcWhite, fontWeight: FontWeight.w700);
+  TextStyle txt14sizeWithW600Underline = TextStyle(
+      fontSize: 14,
+      color: R.colors.kcYellow,
+      fontWeight: FontWeight.w600,
+      decoration: TextDecoration.underline);
+  final txt12sizeW600ColorPrimary = TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+      color: R.colors.kcPrimaryColor);
+  TextStyle txt10sizeWithW500 = TextStyle(
+      fontSize: 10, color: R.colors.kcWhite, fontWeight: FontWeight.w700);
 }

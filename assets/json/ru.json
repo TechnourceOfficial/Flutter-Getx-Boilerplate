@@ -2,5 +2,19 @@
   "btn_yes": "Да",
   "btn_no": "Нет",
   "hn_select_language": "Выберите язык",
-  "btn_next": "Следующий"
+  "btn_next": "Следующий",
+  "welcomeBack": "Добро пожаловать",
+  "glad_to_see_you": "Рад тебя видеть, Снова!",
+  "email_or_password": "Электронная почта или имя пользователя",
+  "password": "Пароль",
+  "forgot_password": "Забыли пароль?",
+  "or_login_with": "Или Войдите с помощью",
+  "dont_have_an_account": "У вас нет аккаунта?",
+  "sign_up": "Зарегистрироваться",
+  "login_button_text": "Авторизоваться",
+  "please_enter_email": "Пожалуйста, введите адрес электронной почты",
+  "valid_email": "Пожалуйста, введите действительный адрес электронной почты",
+  "please_enter_password": "Пожалуйста введите пароль",
+  "login_success_message": "Войти успешно.."
+
 }

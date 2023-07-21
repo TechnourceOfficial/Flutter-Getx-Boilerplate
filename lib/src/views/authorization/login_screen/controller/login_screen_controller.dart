@@ -23,37 +23,39 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter/services.dart';
+// ignore_for_file: unused_local_variable, non_constant_identifier_names
+
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_setup/global/preference/user_preference.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
+import '../../../../../global/constant/resources/resources.dart';
+import '../../../../../global/utils/utils.dart';
 
-import '../constant/resources/resources.dart';
+class LoginScreenController extends GetxController {
+  var isShowPassword = false.obs;
 
-class Validator {
-  static RegExp alphaNumberRic =
-      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+  late GlobalKey<FormState> loginScreenFormKey;
 
-  static List<TextInputFormatter>? nameFormatterWithSpecialChar = [
-    FilteringTextInputFormatter.allow(RegExp("[a-zA-Z0-9@#\$%^&*()_-]")),
-  ];
+  TextEditingController emailTextEditingController = TextEditingController();
+  TextEditingController passwordTextEditingController = TextEditingController();
 
-  static List<TextInputFormatter>? mobileNumberFormatter = [
-    FilteringTextInputFormatter.allow(RegExp("[0-9-_+]"))
-  ];
-
-  static String? passwordValid(String? v) {
-    if (v!.isEmpty) {
-      return R.validation.ksEmptyPassword;
-    } else {
-      return null;
-    }
+  String generateRandomString(int len) {
+    var r = Random();
+    const chars =
+        'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+    return List.generate(len, (index) => chars[r.nextInt(chars.length)]).join();
   }
-  static String? validateEmail(String? v) {
-    if (v!.toString().trim().isEmpty) {
-      return R.validation.ksEmailError;
-    } else if (!GetUtils.isEmail(v.trim())) {
-      return R.validation.ksValidEmail;
+
+  loginValidation() {
+    if (loginScreenFormKey.currentState!.validate()) {
+      AppSession.setAccessToken(generateRandomString(30));
+      Utils.successSnackBar(message: R.strings.scLoginMsg);
+      Get.offAllNamed(Routes.homeScreen);
     } else {
-      return null;
+      Utils.logPrint("invalidate");
     }
   }
 }

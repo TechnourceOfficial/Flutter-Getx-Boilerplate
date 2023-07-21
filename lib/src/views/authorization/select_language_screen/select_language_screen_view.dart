@@ -30,7 +30,9 @@ import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:get/get.dart';
 import '../../../../global/constant/resources/resources.dart';
 import '../../../../global/preference/user_preference.dart';
-import '../../../global/widgets/common_dropdown.dart';
+import '../../../../global/utils/utils.dart';
+import '../../../../global/widgets/common_dropdown.dart';
+import '../../../routes/app_pages.dart';
 import 'controller/select_language_controller.dart';
 import 'model/get_language_list_model.dart';
 
@@ -54,7 +56,16 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
         child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
           buildLanguageDropDown(),
           const SizedBox(height: ksBodyVerticalSpace30),
-          AppButton(btnText: R.strings.btnNext),
+          AppButton(
+            btnText: R.strings.btnNext,
+            onTap: () {
+              if (controller.selectedLanguage.value.langId == "-1") {
+                Utils.errorSnackBar(message: R.strings.erSelectLanguageMsg);
+              } else {
+                Get.toNamed(Routes.loginScreen);
+              }
+            },
+          ),
           const SizedBox(height: ksBodyVerticalSpace30)
         ]));
   }
@@ -67,7 +78,8 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
           onChanged: (data) {
             controller.selectedLanguage.value = data!;
             controller.selectedLanguageName.value = data.langName.toString();
-            Config.setLocale.value = controller.selectedLanguage.value.langCode.toString();
+            Config.setLocale.value =
+                controller.selectedLanguage.value.langCode.toString();
             AppSession.setSelectedLanguageId(Config.setLocale.value);
             Get.updateLocale(Locale(Config.setLocale.value));
             controller.update();

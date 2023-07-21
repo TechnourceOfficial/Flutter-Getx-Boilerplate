@@ -45,4 +45,19 @@ class AppSession {
   static String getSelectedLanguageId() {
     return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? "";
   }
+  static void setAccessToken(String? value) {
+    sessionData!.write(UserSessionDetail.kAccessToken, value);
+  }
+
+  static String getAccessToken() {
+    return sessionData?.read(UserSessionDetail.kAccessToken) ?? "";
+  }
+  static bool isAuthenticationDone() {
+    bool isAuthDone = AppSession.getAccessToken().isNotEmpty &&
+        AppSession.getAccessToken() != "";
+    if (isAuthDone) {
+      return true;
+    }
+    return isAuthDone;
+  }
 }

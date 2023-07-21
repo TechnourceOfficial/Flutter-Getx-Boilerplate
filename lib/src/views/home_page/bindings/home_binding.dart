@@ -23,20 +23,14 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter_setup/src/routes/app_pages.dart';
+import 'package:flutter_setup/src/views/home_page/controllers/home_controller.dart';
 import 'package:get/get.dart';
 
-
-class SplashController extends GetxController {
-  static SplashController get to => Get.find();
-
+class HomeViewBinding extends Bindings {
   @override
-  void onReady() {
-    super.onReady();
-    Future.delayed(const Duration(seconds: 3), () {
-
-        Get.offAllNamed(Routes.selectLanguage);
-
-    });
+  void dependencies() {
+    Get.lazyPut<HomeController>(
+      () => HomeController(),
+    );
   }
 }

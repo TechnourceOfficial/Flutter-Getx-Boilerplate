@@ -23,37 +23,14 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/resources.dart';
+import '../controller/login_screen_controller.dart';
 
-class Validator {
-  static RegExp alphaNumberRic =
-      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
-
-  static List<TextInputFormatter>? nameFormatterWithSpecialChar = [
-    FilteringTextInputFormatter.allow(RegExp("[a-zA-Z0-9@#\$%^&*()_-]")),
-  ];
-
-  static List<TextInputFormatter>? mobileNumberFormatter = [
-    FilteringTextInputFormatter.allow(RegExp("[0-9-_+]"))
-  ];
-
-  static String? passwordValid(String? v) {
-    if (v!.isEmpty) {
-      return R.validation.ksEmptyPassword;
-    } else {
-      return null;
-    }
+class LoginScreenBinding extends Bindings{
+  @override
+  void dependencies() {
+    Get.lazyPut<LoginScreenController>(() => LoginScreenController());
   }
-  static String? validateEmail(String? v) {
-    if (v!.toString().trim().isEmpty) {
-      return R.validation.ksEmailError;
-    } else if (!GetUtils.isEmail(v.trim())) {
-      return R.validation.ksValidEmail;
-    } else {
-      return null;
-    }
-  }
+
 }

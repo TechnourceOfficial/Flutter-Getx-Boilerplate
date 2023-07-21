@@ -25,11 +25,16 @@
 
 // ignore_for_file: constant_identifier_names
 
-import 'package:flutter_setup/src/views/select_language_screen/binding/select_language_screen.dart';
-import 'package:flutter_setup/src/views/select_language_screen/select_language_screen_view.dart';
-import 'package:flutter_setup/src/views/splash/bindings/splash_binding.dart';
-import 'package:flutter_setup/src/views/splash/views/splash_view.dart';
+import 'package:flutter_setup/src/views/authorization/login_screen/login_screen_view.dart';
+import 'package:flutter_setup/src/views/home_page/views/home_view.dart';
 import 'package:get/get.dart';
+
+import '../views/authorization/login_screen/binding/login_screen.dart';
+import '../views/authorization/select_language_screen/binding/select_language_screen.dart';
+import '../views/authorization/select_language_screen/select_language_screen_view.dart';
+import '../views/authorization/splash/bindings/splash_binding.dart';
+import '../views/authorization/splash/views/splash_view.dart';
+import '../views/home_page/bindings/home_binding.dart';
 
 part 'app_routes.dart';
 
@@ -48,6 +53,16 @@ class AppPages {
         name: Routes.selectLanguage,
         page: () => const SelectLanguageScreenView(),
         transition: Transition.downToUp,
-        binding: SelectLanguageBinding())
+        binding: SelectLanguageBinding()),
+    GetPage(
+        name: Routes.loginScreen,
+        page: () => const LoginScreenView(),
+        transition: Transition.downToUp,
+        binding: LoginScreenBinding()),
+    GetPage(
+        name: Routes.homeScreen,
+        page: () => HomeView(),
+        transition: Transition.downToUp,
+        binding: HomeViewBinding())
   ];
 }
