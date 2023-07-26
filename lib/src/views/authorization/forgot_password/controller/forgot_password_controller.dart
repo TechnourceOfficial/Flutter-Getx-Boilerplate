@@ -24,9 +24,9 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 import '../../../../../global/utils/utils.dart';
-
 
 class ForgotPasswordController extends GetxController {
   static ForgotPasswordController get to => Get.find();
@@ -36,9 +36,9 @@ class ForgotPasswordController extends GetxController {
   validAll() {
     if (forgotPwdFormKey.currentState!.validate()) {
       Utils.logPrint("validate");
+      Get.toNamed(Routes.otpScreen);
     } else {
       Utils.logPrint("invalidate");
     }
   }
-
 }

@@ -51,5 +51,13 @@
   "search_text": "Search",
   "no_data_found": "No Data Found",
   "forgot_password_para": "Enter the email associated with your account and we’ll send an email with instrucation to reset your password",
-  "btn_send": "Send"
+  "btn_send": "Send",
+  "we_have_sent_you_an_account": "We have sent you an account verification code on your entered email. Please enter the code to verify your account.",
+  "otp_verification": "OTP Verification",
+  "enter_the_code": "Enter the code",
+  "enter_6_digits_otp": "Please enter 6 digit code",
+  "code_has_been_send_to_your": "* Code has been send to your registered email.",
+  "verify": "Verify",
+  "dont_receive_the_otp": "Don’t receive the otp?",
+  "resend_otp": "RESEND OTP"
 }

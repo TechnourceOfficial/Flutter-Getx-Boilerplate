@@ -27,6 +27,8 @@
 
 import 'package:flutter_setup/src/views/authorization/forgot_password/binding/forgot_password.dart';
 import 'package:flutter_setup/src/views/authorization/login_screen/login_screen_view.dart';
+import 'package:flutter_setup/src/views/authorization/otp_screen/binding/otp_screen.dart';
+import 'package:flutter_setup/src/views/authorization/otp_screen/otp_screen_view.dart';
 import 'package:flutter_setup/src/views/authorization/signup_screen/binding/signup_screen.dart';
 import 'package:flutter_setup/src/views/authorization/signup_screen/signup_screen_view.dart';
 import 'package:flutter_setup/src/views/home_page/views/home_view.dart';
@@ -77,6 +79,11 @@ class AppPages {
         name: Routes.homeScreen,
         page: () => HomeView(),
         transition: Transition.downToUp,
-        binding: HomeViewBinding())
+        binding: HomeViewBinding()),
+    GetPage(
+        name: Routes.otpScreen,
+        page: () => const OtpScreenView(),
+        transition: Transition.downToUp,
+        binding: OtpScreenBinding())
   ];
 }

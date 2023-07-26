@@ -27,10 +27,10 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/utils/validator.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
+import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 import '../../../../global/constant/resources/resources.dart';
-import '../../../../global/widgets/common_component.dart';
 import '../../../../global/widgets/custom_text_field.dart';
 import 'controller/login_screen_controller.dart';
 
@@ -47,45 +47,47 @@ class LoginScreenView extends GetView<LoginScreenController> {
     return Scaffold(
         backgroundColor: R.colors.kcPrimaryColor,
         resizeToAvoidBottomInset: false,
-        body: SingleChildScrollView(
-            child: Container(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: ksWidgetHorizontalSpace15,
-                    vertical: ksWidgetVerticalSpace15),
-                child: Form(
-                    key: controller.loginScreenFormKey,
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(height: ksBodyHorizontalSpace30),
-                          Text(R.strings.ksWelcomeBack,
-                              style: R.styles.txt32sizeWithW700),
-                          SizedBox(height: Get.height * 0.001),
-                          Text(R.strings.ksGladToSeeYou,
-                              style: R.styles.txt14sizeW600ckcWhite
-                                  .copyWith(fontSize: 18)),
-                          SizedBox(height: Get.height * 0.04),
-                          buildEmailField(),
-                          const SizedBox(height: ksVerticalSpace15),
-                          buildPasswordField(),
-                          const SizedBox(height: ksVerticalSpace15),
-                          forgotPasswordComponent(),
-                          SizedBox(height: Get.height * 0.05),
-                          AppButton(
-                              onTap: () => controller.loginValidation(),
-                              btnText: R.strings.ksLoginButtonText),
-                          SizedBox(height: Get.height * 0.03),
-                          dontHaveAnAccountComponent(),
-                          SizedBox(height: Get.height * 0.05),
-                          CommonComponent().commonLogo()
-                        ])))));
+        body: SafeArea(
+          child: SingleChildScrollView(
+              child: Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: ksWidgetHorizontalSpace15,
+                      vertical: ksWidgetVerticalSpace15),
+                  child: Form(
+                      key: controller.loginScreenFormKey,
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const SizedBox(height: ksBodyHorizontalSpace30),
+                            Text(R.strings.ksWelcomeBack,
+                                style: R.styles.txt32sizeWithW700),
+                            SizedBox(height: Get.height * 0.001),
+                            Text(R.strings.ksGladToSeeYou,
+                                style: R.styles.txt14sizeW600ckcWhite
+                                    .copyWith(fontSize: 18)),
+                            SizedBox(height: Get.height * 0.04),
+                            buildEmailField(),
+                            const SizedBox(height: ksVerticalSpace15),
+                            buildPasswordField(),
+                            const SizedBox(height: ksVerticalSpace15),
+                            forgotPasswordComponent(),
+                            SizedBox(height: Get.height * 0.05),
+                            AppButton(
+                                onTap: () => controller.loginValidation(),
+                                btnText: R.strings.ksLoginButtonText),
+                            SizedBox(height: Get.height * 0.03),
+                            dontHaveAnAccountComponent(),
+                            SizedBox(height: Get.height * 0.05),
+                            const CommonLogo()
+                          ])))),
+        ));
   }
 
   forgotPasswordComponent() {
-    return InkWell(
-        onTap: () => Get.toNamed(Routes.forgetPasswordScreen),
-        child: Container(
-            alignment: Alignment.topRight,
+    return Align(
+        alignment: Alignment.topRight,
+        child: InkWell(
+            onTap: () => Get.toNamed(Routes.forgetPasswordScreen),
             child: Text(R.strings.ksForgotPassword,
                 style: R.styles.txt14sizeWithW600Underline)));
   }

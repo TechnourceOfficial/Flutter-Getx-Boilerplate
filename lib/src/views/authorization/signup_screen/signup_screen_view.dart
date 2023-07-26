@@ -26,11 +26,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
+import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:get/get.dart';
 import '../../../../global/constant/resources/resources.dart';
 import '../../../../global/utils/validator.dart';
 import '../../../../global/widgets/custom_text_field.dart';
-import '../../../../global/widgets/common_component.dart';
 import '../../../routes/app_pages.dart';
 import 'controller/signup_screen_controller.dart';
 
@@ -42,80 +42,84 @@ class SignupScreenView extends GetView<SignupScreenController> {
     controller.createAccountFormKey = GlobalKey<FormState>();
     return Scaffold(
         backgroundColor: R.colors.kcPrimaryColor,
-        body: SingleChildScrollView(
-            child: Container(
-                margin: EdgeInsets.symmetric(horizontal: Get.width * 0.04),
-                child: Form(
-                    key: controller.createAccountFormKey,
-                    child: Obx(() {
-                      return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(height: Get.height * 0.045),
-                            Text(R.strings.ksWelcomeToTechnource,
-                                style: R.styles.txt32sizeWithW700),
-                            SizedBox(height: Get.height * 0.001),
-                            Text(R.strings.ksCreateNewAccount,
-                                style: R.styles.txt18sizeWithW600),
-                            SizedBox(height: Get.height * 0.04),
-                            buildTextField(
-                                hintText: R.strings.ksNameHint,
-                                textEditingController:
-                                    controller.firstNameTextEditingController,
-                                validator: Validator.validateFirstName),
-                            buildTextField(
-                                hintText: R.strings.ksLNameHint,
-                                textEditingController:
-                                    controller.lastNameTextEditingController,
-                                validator: Validator.validLastName),
-                            buildTextField(
-                                hintText: R.strings.ksEmailHint,
-                                inputType: TextInputType.emailAddress,
-                                textEditingController:
-                                    controller.emailTextEditingController,
-                                validator: Validator.validateEmail),
-                            buildTextField(
-                                hintText: R.strings.ksUserNameHint,
-                                textEditingController:
-                                    controller.usernameTextEditingController,
-                                validator: Validator.validateUserName),
-                            buildPhoneField(),
-                            buildPwdField(
-                                textEditingController:
-                                    controller.passwordTextEditingController,
-                                hintText: R.strings.ksNewPassHint,
-                                validator: Validator.validateNewPassword,
-                                isPwd: controller.isPwdVisible),
-                            buildPwdField(
-                                textEditingController: controller
-                                    .confirmPasswordTextEditingController,
-                                hintText: R.strings.ksConfirmPassHint,
-                                validator: (v) {
-                                  if (v!.isEmpty) {
-                                    return R.validation.ksEmptyPassword;
-                                  } else if (controller
-                                          .passwordTextEditingController.text
-                                          .toString()
-                                          .trim() !=
-                                      v.toString().trim()) {
-                                    return R.validation.ksConfirmPassError;
-                                  } else {
-                                    return null;
-                                  }
-                                },
-                                isPwd: controller.isConPwdVisible),
-                            buildAcceptTermsConditions(),
-                            SizedBox(height: Get.height * 0.04),
-                            AppButton(
-                                btnText: R.strings.ksSignup,
-                                onTap: () => controller.validAll()),
-                            SizedBox(height: Get.height * 0.04),
-                            alreadyHaveAnAccountComponent(),
-                            SizedBox(height: Get.height * 0.03),
-                            CommonComponent().commonLogo()
-                          ]);
-                    })))));
+        body: SafeArea(
+          child: SingleChildScrollView(
+              child: Container(
+                  margin: const EdgeInsets.symmetric(
+                      vertical: ksBodyVerticalSpace15,
+                      horizontal: ksBodyHorizontalSpace15),
+                  child: Form(
+                      key: controller.createAccountFormKey,
+                      child: Obx(() {
+                        return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(height: Get.height * 0.045),
+                              Text(R.strings.ksWelcomeToTechnource,
+                                  style: R.styles.txt32sizeWithW700),
+                              SizedBox(height: Get.height * 0.001),
+                              Text(R.strings.ksCreateNewAccount,
+                                  style: R.styles.txt18sizeWithW600),
+                              SizedBox(height: Get.height * 0.04),
+                              buildTextField(
+                                  hintText: R.strings.ksNameHint,
+                                  textEditingController:
+                                      controller.firstNameTextEditingController,
+                                  validator: Validator.validateFirstName),
+                              buildTextField(
+                                  hintText: R.strings.ksLNameHint,
+                                  textEditingController:
+                                      controller.lastNameTextEditingController,
+                                  validator: Validator.validLastName),
+                              buildTextField(
+                                  hintText: R.strings.ksEmailHint,
+                                  inputType: TextInputType.emailAddress,
+                                  textEditingController:
+                                      controller.emailTextEditingController,
+                                  validator: Validator.validateEmail),
+                              buildTextField(
+                                  hintText: R.strings.ksUserNameHint,
+                                  textEditingController:
+                                      controller.usernameTextEditingController,
+                                  validator: Validator.validateUserName),
+                              buildPhoneField(),
+                              buildPwdField(
+                                  textEditingController:
+                                      controller.passwordTextEditingController,
+                                  hintText: R.strings.ksNewPassHint,
+                                  validator: Validator.validateNewPassword,
+                                  isPwd: controller.isPwdVisible),
+                              buildPwdField(
+                                  textEditingController: controller
+                                      .confirmPasswordTextEditingController,
+                                  hintText: R.strings.ksConfirmPassHint,
+                                  validator: (v) {
+                                    if (v!.isEmpty) {
+                                      return R.validation.ksEmptyPassword;
+                                    } else if (controller
+                                            .passwordTextEditingController.text
+                                            .toString()
+                                            .trim() !=
+                                        v.toString().trim()) {
+                                      return R.validation.ksConfirmPassError;
+                                    } else {
+                                      return null;
+                                    }
+                                  },
+                                  isPwd: controller.isConPwdVisible),
+                              buildAcceptTermsConditions(),
+                              SizedBox(height: Get.height * 0.04),
+                              AppButton(
+                                  btnText: R.strings.ksSignup,
+                                  onTap: () => controller.validAll()),
+                              SizedBox(height: Get.height * 0.04),
+                              alreadyHaveAnAccountComponent(),
+                              SizedBox(height: Get.height * 0.03),
+                              const CommonLogo()
+                            ]);
+                      })))),
+        ));
   }
 
   buildAcceptTermsConditions() {

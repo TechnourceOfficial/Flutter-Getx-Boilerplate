@@ -22,9 +22,8 @@
  *  Email: support@technource.com
  *  Developed by Technource (https://www.technource.com)
  */
-
-/**
- * We can add our images and icons here path wise
+/*
+  We can add our images and icons here path wise
  */
 class Assets {
   static var assetFromImagesPath = "assets/images/";
@@ -34,4 +33,5 @@ class Assets {
   final passwordHide = "${assetFromIconsPath}ic_password_hide.png";
   final passwordShow = "${assetFromIconsPath}ic_password_show.png";
   final forgotPasswordVector = "${assetFromImagesPath}img_forgot_password.png";
+  final otpScreen = "${assetFromImagesPath}img_otp_verification.png";
 }

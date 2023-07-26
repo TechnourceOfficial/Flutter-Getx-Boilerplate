@@ -25,10 +25,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
+import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:get/get.dart';
 import '../../../../global/constant/resources/resources.dart';
 import '../../../../global/utils/validator.dart';
-import '../../../../global/widgets/common_component.dart';
 import '../../../../global/widgets/custom_text_field.dart';
 import '../../../../global/widgets/vector_description_widget.dart';
 import 'controller/forgot_password_controller.dart';
@@ -60,7 +60,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
                               onTap: () => controller.validAll(),
                               btnText: R.strings.btnSend),
                           SizedBox(height: Get.height * 0.03),
-                          CommonComponent().commonLogo()
+                          const CommonLogo()
                         ])))));
   }
 

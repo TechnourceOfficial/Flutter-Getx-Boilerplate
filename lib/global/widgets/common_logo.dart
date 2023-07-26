@@ -22,29 +22,18 @@
  *  Email: support@technource.com
  *  Developed by Technource (https://www.technource.com)
  */
+import 'package:flutter/material.dart';
+import 'package:flutter_setup/global/constant/resources/resources.dart';
+import 'package:get/get.dart';
 
-part of 'app_pages.dart';
+class CommonLogo extends StatelessWidget {
+  const CommonLogo({Key? key}) : super(key: key);
 
-abstract class Routes {
-  Routes._();
-
-  static const splash = _Paths.splash;
-  static const selectLanguage = _Paths.selectLanguage;
-  static const loginScreen = _Paths.loginScreen;
-  static const signupScreen = _Paths.signupScreen;
-  static const forgetPasswordScreen = _Paths.forgetPasswordScreen;
-  static const homeScreen = _Paths.homeScreen;
-  static const otpScreen = _Paths.otpScreen;
-}
-
-abstract class _Paths {
-  _Paths._();
-
-  static const splash = '/splash';
-  static const selectLanguage = '/selectLanguage';
-  static const loginScreen = '/loginScreen';
-  static const signupScreen = '/signupScreen';
-  static const forgetPasswordScreen = '/forgetPasswordScreen';
-  static const homeScreen = '/homeScreen';
-  static const otpScreen = '/otpScreen';
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Image.asset(R.assets.appLogo,
+          height: Get.height * 0.1, width: Get.width * 0.6),
+    );
+  }
 }

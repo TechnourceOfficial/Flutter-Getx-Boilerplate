@@ -99,12 +99,31 @@ class AppStrings {
   String get ksNewPassHint => "new_pass_hint".toTranslate();
 
   String get ksConfirmPassHint => "confirm_pass_hint".toTranslate();
+
   String get ksSelectCountryCode => 'select_country_code'.toTranslate();
+
   String get ksSearch => 'search_text'.toTranslate();
+
   String get ksNoDataFound => 'no_data_found'.toTranslate();
+
   String get ksForgotPasswordParaText => 'forgot_password_para'.toTranslate();
+
   String get btnSend => 'btn_send'.toTranslate();
 
+  ///Otp Screen
+  String get ksWeHaveSentAn => "we_have_sent_you_an_account".toTranslate();
+
+  String get ksEnterTheCode => "enter_the_code".toTranslate();
+
+  String get ksCodeHasBeenSend => "code_has_been_send_to_your".toTranslate();
+
+  String get ksVerify => "verify".toTranslate();
+
+  String get ksDontReceiveTheOtp => "dont_receive_the_otp".toTranslate();
+
+  String get ksResendOtp => "resend_otp".toTranslate();
+
+  String get ksOTPVerification => "otp_verification".toTranslate();
 }
 
 /// Validation message will be added here
@@ -135,4 +154,6 @@ class AppStringsValidation {
 
   String get ksErrorNewPassword =>
       "change_password_valid_new_password".toTranslate();
+
+  String get ksEnter6DigitOpt => "enter_6_digits_otp".toTranslate();
 }

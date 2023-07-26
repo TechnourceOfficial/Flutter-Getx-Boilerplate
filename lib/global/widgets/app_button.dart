@@ -28,9 +28,7 @@ import 'package:get/get.dart';
 
 import '../constant/resources/resources.dart';
 
-/**
- * This is comman App button that will be used in all places where it should be match the app theme
- */
+/// This is comman App button that will be used in all places where it should be match the app theme
 class AppButton extends StatelessWidget {
   final double? height, width;
   final Color? btnBgColor, borderColor;
