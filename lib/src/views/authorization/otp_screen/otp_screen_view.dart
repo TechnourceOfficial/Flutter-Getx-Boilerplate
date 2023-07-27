@@ -32,7 +32,6 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../../../global/constant/resources/resources.dart';
 import '../../../../global/utils/validator.dart';
 import '../../../../global/widgets/vector_description_widget.dart';
-import '../../../routes/app_pages.dart';
 import 'controller/otp_controller.dart';
 
 const ksBodyVerticalSpace10 = 10.0;

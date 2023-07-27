@@ -61,8 +61,8 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
             onTap: () {
               if (controller.selectedLanguage.value.langId == "-1") {
                 Utils.errorSnackBar(message: R.strings.erSelectLanguageMsg);
-              } else {
-                Get.toNamed(Routes.loginScreen);
+              }  else {
+                Get.toNamed(Routes.welcomeScreen);
               }
             },
           ),

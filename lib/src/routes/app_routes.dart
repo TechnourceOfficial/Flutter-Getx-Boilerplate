@@ -30,6 +30,7 @@ abstract class Routes {
 
   static const splash = _Paths.splash;
   static const selectLanguage = _Paths.selectLanguage;
+  static const welcomeScreen = _Paths.welcomeScreen;
   static const loginScreen = _Paths.loginScreen;
   static const signupScreen = _Paths.signupScreen;
   static const forgetPasswordScreen = _Paths.forgetPasswordScreen;
@@ -42,6 +43,7 @@ abstract class _Paths {
 
   static const splash = '/splash';
   static const selectLanguage = '/selectLanguage';
+  static const welcomeScreen = '/welcomeScreen';
   static const loginScreen = '/loginScreen';
   static const signupScreen = '/signupScreen';
   static const forgetPasswordScreen = '/forgetPasswordScreen';

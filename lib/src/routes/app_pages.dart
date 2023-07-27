@@ -31,6 +31,8 @@ import 'package:flutter_setup/src/views/authorization/otp_screen/binding/otp_scr
 import 'package:flutter_setup/src/views/authorization/otp_screen/otp_screen_view.dart';
 import 'package:flutter_setup/src/views/authorization/signup_screen/binding/signup_screen.dart';
 import 'package:flutter_setup/src/views/authorization/signup_screen/signup_screen_view.dart';
+import 'package:flutter_setup/src/views/authorization/welcome_screen/binding/welcome_screen.dart';
+import 'package:flutter_setup/src/views/authorization/welcome_screen/welcome_screen_view.dart';
 import 'package:flutter_setup/src/views/home_page/views/home_view.dart';
 import 'package:get/get.dart';
 
@@ -60,6 +62,11 @@ class AppPages {
         page: () => const SelectLanguageScreenView(),
         transition: Transition.downToUp,
         binding: SelectLanguageBinding()),
+    GetPage(
+        name: Routes.welcomeScreen,
+        page: () => const WelcomeScreenView(),
+        transition: Transition.downToUp,
+        binding: WelcomeScreenBinding()),
     GetPage(
         name: Routes.loginScreen,
         page: () => const LoginScreenView(),
