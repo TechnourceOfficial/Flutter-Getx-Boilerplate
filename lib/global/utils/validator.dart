@@ -106,4 +106,12 @@ class Validator {
       return null;
     }
   }
+
+  static String? validOtp(String? v) {
+    if (v!.length < 6) {
+      return R.validation.ksEnter6DigitOpt;
+    } else {
+      return null;
+    }
+  }
 }

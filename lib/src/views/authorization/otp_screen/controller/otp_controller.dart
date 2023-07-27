@@ -23,19 +23,27 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-
-
-
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import '../../../../../global/utils/utils.dart';
 
-import '../constant/resources/resources.dart';
+class OtpScreenController extends GetxController {
+  TextEditingController otpController = TextEditingController();
+  late GlobalKey<FormState> otpFormKey;
 
-class CommonComponent {
-  commonLogo() {
-    return Center(
-      child: Image.asset(R.assets.appLogo,
-          height: Get.height * 0.1, width: Get.width * 0.6),
-    );
+  validAll() {
+    if (otpFormKey.currentState!.validate()) {
+      Utils.logPrint("validate");
+    } else {
+      Utils.logPrint("invalidate");
+    }
+  }
+
+  void otpValidation() async {
+    if (otpFormKey.currentState!.validate()) {
+      Utils.logPrint("validate");
+    } else {
+      Utils.logPrint("invalidate");
+    }
   }
 }

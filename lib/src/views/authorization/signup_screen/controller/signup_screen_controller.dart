@@ -64,15 +64,10 @@ class SignupScreenController extends GetxController {
 
   validAll() {
     if (createAccountFormKey.currentState!.validate()) {
-      debugPrint("validate");
-
       if (isAcceptPolicy.value == true) {
         Get.offAllNamed(Routes.loginScreen);
       } else {
-        debugPrint("in Else");
-        Utils.errorSnackBar(
-          message: R.strings.ksAcceptTermAndConditionError,
-        );
+        Utils.errorSnackBar(message: R.strings.ksAcceptTermAndConditionError);
       }
     } else {
       debugPrint("Invalidate");

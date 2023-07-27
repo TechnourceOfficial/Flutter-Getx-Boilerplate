@@ -51,5 +51,13 @@
   "search_text": "Recherche",
   "no_data_found": "Aucune donnée disponible",
   "forgot_password_para": "Entrez l'e-mail associé à votre compte et nous vous enverrons un e-mail avec des instructions pour réinitialiser votre mot de passe",
-  "btn_send": "Envoyer"
+  "btn_send": "Envoyer",
+  "we_have_sent_you_an_account": "Nous vous avons envoyé un code de vérification de compte sur votre e-mail saisi. ",
+  "otp_verification": "Vérification OTP",
+  "enter_the_code": "Entrer le code",
+  "enter_6_digits_otp": "Veuillez entrer le code à 6 chiffres",
+  "code_has_been_send_to_your": "* Le code a été envoyé à votre adresse e-mail enregistrée.",
+  "verify": "Vérifier",
+  "dont_receive_the_otp": "Vous ne recevez pas l'OTP?",
+  "resend_otp": "RENVOYER OTP"
 }

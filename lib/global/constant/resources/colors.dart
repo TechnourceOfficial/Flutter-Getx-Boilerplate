@@ -24,9 +24,7 @@
  */
 
 import 'package:flutter/material.dart';
-/**
- * Define color  here that we are using in app
- */
+/// Define color  here that we are using in app
 class AppColors {
   final kcPrimaryColor = const Color(0xff101B49);
   final kcPrimaryAccentColor = const Color(0xff05490a);
