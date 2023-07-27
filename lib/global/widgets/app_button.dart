@@ -24,13 +24,12 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../constant/resources/resources.dart';
 
 /// This is comman App button that will be used in all places where it should be match the app theme
 class AppButton extends StatelessWidget {
-  final double? height, width;
+  final double? verticlePadding;
   final Color? btnBgColor, borderColor;
   final VoidCallback? onTap;
   final String? btnText;
@@ -38,8 +37,7 @@ class AppButton extends StatelessWidget {
 
   const AppButton(
       {Key? key,
-      this.width,
-      this.height,
+      this.verticlePadding,
       this.buttonTextStyle,
       this.borderColor,
       this.btnBgColor,
@@ -49,20 +47,17 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: height ?? Get.height * 0.06,
-        width: width ?? Get.width,
-        decoration: BoxDecoration(
-            color: btnBgColor ?? R.colors.kcYellow,
-            borderRadius: BorderRadius.circular(Get.height * 0.01),
-            border: Border.all(color: borderColor ?? R.colors.kcTransparent)),
-        child: InkWell(
-            onTap: onTap ?? () {},
-            child: Center(
-                child: Text(
-                    textAlign: TextAlign.center,
-                    btnText.toString(),
-                    style: buttonTextStyle ??
-                        R.styles.txt14sizeW700ColorPrimary))));
+    return MaterialButton(
+        onPressed: onTap,
+        minWidth: double.infinity,
+        color: btnBgColor ?? R.colors.kcYellow,
+        padding:  EdgeInsets.symmetric(vertical: verticlePadding??15),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+            side: BorderSide(color: borderColor ?? R.colors.kcTransparent)),
+        child: Text(
+            textAlign: TextAlign.center,
+            btnText.toString(),
+            style: buttonTextStyle ?? R.styles.txt14sizeW700ColorPrimary));
   }
 }

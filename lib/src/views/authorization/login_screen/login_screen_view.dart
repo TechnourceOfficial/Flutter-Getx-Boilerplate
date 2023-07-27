@@ -44,11 +44,14 @@ class LoginScreenView extends GetView<LoginScreenController> {
   Widget build(BuildContext context) {
     controller.loginScreenFormKey = GlobalKey<FormState>();
 
-    return Scaffold(
-        backgroundColor: R.colors.kcPrimaryColor,
-        resizeToAvoidBottomInset: false,
-        body: SafeArea(
-          child: SingleChildScrollView(
+    return WillPopScope(
+        onWillPop: () async {
+          return await Get.offAllNamed(Routes.welcomeScreen);
+        },
+        child: Scaffold(
+          backgroundColor: R.colors.kcPrimaryColor,
+          resizeToAvoidBottomInset: false,
+          body: SingleChildScrollView(
               child: Container(
                   padding: const EdgeInsets.symmetric(
                       horizontal: ksWidgetHorizontalSpace15,
@@ -58,6 +61,12 @@ class LoginScreenView extends GetView<LoginScreenController> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            const SizedBox(height: ksBodyHorizontalSpace30),
+                            InkWell(
+                                onTap: () =>
+                                    Get.offAllNamed(Routes.welcomeScreen),
+                                child: Image.asset(R.assets.icWhiteBack,
+                                    width: 25, height: 25)),
                             const SizedBox(height: ksBodyHorizontalSpace30),
                             Text(R.strings.ksWelcomeBack,
                                 style: R.styles.txt32sizeWithW700),
