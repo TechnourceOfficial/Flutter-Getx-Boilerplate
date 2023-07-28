@@ -27,6 +27,8 @@
 
 import 'package:flutter_setup/src/views/authorization/forgot_password/binding/forgot_password.dart';
 import 'package:flutter_setup/src/views/authorization/login_screen/login_screen_view.dart';
+import 'package:flutter_setup/src/views/authorization/onboard/binding/onboard.dart';
+import 'package:flutter_setup/src/views/authorization/onboard/onboard_view.dart';
 import 'package:flutter_setup/src/views/authorization/otp_screen/binding/otp_screen.dart';
 import 'package:flutter_setup/src/views/authorization/otp_screen/otp_screen_view.dart';
 import 'package:flutter_setup/src/views/authorization/signup_screen/binding/signup_screen.dart';
@@ -57,6 +59,11 @@ class AppPages {
         page: () => SplashView(),
         transition: Transition.downToUp,
         binding: SplashBinding()),
+    GetPage(
+        name: Routes.onBoard,
+        page: () => const OnBoardView(),
+        transition: Transition.downToUp,
+        binding: OnBoardBinding()),
     GetPage(
         name: Routes.selectLanguage,
         page: () => const SelectLanguageScreenView(),

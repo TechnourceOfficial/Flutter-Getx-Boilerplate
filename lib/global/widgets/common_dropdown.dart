@@ -25,7 +25,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/resources.dart';
+import '../constant/resources/import_resources.dart';
+
 
 class CommonDropDownWidget extends StatelessWidget {
   final dynamic value;
@@ -52,17 +53,17 @@ class CommonDropDownWidget extends StatelessWidget {
             const EdgeInsets.symmetric(horizontal: ksWidgetHorizontalSpace15),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(Get.height * 0.01)),
-            color: dropdownBackgroundColor ?? R.colors.kcInputFilled),
+            color: dropdownBackgroundColor ?? AppColors.kcInputFilled.withOpacity(0.3)),
         child: DropdownButtonHideUnderline(
             child: DropdownButton(
                 value: value,
                 icon: Icon(Icons.keyboard_arrow_down,
                     color: dropdownIconColor ?? Colors.grey, size: 30),
                 isExpanded: true,
-                style: R.styles.txt10sizeWithW700,
+                style: AppStyles.txt10sizeWithW700,
                 onChanged: onChanged,
                 hint: Text(hintText ?? "",
-                    style: R.styles.txt16sizeW600CaptionLightGray),
+                    style: AppStyles.txt16sizeW600CaptionLightGray),
                 items: items)));
   }
 }

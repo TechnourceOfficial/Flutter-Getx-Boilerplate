@@ -27,12 +27,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/resources.dart';
+import '../../../../global/constant/resources/import_resources.dart';
 import '../../../../global/utils/validator.dart';
 import '../../../../global/widgets/custom_text_field.dart';
 import '../../../../global/widgets/vector_description_widget.dart';
 import 'controller/forgot_password_controller.dart';
-
 class ForgotPasswordView extends GetView<ForgotPasswordController> {
   const ForgotPasswordView({super.key});
 
@@ -40,7 +39,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
   Widget build(BuildContext context) {
     controller.forgotPwdFormKey = GlobalKey<FormState>();
     return Scaffold(
-        backgroundColor: R.colors.kcPrimaryColor,
+        backgroundColor: AppColors.kcPrimaryColor,
         body: SingleChildScrollView(
             child: Padding(
                 padding: const EdgeInsets.symmetric(
@@ -49,10 +48,9 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
                 child: Form(
                     key: controller.forgotPwdFormKey,
                     child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           VectorDescriptionWidget(
-                              imagePath: R.assets.forgotPasswordVector,
+                              imagePath: AppAssets.forgotPasswordVector,
                               description: R.strings.ksForgotPasswordParaText),
                           buildEmailField(),
                           SizedBox(height: Get.height * 0.04),

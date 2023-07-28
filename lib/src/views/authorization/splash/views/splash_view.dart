@@ -26,7 +26,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_background.dart';
 import 'package:get/get.dart';
-import '../../../../../global/constant/resources/resources.dart';
+import '../../../../../global/constant/resources/import_resources.dart';
 import '../controllers/splash_controller.dart';
 
 class SplashView extends GetView<SplashController> {
@@ -36,8 +36,8 @@ class SplashView extends GetView<SplashController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: R.colors.kcPrimaryColor,
-        body: const SafeArea(child: AppBackground()));
+    return const Scaffold(
+        backgroundColor: AppColors.kcPrimaryColor,
+        body: SafeArea(child: AppBackground()));
   }
 }

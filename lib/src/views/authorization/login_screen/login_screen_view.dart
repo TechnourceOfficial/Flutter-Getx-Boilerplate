@@ -30,7 +30,7 @@ import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/resources.dart';
+import '../../../../global/constant/resources/import_resources.dart';
 import '../../../../global/widgets/custom_text_field.dart';
 import 'controller/login_screen_controller.dart';
 
@@ -49,7 +49,7 @@ class LoginScreenView extends GetView<LoginScreenController> {
           return await Get.offAllNamed(Routes.welcomeScreen);
         },
         child: Scaffold(
-          backgroundColor: R.colors.kcPrimaryColor,
+          backgroundColor: AppColors.kcPrimaryColor,
           resizeToAvoidBottomInset: false,
           body: SingleChildScrollView(
               child: Container(
@@ -65,14 +65,14 @@ class LoginScreenView extends GetView<LoginScreenController> {
                             InkWell(
                                 onTap: () =>
                                     Get.offAllNamed(Routes.welcomeScreen),
-                                child: Image.asset(R.assets.icWhiteBack,
+                                child: Image.asset(AppAssets.icWhiteBack,
                                     width: 25, height: 25)),
                             const SizedBox(height: ksBodyHorizontalSpace30),
                             Text(R.strings.ksWelcomeBack,
-                                style: R.styles.txt32sizeWithW700),
+                                style: AppStyles.txt32sizeWithW700),
                             SizedBox(height: Get.height * 0.001),
                             Text(R.strings.ksGladToSeeYou,
-                                style: R.styles.txt14sizeW600ckcWhite
+                                style: AppStyles.txt14sizeW600ckcWhite
                                     .copyWith(fontSize: 18)),
                             SizedBox(height: Get.height * 0.04),
                             buildEmailField(),
@@ -98,7 +98,7 @@ class LoginScreenView extends GetView<LoginScreenController> {
         child: InkWell(
             onTap: () => Get.toNamed(Routes.forgetPasswordScreen),
             child: Text(R.strings.ksForgotPassword,
-                style: R.styles.txt14sizeWithW600Underline)));
+                style: AppStyles.txt14sizeWithW600Underline)));
   }
 
   dontHaveAnAccountComponent() {
@@ -106,11 +106,11 @@ class LoginScreenView extends GetView<LoginScreenController> {
         child: RichText(
             text: TextSpan(
                 text: "${R.strings.ksDontHaveAnAccount} ",
-                style: R.styles.txt14sizeW600ckcWhite,
+                style: AppStyles.txt14sizeW600ckcWhite,
                 children: <TextSpan>[
           TextSpan(
               text: R.strings.ksSignUp,
-              style: R.styles.txt14sizeWithW600Underline,
+              style: AppStyles.txt14sizeWithW600Underline,
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
                   Get.toNamed(Routes.signupScreen);
@@ -138,8 +138,8 @@ class LoginScreenView extends GetView<LoginScreenController> {
           isPwd: controller.isShowPassword.value ? false : true,
           maxLines: 1,
           suffixIconPath: controller.isShowPassword.value
-              ? R.assets.passwordHide
-              : R.assets.passwordShow,
+              ? AppAssets.passwordHide
+              : AppAssets.passwordShow,
           onSuffixIconTap: () {
             controller.isShowPassword.value = !controller.isShowPassword.value;
           },

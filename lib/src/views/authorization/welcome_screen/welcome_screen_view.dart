@@ -26,7 +26,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/resources.dart';
+import '../../../../global/constant/resources/import_resources.dart';
 import '../../../../global/widgets/app_background.dart';
 import '../../../routes/app_pages.dart';
 import 'controller/welcome_screen_controller.dart';
@@ -37,7 +37,7 @@ class WelcomeScreenView extends GetView<WelcomeScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: R.colors.kcPrimaryColor,
+        backgroundColor: AppColors.kcPrimaryColor,
         body: Stack(children: [const AppBackground(), bottomComponent()]));
   }
 
@@ -53,10 +53,10 @@ class WelcomeScreenView extends GetView<WelcomeScreenController> {
           const SizedBox(height: ksWidgetVerticalSpace15),
           AppButton(
               onTap: () => Get.offAllNamed(Routes.signupScreen),
-              btnBgColor: R.colors.kcPrimaryColor,
-              buttonTextStyle: R.styles.txt14sizeW600ckcWhite,
+              btnBgColor: AppColors.kcPrimaryColor,
+              buttonTextStyle: AppStyles.txt14sizeW600ckcWhite,
               btnText: R.strings.ksSignup,
-              borderColor: R.colors.kcWhite),
+              borderColor: AppColors.kcWhite),
           const SizedBox(height: ksWidgetVerticalSpace15)
         ]));
   }

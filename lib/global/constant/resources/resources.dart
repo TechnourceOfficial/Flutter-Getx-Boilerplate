@@ -23,10 +23,7 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter_setup/global/constant/resources/colors.dart';
-import 'package:flutter_setup/global/constant/resources/assets.dart';
 import 'package:flutter_setup/global/constant/resources/strings.dart';
-import 'package:flutter_setup/global/constant/resources/styles.dart';
 
 const ksBodyVerticalSpace30 = 30.0;
 const ksBodyHorizontalSpace30 = 30.0;
@@ -36,9 +33,6 @@ const ksWidgetHorizontalSpace15 = 15.0;
 const ksWidgetVerticalSpace15 = 15.0;
 
 class R {
-  static final assets = Assets();
   static var strings = AppStrings();
   static final validation = AppStringsValidation();
-  static final colors = AppColors();
-  static final styles = AppStyles();
 }

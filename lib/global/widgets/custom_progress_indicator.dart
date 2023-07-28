@@ -27,7 +27,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 
-import '../constant/resources/resources.dart';
+import '../constant/resources/import_resources.dart';
+
 
 class CustomProgressIndicatorWidget extends StatelessWidget {
   final double? height, width;
@@ -41,9 +42,8 @@ class CustomProgressIndicatorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(color: R.colors.kcTransparent),
+        decoration: const BoxDecoration(color: AppColors.kcTransparent),
         child: Align(
-            alignment: Alignment.center,
             child: Container(
                 height: 100,
                 constraints: const BoxConstraints.expand(width: 50, height: 50),
@@ -53,11 +53,11 @@ class CustomProgressIndicatorWidget extends StatelessWidget {
                     child: SizedBox(
                         height: height ?? Get.height * 0.2,
                         width: width ?? Get.width * 0.25,
-                        child: LoadingIndicator(
+                        child: const LoadingIndicator(
                             indicatorType: Indicator.ballSpinFadeLoader,
                             colors: [
-                              R.colors.kcYellow,
-                              R.colors.kcPrimaryColor
+                              AppColors.kcYellow,
+                              AppColors.kcPrimaryColor
                             ]))))));
   }
 }

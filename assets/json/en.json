@@ -59,5 +59,9 @@
   "code_has_been_send_to_your": "* Code has been send to your registered email.",
   "verify": "Verify",
   "dont_receive_the_otp": "Don’t receive the otp?",
-  "resend_otp": "RESEND OTP"
+  "resend_otp": "RESEND OTP",
+  "title_text": "Title",
+  "description_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "intro_skip": "Skip",
+  "intro_next": "Next"
 }

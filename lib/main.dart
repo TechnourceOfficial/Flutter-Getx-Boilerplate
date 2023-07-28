@@ -28,7 +28,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
-
 import 'flutter_boilerplate.dart';
 import 'global/preference/user_preference.dart';
 import 'global/utils/utils.dart';

@@ -1,3 +1,5 @@
+
+
 /*
  * Copyright (c) 2023 Technource. All rights reserved.
  *
@@ -22,19 +24,15 @@
  *  Email: support@technource.com
  *  Developed by Technource (https://www.technource.com)
  */
-import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
-import '../constant/resources/import_resources.dart';
+import '../controller/onboard_controller.dart';
 
-class CommonLogo extends StatelessWidget {
-  const CommonLogo({Key? key}) : super(key: key);
-
+class OnBoardBinding extends Bindings{
   @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(AppAssets.appLogo,
-          height: Get.height * 0.1, width: Get.width * 0.6),
-    );
+  void dependencies() {
+    Get.lazyPut<OnBoardController>(() => OnBoardController());
   }
+
 }

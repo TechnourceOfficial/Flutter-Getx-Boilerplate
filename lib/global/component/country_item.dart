@@ -114,7 +114,8 @@ class CountryItem {
 }
 
 CountryList getCountryList() {
-  return CountryList.fromJson(jsonDecode('''{
+  return CountryList.fromJson(jsonDecode('''
+{
   "message": "country code list successfully",
   "data": [
     {

@@ -28,7 +28,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/resources.dart';
+import '../../../../global/constant/resources/import_resources.dart';
 import '../../../../global/utils/validator.dart';
 import '../../../../global/widgets/custom_text_field.dart';
 import '../../../routes/app_pages.dart';
@@ -46,7 +46,7 @@ class SignupScreenView extends GetView<SignupScreenController> {
           return await Get.offAllNamed(Routes.welcomeScreen);
         },
         child: Scaffold(
-            backgroundColor: R.colors.kcPrimaryColor,
+            backgroundColor: AppColors.kcPrimaryColor,
             body: SingleChildScrollView(
                 child: Container(
                     margin: const EdgeInsets.symmetric(
@@ -63,14 +63,14 @@ class SignupScreenView extends GetView<SignupScreenController> {
                                 InkWell(
                                     onTap: () =>
                                         Get.offAllNamed(Routes.welcomeScreen),
-                                    child: Image.asset(R.assets.icWhiteBack,
+                                    child: Image.asset(AppAssets.icWhiteBack,
                                         width: 25, height: 25)),
                                 const SizedBox(height: ksBodyHorizontalSpace30),
                                 Text(R.strings.ksWelcomeToTechnource,
-                                    style: R.styles.txt32sizeWithW700),
+                                    style: AppStyles.txt32sizeWithW700),
                                 SizedBox(height: Get.height * 0.001),
                                 Text(R.strings.ksCreateNewAccount,
-                                    style: R.styles.txt18sizeWithW600),
+                                    style: AppStyles.txt18sizeWithW600),
                                 SizedBox(height: Get.height * 0.04),
                                 buildTextField(
                                     hintText: R.strings.ksNameHint,
@@ -145,11 +145,11 @@ class SignupScreenView extends GetView<SignupScreenController> {
         child: RichText(
             text: TextSpan(
                 text: "${R.strings.ksAlreadyHaveAnAccount} ",
-                style: R.styles.txt14sizeW600ckcWhite,
+                style: AppStyles.txt14sizeW600ckcWhite,
                 children: <TextSpan>[
           TextSpan(
               text: R.strings.ksLogin,
-              style: R.styles.txt14sizeWithW600Underline,
+              style: AppStyles.txt14sizeWithW600Underline,
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
                   Get.toNamed(Routes.loginScreen);
@@ -167,9 +167,9 @@ class SignupScreenView extends GetView<SignupScreenController> {
               checkboxValue.value = !checkboxValue.value;
               controller.isAcceptPolicy.value = checkboxValue.value;
             },
-            activeColor: R.colors.kcPrimaryColor,
-            side: MaterialStateBorderSide.resolveWith(
-                (states) => BorderSide(width: 1.0, color: R.colors.kcWhite)),
+            activeColor: AppColors.kcPrimaryColor,
+            side: MaterialStateBorderSide.resolveWith((states) =>
+                const BorderSide(color: AppColors.kcWhite)),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4.0)))));
   }
@@ -179,18 +179,19 @@ class SignupScreenView extends GetView<SignupScreenController> {
         child: RichText(
             text: TextSpan(
                 text: "${R.strings.ksBySigningUpYou} ",
-                style: R.styles.txt10sizeWithW500,
+                style: AppStyles.txt10sizeWithW500,
                 children: <TextSpan>[
           TextSpan(
               recognizer: TapGestureRecognizer()..onTap = () {},
               text: R.strings.ksTermsAndConditions,
               style:
-                  R.styles.txt14sizeWithW600Underline.copyWith(fontSize: 10)),
+                  AppStyles.txt14sizeWithW600Underline.copyWith(fontSize: 10)),
           TextSpan(
-              text: " ${R.strings.ksAnd} ", style: R.styles.txt10sizeWithW500),
+              text: " ${R.strings.ksAnd} ", style: AppStyles.txt10sizeWithW500),
           TextSpan(
               text: R.strings.ksPrivacyPolicy,
-              style: R.styles.txt14sizeWithW600Underline.copyWith(fontSize: 10),
+              style:
+                  AppStyles.txt14sizeWithW600Underline.copyWith(fontSize: 10),
               recognizer: TapGestureRecognizer()..onTap = () {})
         ])));
   }
@@ -208,8 +209,8 @@ class SignupScreenView extends GetView<SignupScreenController> {
             onTap: onTap,
             isReadOnly: isReadOnly ?? false,
             maxLines: 1,
-            cursorcolor: R.colors.kcWhite,
-            textStyle: R.styles.txt14sizeW600ckcWhite,
+            cursorcolor: AppColors.kcWhite,
+            textStyle: AppStyles.txt14sizeW600ckcWhite,
             hintText: hintText,
             errorText: "",
             textEditingController: textEditingController,
@@ -259,10 +260,10 @@ class SignupScreenView extends GetView<SignupScreenController> {
               textEditingController: textEditingController,
               validator: validator,
               isPwd: isPwd!.value ? false : true,
-              cursorcolor: R.colors.kcWhite,
-              textStyle: R.styles.txt14sizeW600ckcWhite,
+              cursorcolor: AppColors.kcWhite,
+              textStyle: AppStyles.txt14sizeW600ckcWhite,
               suffixIconPath:
-                  isPwd.value ? R.assets.passwordHide : R.assets.passwordShow,
+                  isPwd.value ? AppAssets.passwordHide : AppAssets.passwordShow,
               onSuffixIconTap: () {
                 isPwd.value = !isPwd.value;
               },

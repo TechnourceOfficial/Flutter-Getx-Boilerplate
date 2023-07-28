@@ -90,10 +90,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_localization
-      sha256: "9afed0ae301ee3ca547bceb5132b50d0d2d539ad4da4131ea7fc89e3bdeb67d3"
+      sha256: b2b0fe87f4608f5a3e78ed570d5f85ba9f55c746a6aca4981c0ea4bb894d5d00
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.12"
+    version: "0.1.13"
   flutter_localizations:
     dependency: transitive
     description: flutter
