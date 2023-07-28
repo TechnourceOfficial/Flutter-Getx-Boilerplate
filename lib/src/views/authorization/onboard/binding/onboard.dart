@@ -27,7 +27,7 @@
 
 import 'package:get/get.dart';
 
-import '../controller/onboard_controller.dart';
+import 'package:flutter_setup/src/views/authorization/onboard/controller/onboard_controller.dart';
 
 class OnBoardBinding extends Bindings{
   @override

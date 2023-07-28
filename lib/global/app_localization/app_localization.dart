@@ -38,7 +38,7 @@ class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  String getText(String? key) => language[key] ?? "";
+  String getText(String? key) => language[key] ?? '';
 }
 
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -52,7 +52,7 @@ class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
 
   @override
   Future<AppLocalizations> load(Locale locale) async {
-    final string =
+    var string =
         await rootBundle.loadString('assets/json/${locale.languageCode}.json');
     language.value = json.decode(string);
     return SynchronousFuture<AppLocalizations>(AppLocalizations());

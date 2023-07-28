@@ -25,7 +25,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 class AppBackground extends StatelessWidget {
   const AppBackground({Key? key}) : super(key: key);
@@ -33,9 +33,7 @@ class AppBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      SizedBox(
-          height: double.infinity,
-          width: double.infinity,
+      SizedBox.expand(
           child: Image.asset(AppAssets.welcomeBg4x, fit: BoxFit.fill)),
       Center(
           child: Padding(

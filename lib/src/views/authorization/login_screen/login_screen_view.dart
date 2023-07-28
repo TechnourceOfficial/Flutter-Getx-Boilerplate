@@ -30,9 +30,9 @@ import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/import_resources.dart';
-import '../../../../global/widgets/custom_text_field.dart';
-import 'controller/login_screen_controller.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/widgets/custom_text_field.dart';
+import 'package:flutter_setup/src/views/authorization/login_screen/controller/login_screen_controller.dart';
 
 const ksHorizontalSpace15 = 15.0;
 const ksVerticalSpace15 = 15.0;
@@ -105,7 +105,7 @@ class LoginScreenView extends GetView<LoginScreenController> {
     return Center(
         child: RichText(
             text: TextSpan(
-                text: "${R.strings.ksDontHaveAnAccount} ",
+                text: '${R.strings.ksDontHaveAnAccount} ',
                 style: AppStyles.txt14sizeW600ckcWhite,
                 children: <TextSpan>[
           TextSpan(
@@ -123,7 +123,7 @@ class LoginScreenView extends GetView<LoginScreenController> {
         isScreenTitle: true,
         hintText: R.strings.ksEmailOrPassword,
         onChanged: (value) {},
-        errorText: "",
+        errorText: '',
         validator: Validator.validateEmail,
         textEditingController: controller.emailTextEditingController,
         keyBoardType: TextInputType.emailAddress,

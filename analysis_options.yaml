@@ -16,3 +16,29 @@ linter:
     - curly_braces_in_flow_control_structures
     # doc comments
     - slash_for_doc_comments
+    - unnecessary_const
+    - unnecessary_new
+    - unnecessary_null_in_if_null_operators
+    - always_use_package_imports
+    - empty_statements
+    - invariant_booleans
+    - always_put_control_body_on_new_line
+    - empty_constructor_bodies
+    - missing_whitespace_between_adjacent_strings
+    - depend_on_referenced_packages
+    - use_decorated_box
+    - use_colored_box
+    - unnecessary_string_interpolations
+    - unnecessary_this
+    - unnecessary_null_checks
+    - unnecessary_null_aware_operator_on_extension_on_nullable
+    - unnecessary_late
+    - unnecessary_getters_setters
+    - unnecessary_final
+    - sized_box_shrink_expand
+    - prefer_single_quotes
+    - prefer_is_not_empty
+    - prefer_is_empty
+    - prefer_contains
+    - prefer_adjacent_string_concatenation
+

@@ -28,13 +28,13 @@ import 'package:flutter_setup/global/utils/config.dart';
 import 'package:flutter_setup/global/widgets/app_background.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/import_resources.dart';
-import '../../../../global/preference/user_preference.dart';
-import '../../../../global/utils/utils.dart';
-import '../../../../global/widgets/common_dropdown.dart';
-import '../../../routes/app_pages.dart';
-import 'controller/select_language_controller.dart';
-import 'model/get_language_list_model.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/preference/user_preference.dart';
+import 'package:flutter_setup/global/utils/utils.dart';
+import 'package:flutter_setup/global/widgets/common_dropdown.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
+import 'package:flutter_setup/src/views/authorization/select_language_screen/controller/select_language_controller.dart';
+import 'package:flutter_setup/src/views/authorization/select_language_screen/model/get_language_list_model.dart';
 
 class SelectLanguageScreenView extends GetView<SelectLanguageController> {
   const SelectLanguageScreenView({super.key});
@@ -59,7 +59,7 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
           AppButton(
             btnText: R.strings.btnNext,
             onTap: () {
-              if (controller.selectedLanguage.value.langId == "-1") {
+              if (controller.selectedLanguage.value.langId == '-1') {
                 Utils.errorSnackBar(message: R.strings.erSelectLanguageMsg);
               }
               if (!AppSession.isIntroScreenDone()) {
@@ -94,7 +94,7 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
                     style: AppStyles.txt14sizeW500CaptionLightGray));
           }).toList(),
           hintText: R.strings.hnSelectLanguage,
-          value: controller.selectedLanguage.value.langId != "-1"
+          value: controller.selectedLanguage.value.langId != '-1'
               ? controller.selectedLanguage.value
               : null))
     ]);

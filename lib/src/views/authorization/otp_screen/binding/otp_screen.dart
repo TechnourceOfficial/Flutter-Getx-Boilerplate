@@ -25,7 +25,7 @@
 
 import 'package:get/get.dart';
 
-import '../controller/otp_controller.dart';
+import 'package:flutter_setup/src/views/authorization/otp_screen/controller/otp_controller.dart';
 
 
 class OtpScreenBinding extends Bindings{

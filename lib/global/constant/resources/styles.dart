@@ -24,7 +24,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'colors.dart';
+import 'package:flutter_setup/global/constant/resources/colors.dart';
 
 /// Definer text style,decoration style, card style in this file
 class AppStyles {
@@ -74,4 +74,10 @@ class AppStyles {
       fontWeight: FontWeight.w600);
   static const txtIntroTitle = TextStyle(
       fontSize: 28, color: AppColors.kcYellow, fontWeight: FontWeight.w700);
+
+  //Home screen Style
+  static const selectedLabelStyle = TextStyle(
+      color: AppColors.kcCaptionLightGray,
+      fontWeight: FontWeight.w600,
+      fontSize: 8);
 }

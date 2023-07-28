@@ -27,7 +27,7 @@ import 'package:get/get.dart';
 
 class Config {
 
-  static var appName = "Flutter BoilerPlate";
+  static var appName = 'Flutter BoilerPlate';
 
   static RxString setLocale = 'en'.obs;
 
@@ -38,4 +38,5 @@ class Config {
   static String langCountryCodeEn = 'US';
   static String langCountryCodeRu = 'RU';
   static String langCountryCodeFr = 'CA';
+
 }

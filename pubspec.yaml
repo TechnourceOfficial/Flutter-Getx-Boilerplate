@@ -13,6 +13,7 @@ dependencies:
   overlay_support: ^2.0.1
   pin_code_fields: ^7.4.0
   flutter_localization: ^0.1.13
+  flutter_svg:
 
 
   flutter: 

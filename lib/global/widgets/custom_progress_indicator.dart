@@ -27,7 +27,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 
-import '../constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 
 class CustomProgressIndicatorWidget extends StatelessWidget {
@@ -41,7 +41,7 @@ class CustomProgressIndicatorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return DecoratedBox(
         decoration: const BoxDecoration(color: AppColors.kcTransparent),
         child: Align(
             child: Container(

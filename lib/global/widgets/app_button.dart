@@ -25,7 +25,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 
 /// This is comman App button that will be used in all places where it should be match the app theme

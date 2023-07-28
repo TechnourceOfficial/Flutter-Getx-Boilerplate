@@ -35,8 +35,10 @@ abstract class Routes {
   static const loginScreen = _Paths.loginScreen;
   static const signupScreen = _Paths.signupScreen;
   static const forgetPasswordScreen = _Paths.forgetPasswordScreen;
-  static const homeScreen = _Paths.homeScreen;
   static const otpScreen = _Paths.otpScreen;
+  static const dashboardScreen = _Paths.dashboardScreen;
+
+  static const homeScreen = _Paths.homeScreen;
 }
 
 abstract class _Paths {
@@ -49,6 +51,8 @@ abstract class _Paths {
   static const loginScreen = '/loginScreen';
   static const signupScreen = '/signupScreen';
   static const forgetPasswordScreen = '/forgetPasswordScreen';
-  static const homeScreen = '/homeScreen';
   static const otpScreen = '/otpScreen';
+  static const dashboardScreen = '/dashboardScreen';
+
+  static const homeScreen = '/homeScreen';
 }

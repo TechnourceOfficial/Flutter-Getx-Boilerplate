@@ -28,9 +28,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
-import 'flutter_boilerplate.dart';
-import 'global/preference/user_preference.dart';
-import 'global/utils/utils.dart';
+import 'package:flutter_setup/flutter_boilerplate.dart';
+import 'package:flutter_setup/global/preference/user_preference.dart';
+import 'package:flutter_setup/global/utils/utils.dart';
 
 Future<void> main() async {
   await runZonedGuarded(() async {

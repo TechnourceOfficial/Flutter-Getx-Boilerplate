@@ -46,7 +46,7 @@ class GetLanguageListModel {
   num? code;
 
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
+    var map = <String, dynamic>{};
     map['message'] = message;
     if (data != null) {
       map['data'] = data?.map((v) => v.toJson()).toList();
@@ -74,7 +74,7 @@ class LanguageData {
   String? langName;
 
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
+    var map = <String, dynamic>{};
     map['lang_id'] = langId;
     map['lang_code'] = langCode;
     map['lang_name'] = langName;

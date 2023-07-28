@@ -31,8 +31,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/preference/user_preference.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
-import '../../../../../global/constant/resources/resources.dart';
-import '../../../../../global/utils/utils.dart';
+import 'package:flutter_setup/global/constant/resources/resources.dart';
+import 'package:flutter_setup/global/utils/utils.dart';
 
 class LoginScreenController extends GetxController {
   var isShowPassword = false.obs;
@@ -53,9 +53,9 @@ class LoginScreenController extends GetxController {
     if (loginScreenFormKey.currentState!.validate()) {
       AppSession.setAccessToken(generateRandomString(30));
       Utils.successSnackBar(message: R.strings.scLoginMsg);
-      Get.offAllNamed(Routes.homeScreen);
+      Get.offAllNamed(Routes.dashboardScreen);
     } else {
-      Utils.logPrint("invalidate");
+      Utils.logPrint('invalidate');
     }
   }
 }

@@ -28,7 +28,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 class AppTextField extends StatelessWidget {
   final String hintText;
@@ -112,7 +112,7 @@ class AppTextField extends StatelessWidget {
           child: Column(children: [
         isScreenTitle ?? false
             ? Row(children: [
-                Text(title ?? "", style: AppStyles.txt12sizeW600ColorPrimary)
+                Text(title ?? '', style: AppStyles.txt12sizeW600ColorPrimary)
               ])
             : const SizedBox(),
         Container(
@@ -146,7 +146,7 @@ class AppTextField extends StatelessWidget {
                     inputFormatters: inputFormatter,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     keyboardType: keyBoardType,
-                    initialValue: initialValue ?? "",
+                    initialValue: initialValue ?? '',
                     onChanged: onChanged,
                     maxLines: maxLines ?? 1,
                     onTap: onTap,
@@ -204,7 +204,7 @@ class AppTextField extends StatelessWidget {
             : const SizedBox(height: 35, width: 10),
         errorMaxLines: 2,
         filled: true,
-        errorText: (errorText != "") ? errorText : null,
+        errorText: (errorText != '') ? errorText : null,
         fillColor: fillColor ?? AppColors.kcCaptionLightGray.withOpacity(0.2),
         hintStyle: AppStyles.txt14sizeW500CaptionLightGray,
         errorStyle:

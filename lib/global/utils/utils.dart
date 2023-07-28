@@ -30,14 +30,14 @@ import 'package:get/get.dart';
 
 class Utils {
   static logPrint(String msg) {
-    logging.log("fromLog: $msg");
+    logging.log('fromLog: $msg');
   }
 
   /// When we want to show error to the user this method can be user and we also have message param
   /// so we can make it dynamic message
   static errorSnackBar({String title = 'Error', required String message}) {
-    Get.log("[$title] $message", isError: true);
-    if (message != "" && message != "{}") {
+    Get.log('[$title] $message', isError: true);
+    if (message != '' && message != '{}') {
       return Get.showSnackbar(GetSnackBar(
           messageText: Text(message,
               style: Get.textTheme.bodySmall!
@@ -53,8 +53,8 @@ class Utils {
   /// When we want to show success message to the user this method can be user and we also have message param
   /// so we can make it dynamic message
   static successSnackBar({String title = 'Success', required String message}) {
-    Get.log("[$title] $message");
-    if (message != "" && message != "{}") {
+    Get.log('[$title] $message');
+    if (message != '' && message != '{}') {
       return Get.showSnackbar(GetSnackBar(
           messageText: Text(message,
               style: Get.textTheme.bodySmall!
