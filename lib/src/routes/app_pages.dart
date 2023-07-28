@@ -37,7 +37,6 @@ import 'package:flutter_setup/src/views/authorization/welcome_screen/binding/wel
 import 'package:flutter_setup/src/views/authorization/welcome_screen/welcome_screen_view.dart';
 import 'package:flutter_setup/src/views/dashboard/binding/dashboard.dart';
 import 'package:flutter_setup/src/views/dashboard/dashboard_view.dart';
-import 'package:flutter_setup/src/views/home_page/views/home_view.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_setup/src/views/authorization/forgot_password/forgot_password_view.dart';
@@ -46,7 +45,9 @@ import 'package:flutter_setup/src/views/authorization/select_language_screen/bin
 import 'package:flutter_setup/src/views/authorization/select_language_screen/select_language_screen_view.dart';
 import 'package:flutter_setup/src/views/authorization/splash/bindings/splash_binding.dart';
 import 'package:flutter_setup/src/views/authorization/splash/views/splash_view.dart';
-import 'package:flutter_setup/src/views/home_page/bindings/home_binding.dart';
+
+import 'package:flutter_setup/src/views/home_page/binding/home_page.dart';
+import 'package:flutter_setup/src/views/home_page/home_page_view.dart';
 
 part 'app_routes.dart';
 
@@ -103,8 +104,8 @@ class AppPages {
         binding: DashboradBinding()),
     GetPage(
         name: Routes.homeScreen,
-        page: () => HomeView(),
+        page: () =>  HomePageView(),
         transition: Transition.downToUp,
-        binding: HomeViewBinding()),
+        binding: HomePageBinding()),
   ];
 }

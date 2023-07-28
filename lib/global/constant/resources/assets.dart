@@ -37,16 +37,23 @@ class AppAssets {
   static const otpScreen = '${assetFromImagesPath}img_otp_verification.png';
   static const icWhiteBack = '${assetFromIconsPath}ic_back.png';
   static const introVector1 = '${assetFromImagesPath}img_intro_vector.png';
+
   ///home bottom navigation icons
   static const icActiveBottomHome = '${assetFromIconsPath}ic_active_home.svg';
   static const icActiveBottomOrder = '${assetFromIconsPath}ic_active_order.svg';
   static const icActiveBottomNotification =
       '${assetFromIconsPath}ic_active_notification.svg';
-  static const icActiveBottomSetting = '${assetFromIconsPath}ic_active_setting.svg';
-  static const icDeActiveBottomHome = '${assetFromIconsPath}ic_deactive_home.svg';
-  static const icDeActiveBottomOrder = '${assetFromIconsPath}ic_deactive_order.svg';
+  static const icActiveBottomSetting =
+      '${assetFromIconsPath}ic_active_setting.svg';
+  static const icDeActiveBottomHome =
+      '${assetFromIconsPath}ic_deactive_home.svg';
+  static const icDeActiveBottomOrder =
+      '${assetFromIconsPath}ic_deactive_order.svg';
   static const icDeActiveBottomNotification =
       '${assetFromIconsPath}ic_deactive_notification.svg';
   static const icDeActiveBottomSetting =
       '${assetFromIconsPath}ic_deactive_setting.svg';
+
+  static const icTechnourceLogo = '${assetFromIconsPath}ic_technource_logo.png';
+  static const icSearchIcon = '${assetFromIconsPath}ic_search_icon.png';
 }
