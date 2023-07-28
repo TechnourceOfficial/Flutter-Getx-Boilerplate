@@ -22,19 +22,9 @@
  *  Email: support@technource.com
  *  Developed by Technource (https://www.technource.com)
  */
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-import '../constant/resources/import_resources.dart';
-
-class CommonLogo extends StatelessWidget {
-  const CommonLogo({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(AppAssets.appLogo,
-          height: Get.height * 0.1, width: Get.width * 0.6),
-    );
-  }
-}
+export 'package:flutter_setup/global/constant/resources/styles.dart';
+export 'package:flutter_setup/global/constant/resources/strings.dart';
+export 'package:flutter_setup/global/constant/resources/colors.dart';
+export 'package:flutter_setup/global/constant/resources/assets.dart';
+export 'package:flutter_setup/global/constant/resources/resources.dart';

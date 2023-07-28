@@ -24,21 +24,22 @@
  */
 
 import 'package:flutter/material.dart';
+
 /// Define color  here that we are using in app
 class AppColors {
-  final kcPrimaryColor = const Color(0xff101B49);
-  final kcPrimaryAccentColor = const Color(0xff05490a);
-  final kcDefaultText = const Color(0xff424242);
-  final hintColor = const Color(0xff636363);
-  final kcSubtitleText2 = const Color(0xffA4A4A4);
-  final kcLightGray = const Color(0xffA3A3A3);
-  final kcGray = const Color(0xff212529);
-  final kcWhite = Colors.white;
-  final kcBlack = Colors.black;
-  final kcRed = Colors.red;
-  final kcTransparent = Colors.transparent;
-  final kcYellow = const Color(0xffFFD933);
-  final kcInputFilled = const Color(0xffA2A8B5).withOpacity(0.3);
-  final kcCaptionLightGray = const Color(0xffA2A8B5);
-  final kcGrey = const Color(0xffEEEEEE);
+  static const kcPrimaryColor = Color(0xff101B49);
+  static const kcPrimaryAccentColor = Color(0xff05490a);
+  static const kcDefaultText = Color(0xff424242);
+  static const hintColor = Color(0xff636363);
+  static const kcSubtitleText2 = Color(0xffA4A4A4);
+  static const kcLightGray = Color(0xffA3A3A3);
+  static const kcGray = Color(0xff212529);
+  static const kcWhite = Colors.white;
+  static const kcBlack = Colors.black;
+  static const kcRed = Colors.red;
+  static const kcTransparent = Colors.transparent;
+  static const kcYellow = Color(0xffFFD933);
+  static const kcInputFilled = Color(0xffA2A8B5);
+  static const kcCaptionLightGray = Color(0xffA2A8B5);
+  static const kcGrey = Color(0xffEEEEEE);
 }

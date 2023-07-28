@@ -26,7 +26,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/resources.dart';
+import '../constant/resources/import_resources.dart';
+
 
 class VectorDescriptionWidget extends StatelessWidget {
   final String imagePath, description;
@@ -50,14 +51,14 @@ class VectorDescriptionWidget extends StatelessWidget {
     return Container(
         height: Get.height * 0.4,
         width: Get.width * 0.7,
-        margin: const EdgeInsets.only(top: 0.0),
+        margin: const EdgeInsets.only(),
         child: Image.asset(imagePath));
   }
 
   showForgotPasswordPara({component}) {
-    return Text(description,
-        style: R.styles.txt14sizeW700ColorPrimary
-            .copyWith(fontWeight: FontWeight.w500,color: R.colors.kcWhite),
+    return  Text(description,
+        style: AppStyles.txt14sizeW700ColorPrimary
+            .copyWith(fontWeight: FontWeight.w500,color: AppColors.kcWhite),
         textAlign: TextAlign.center,
         textDirection: TextDirection.ltr);
   }

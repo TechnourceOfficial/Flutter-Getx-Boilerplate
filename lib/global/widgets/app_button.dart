@@ -25,7 +25,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../constant/resources/resources.dart';
+import '../constant/resources/import_resources.dart';
+
 
 /// This is comman App button that will be used in all places where it should be match the app theme
 class AppButton extends StatelessWidget {
@@ -50,14 +51,14 @@ class AppButton extends StatelessWidget {
     return MaterialButton(
         onPressed: onTap,
         minWidth: double.infinity,
-        color: btnBgColor ?? R.colors.kcYellow,
+        color: btnBgColor ?? AppColors.kcYellow,
         padding:  EdgeInsets.symmetric(vertical: verticlePadding??15),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
-            side: BorderSide(color: borderColor ?? R.colors.kcTransparent)),
+            side: BorderSide(color: borderColor ?? AppColors.kcTransparent)),
         child: Text(
             textAlign: TextAlign.center,
             btnText.toString(),
-            style: buttonTextStyle ?? R.styles.txt14sizeW700ColorPrimary));
+            style: buttonTextStyle ?? AppStyles.txt14sizeW700ColorPrimary));
   }
 }

@@ -27,7 +27,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/resources.dart';
+import '../constant/resources/import_resources.dart';
 import '../utils/config.dart';
 
 class CommonDialog extends StatelessWidget {
@@ -52,7 +52,6 @@ class CommonDialog extends StatelessWidget {
         body: Center(
             child: SingleChildScrollView(
                 child: Column(
-                    mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
               Container(
@@ -61,7 +60,6 @@ class CommonDialog extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10)),
                   child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         buildDialogueHeader(),
@@ -84,10 +82,10 @@ class CommonDialog extends StatelessWidget {
     return Center(
         child: Text(description,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 15,
-                color: R.colors.kcCaptionLightGray)));
+                color: AppColors.kcCaptionLightGray)));
   }
 
   buildBtn() {
@@ -99,10 +97,10 @@ class CommonDialog extends StatelessWidget {
       SizedBox(width: Get.width * 0.08),
       Expanded(
           child: AppButton(
-              btnBgColor: R.colors.kcWhite,
+              btnBgColor: AppColors.kcWhite,
               btnText: negativeBtnText ?? R.strings.btnNo,
               onTap: onNegativeTap ?? () => Get.back(),
-              borderColor: R.colors.kcPrimaryColor))
+              borderColor: AppColors.kcPrimaryColor))
     ]);
   }
 
@@ -110,16 +108,15 @@ class CommonDialog extends StatelessWidget {
     return ListTile(
       title: Text(title == null ? Config.appName : title!,
           textAlign: TextAlign.center,
-          style: R.styles.txt16sizeW600CaptionLightGray
-              .merge(TextStyle(color: R.colors.kcBlack))),
+          style: AppStyles.txt16sizeW600CaptionLightGray
+              .copyWith(color: AppColors.kcBlack)),
       trailing: InkWell(
-          onTap: () {
-            Get.back();
-          },
-          child: Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
+          onTap:() =>
+            Get.back(),
+          child: const Padding(
+              padding: EdgeInsets.only(bottom: 10.0),
               child: Icon(Icons.clear,
-                  size: 25, color: R.colors.kcCaptionLightGray))),
+                  size: 25, color: AppColors.kcCaptionLightGray)))
     );
   }
 }

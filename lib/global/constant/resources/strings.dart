@@ -124,6 +124,16 @@ class AppStrings {
   String get ksResendOtp => "resend_otp".toTranslate();
 
   String get ksOTPVerification => "otp_verification".toTranslate();
+
+  ///OnBoard
+
+  String get ksTitle => 'title_text'.toTranslate();
+
+  String get ksDescription => 'description_text'.toTranslate();
+
+  String get ksSkip => "intro_skip".toTranslate();
+
+  String get ksNext => "intro_next".toTranslate();
 }
 
 /// Validation message will be added here

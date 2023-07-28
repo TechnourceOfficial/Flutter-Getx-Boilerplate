@@ -31,8 +31,9 @@ import 'package:get/get.dart';
 import 'package:overlay_support/overlay_support.dart';
 import '../../global/theme/light_theme.dart';
 import '../../global/utils/config.dart';
-import 'global/constant/resources/resources.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'global/constant/resources/import_resources.dart';
 
 class FlutterBoilerPlateApp extends StatelessWidget {
   const FlutterBoilerPlateApp({super.key});
@@ -41,14 +42,13 @@ class FlutterBoilerPlateApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return OverlaySupport.global(
         child: AnnotatedRegion<SystemUiOverlayStyle>(
-            value: SystemUiOverlayStyle(
-                systemNavigationBarColor: R.colors.kcPrimaryColor,
+            value: const SystemUiOverlayStyle(
+                systemNavigationBarColor: AppColors.kcPrimaryColor,
                 statusBarColor: Colors.transparent,
                 statusBarIconBrightness: Brightness.light,
                 statusBarBrightness: Brightness.light),
             child: GetMaterialApp(
                 title: Config.appName,
-                enableLog: true,
                 locale: Locale(Config.setLocale.value),
                 localizationsDelegates: const [
                   AppLocalizationsDelegate(),

@@ -42,7 +42,6 @@ class Utils {
           messageText: Text(message,
               style: Get.textTheme.bodySmall!
                   .merge(const TextStyle(color: Colors.white))),
-          snackPosition: SnackPosition.BOTTOM,
           margin:
               EdgeInsets.only(bottom: Get.height * 0.15, right: 20, left: 20),
           backgroundColor: Colors.red,
@@ -60,7 +59,6 @@ class Utils {
           messageText: Text(message,
               style: Get.textTheme.bodySmall!
                   .merge(const TextStyle(color: Colors.white))),
-          snackPosition: SnackPosition.BOTTOM,
           margin:
               EdgeInsets.only(bottom: Get.height * 0.15, right: 20, left: 20),
           backgroundColor: Colors.green,

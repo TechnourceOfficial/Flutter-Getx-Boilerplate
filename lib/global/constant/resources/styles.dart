@@ -24,53 +24,54 @@
  */
 
 import 'package:flutter/material.dart';
-import 'resources.dart';
+import 'colors.dart';
 
 /// Definer text style,decoration style, card style in this file
 class AppStyles {
-  TextStyle txt10sizeWithW700 = TextStyle(
+  static const TextStyle txt10sizeWithW700 = TextStyle(
       fontSize: 10,
-      color: R.colors.kcPrimaryColor,
+      color: AppColors.kcPrimaryColor,
       fontWeight: FontWeight.bold);
 
-  TextStyle txt14sizeW500CaptionLightGray = TextStyle(
+  static const TextStyle txt14sizeW500CaptionLightGray = TextStyle(
       fontSize: 14,
-      color: R.colors.kcCaptionLightGray,
+      color: AppColors.kcCaptionLightGray,
       fontWeight: FontWeight.w500);
 
-  final txt14sizeW600ckcWhite = TextStyle(
-      color: R.colors.kcWhite, fontSize: 14, fontWeight: FontWeight.w600);
+  static const txt14sizeW600ckcWhite = TextStyle(
+      color: AppColors.kcWhite, fontSize: 14, fontWeight: FontWeight.w600);
 
-  TextStyle txt14sizeW700ColorPrimary = TextStyle(
+  static const TextStyle txt14sizeW700ColorPrimary = TextStyle(
       fontSize: 14,
-      color: R.colors.kcPrimaryColor,
+      color: AppColors.kcPrimaryColor,
       fontWeight: FontWeight.w700);
 
-  final txt16sizeW600CaptionLightGray = TextStyle(
-      color: R.colors.kcCaptionLightGray,
+  static const txt16sizeW600CaptionLightGray = TextStyle(
+      color: AppColors.kcCaptionLightGray,
       fontSize: 16,
       fontWeight: FontWeight.w600);
 
-  final txt24sizeW600kcCaptionLightGray = TextStyle(
+  static const txt24sizeW600kcCaptionLightGray = TextStyle(
       fontSize: 24,
       fontWeight: FontWeight.w600,
-      color: R.colors.kcCaptionLightGray);
-  TextStyle txt32sizeWithW700 = TextStyle(
-      fontSize: 32, color: R.colors.kcWhite, fontWeight: FontWeight.w700);
-  TextStyle txt14sizeWithW600Underline = TextStyle(
+      color: AppColors.kcCaptionLightGray);
+  static const txt32sizeWithW700 = TextStyle(
+      fontSize: 32, color: AppColors.kcWhite, fontWeight: FontWeight.w700);
+  static const txt14sizeWithW600Underline = TextStyle(
       fontSize: 14,
-      color: R.colors.kcYellow,
+      color: AppColors.kcYellow,
       fontWeight: FontWeight.w600,
       decoration: TextDecoration.underline);
-  final txt12sizeW600ColorPrimary = TextStyle(
+  static const txt12sizeW600ColorPrimary = TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.w600,
-      color: R.colors.kcPrimaryColor);
-  TextStyle txt10sizeWithW500 = TextStyle(
-      fontSize: 10, color: R.colors.kcWhite, fontWeight: FontWeight.w700);
-  TextStyle txt18sizeWithW600 = TextStyle(
-    fontSize: 18,
-    color: R.colors.kcCaptionLightGray,
-    fontWeight: FontWeight.w600
-  );
+      color: AppColors.kcPrimaryColor);
+  static const txt10sizeWithW500 = TextStyle(
+      fontSize: 10, color: AppColors.kcWhite, fontWeight: FontWeight.w700);
+  static const txt18sizeWithW600 = TextStyle(
+      fontSize: 18,
+      color: AppColors.kcCaptionLightGray,
+      fontWeight: FontWeight.w600);
+  static const txtIntroTitle = TextStyle(
+      fontSize: 28, color: AppColors.kcYellow, fontWeight: FontWeight.w700);
 }

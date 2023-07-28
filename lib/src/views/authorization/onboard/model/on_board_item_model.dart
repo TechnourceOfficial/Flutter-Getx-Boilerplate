@@ -22,19 +22,8 @@
  *  Email: support@technource.com
  *  Developed by Technource (https://www.technource.com)
  */
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+class OnBoardItemModel{
+  final String? imgPath,title,description;
 
-import '../constant/resources/import_resources.dart';
-
-class CommonLogo extends StatelessWidget {
-  const CommonLogo({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(AppAssets.appLogo,
-          height: Get.height * 0.1, width: Get.width * 0.6),
-    );
-  }
+  OnBoardItemModel({this.imgPath, this.title, this.description});
 }

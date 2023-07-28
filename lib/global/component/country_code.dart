@@ -26,6 +26,7 @@
 import 'package:flutter_setup/global/extention/string_extensions.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import '../constant/resources/colors.dart';
 import '../constant/resources/resources.dart';
 import '../utils/utils.dart';
 import 'country_item.dart';
@@ -50,7 +51,6 @@ class CountryCodePicker {
         FractionallySizedBox(
             heightFactor: 0.9,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -72,7 +72,6 @@ class CountryCodePicker {
                     margin: const EdgeInsets.all(15),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Expanded(
                               child: ListTile(
@@ -108,7 +107,7 @@ class CountryCodePicker {
                                         (BuildContext context, int index) {
                                       return Divider(
                                           thickness: 1,
-                                          color: R.colors.kcPrimaryColor
+                                          color: AppColors.kcPrimaryColor
                                               .withOpacity(0.2));
                                     },
                                     itemCount: searchResult.length,
@@ -129,7 +128,7 @@ class CountryCodePicker {
                                         (BuildContext context, int index) {
                                       return Divider(
                                           thickness: 1,
-                                          color: R.colors.kcPrimaryColor
+                                          color: AppColors.kcPrimaryColor
                                               .withOpacity(0.2));
                                     },
                                     shrinkWrap: true,
@@ -209,10 +208,9 @@ class CountryItemView extends StatelessWidget {
                         height: 30,
                         width: 50,
                         decoration: BoxDecoration(
-                            shape: BoxShape.rectangle,
                             borderRadius: BorderRadius.circular(5),
                             border: Border.all(
-                                color: R.colors.kcLightGray, width: 0.2)),
+                                color: AppColors.kcLightGray, width: 0.2)),
                         child: SizedBox(
                             width: 50,
                             height: 30,

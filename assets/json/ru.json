@@ -59,5 +59,9 @@
   "code_has_been_send_to_your": "* Код был отправлен на ваш зарегистрированный адрес электронной почты.",
   "verify": "Проверять",
   "dont_receive_the_otp": "Не получили отп?",
-  "resend_otp": "ПОВТОРИТЬ ОТП"
+  "resend_otp": "ПОВТОРИТЬ ОТП",
+  "title_text": "Название",
+  "description_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "intro_skip": "Пропускать",
+  "intro_next": "Следующий"
 }

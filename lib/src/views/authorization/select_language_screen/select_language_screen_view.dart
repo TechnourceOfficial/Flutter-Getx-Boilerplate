@@ -28,7 +28,7 @@ import 'package:flutter_setup/global/utils/config.dart';
 import 'package:flutter_setup/global/widgets/app_background.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/resources.dart';
+import '../../../../global/constant/resources/import_resources.dart';
 import '../../../../global/preference/user_preference.dart';
 import '../../../../global/utils/utils.dart';
 import '../../../../global/widgets/common_dropdown.dart';
@@ -42,7 +42,7 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: R.colors.kcPrimaryColor,
+        backgroundColor: AppColors.kcPrimaryColor,
         body: Obx(() {
           return Stack(children: [const AppBackground(), languageBodyView()]);
         }));
@@ -61,7 +61,10 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
             onTap: () {
               if (controller.selectedLanguage.value.langId == "-1") {
                 Utils.errorSnackBar(message: R.strings.erSelectLanguageMsg);
-              }  else {
+              }
+              if (!AppSession.isIntroScreenDone()) {
+                Get.toNamed(Routes.onBoard);
+              } else {
                 Get.toNamed(Routes.welcomeScreen);
               }
             },
@@ -72,7 +75,7 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
 
   buildLanguageDropDown() {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(R.strings.hnSelectLanguage, style: R.styles.txt14sizeW600ckcWhite),
+      Text(R.strings.hnSelectLanguage, style: AppStyles.txt14sizeW600ckcWhite),
       const SizedBox(height: ksWidgetVerticalSpace15),
       Obx(() => CommonDropDownWidget(
           onChanged: (data) {
@@ -88,7 +91,7 @@ class SelectLanguageScreenView extends GetView<SelectLanguageController> {
             return DropdownMenuItem<LanguageData>(
                 value: genre,
                 child: Text(genre.langName!,
-                    style: R.styles.txt14sizeW500CaptionLightGray));
+                    style: AppStyles.txt14sizeW500CaptionLightGray));
           }).toList(),
           hintText: R.strings.hnSelectLanguage,
           value: controller.selectedLanguage.value.langId != "-1"

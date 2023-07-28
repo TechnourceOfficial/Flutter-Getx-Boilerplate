@@ -27,7 +27,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import '../constant/resources/resources.dart';
+
+import '../constant/resources/import_resources.dart';
 
 class AppTextField extends StatelessWidget {
   final String hintText;
@@ -111,7 +112,7 @@ class AppTextField extends StatelessWidget {
           child: Column(children: [
         isScreenTitle ?? false
             ? Row(children: [
-                Text(title ?? "", style: R.styles.txt12sizeW600ColorPrimary)
+                Text(title ?? "", style: AppStyles.txt12sizeW600ColorPrimary)
               ])
             : const SizedBox(),
         Container(
@@ -127,14 +128,14 @@ class AppTextField extends StatelessWidget {
                     maxLines: maxLines ?? 1,
                     onChanged: onChanged,
                     inputFormatters: inputFormatter,
-                    cursorColor: cursorcolor ?? R.colors.kcWhite,
+                    cursorColor: cursorcolor ?? AppColors.kcWhite,
                     onFieldSubmitted: onFieldSubmitted,
                     textCapitalization: textCapitalization,
                     textAlignVertical: TextAlignVertical.center,
                     textInputAction: inputAction ?? TextInputAction.next,
                     validator: validator,
                     style: textStyle ??
-                        TextStyle(fontSize: 14, color: R.colors.kcWhite),
+                        const TextStyle(fontSize: 14, color: AppColors.kcWhite),
                     readOnly: isReadOnly ?? false,
                     obscureText: isPwd ?? false,
                     decoration: buildInputDecoration())
@@ -149,13 +150,13 @@ class AppTextField extends StatelessWidget {
                     onChanged: onChanged,
                     maxLines: maxLines ?? 1,
                     onTap: onTap,
-                    cursorColor: cursorcolor ?? R.colors.kcWhite,
+                    cursorColor: cursorcolor ?? AppColors.kcWhite,
                     onFieldSubmitted: onFieldSubmitted,
                     textCapitalization: textCapitalization,
                     textInputAction: inputAction ?? TextInputAction.next,
                     readOnly: isReadOnly ?? false,
                     style: textStyle ??
-                        TextStyle(fontSize: 14, color: R.colors.kcWhite),
+                        const TextStyle(fontSize: 14, color: AppColors.kcWhite),
                     validator: validator,
                     textAlignVertical: TextAlignVertical.center,
                     obscureText: isPwd ?? false,
@@ -170,27 +171,27 @@ class AppTextField extends StatelessWidget {
             borderRadius: BorderRadius.all(
                 Radius.circular(borderRadius ?? Get.height * 0.01)),
             borderSide: BorderSide(
-                width: 1, color: borderColor ?? R.colors.kcTransparent)),
+                color: borderColor ?? AppColors.kcTransparent)),
         errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(
                 Radius.circular(borderRadius ?? Get.height * 0.01)),
             borderSide: BorderSide(
-                width: 1, color: borderColor ?? R.colors.kcTransparent)),
+                color: borderColor ?? AppColors.kcTransparent)),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(
                 Radius.circular(borderRadius ?? Get.height * 0.01)),
             borderSide: BorderSide(
-                width: 1, color: borderColor ?? R.colors.kcTransparent)),
+                color: borderColor ?? AppColors.kcTransparent)),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(
                 Radius.circular(borderRadius ?? Get.height * 0.01)),
             borderSide: BorderSide(
-                width: 1, color: borderColor ?? R.colors.kcTransparent)),
+                color: borderColor ?? AppColors.kcTransparent)),
         border: OutlineInputBorder(
             borderRadius: BorderRadius.all(
                 Radius.circular(borderRadius ?? Get.height * 0.01)),
             borderSide: BorderSide(
-                width: 1, color: borderColor ?? R.colors.kcTransparent)),
+                color: borderColor ?? AppColors.kcTransparent)),
         suffixIconConstraints:
             const BoxConstraints(maxWidth: 40, maxHeight: 50, minHeight: 50),
         suffixIcon: suffixIconPath != null
@@ -204,10 +205,10 @@ class AppTextField extends StatelessWidget {
         errorMaxLines: 2,
         filled: true,
         errorText: (errorText != "") ? errorText : null,
-        fillColor: fillColor ?? R.colors.kcCaptionLightGray.withOpacity(0.2),
-        hintStyle: R.styles.txt14sizeW500CaptionLightGray,
+        fillColor: fillColor ?? AppColors.kcCaptionLightGray.withOpacity(0.2),
+        hintStyle: AppStyles.txt14sizeW500CaptionLightGray,
         errorStyle:
-            R.styles.txt10sizeWithW500.merge(TextStyle(color: R.colors.kcRed)),
+            AppStyles.txt10sizeWithW500.copyWith(color: AppColors.kcRed),
         hintText: hintText);
   }
 
@@ -218,13 +219,8 @@ class AppTextField extends StatelessWidget {
             padding: EdgeInsets.zero,
             child: Padding(
                 padding: EdgeInsets.only(
-                    top: 0,
-                    left: 0,
-                    right: alignEnd ?? false ? 0 : 0,
-                    bottom: 0),
+                    right: alignEnd ?? false ? 0 : 0),
                 child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Container(
@@ -240,10 +236,9 @@ class AppTextField extends StatelessWidget {
         onTap: onSuffixIconTap,
         child: Padding(
             padding: EdgeInsets.only(
-                top: 10, left: 0, right: alignEnd ?? false ? 0 : 10, bottom: 8),
+                top: 10, right: alignEnd ?? false ? 0 : 10, bottom: 8),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Image.asset(suffixIconPath!,

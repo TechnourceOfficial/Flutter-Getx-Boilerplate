@@ -29,7 +29,7 @@ import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import '../../../../global/constant/resources/resources.dart';
+import '../../../../global/constant/resources/import_resources.dart';
 import '../../../../global/utils/validator.dart';
 import '../../../../global/widgets/vector_description_widget.dart';
 import 'controller/otp_controller.dart';
@@ -44,11 +44,11 @@ class OtpScreenView extends GetView<OtpScreenController> {
   Widget build(BuildContext context) {
     controller.otpFormKey = GlobalKey<FormState>();
     return Scaffold(
-        backgroundColor: R.colors.kcPrimaryColor,
+        backgroundColor: AppColors.kcPrimaryColor,
         body: SafeArea(
           child: SingleChildScrollView(
               child: Container(
-                  color: R.colors.kcPrimaryColor,
+                  color: AppColors.kcPrimaryColor,
                   child: Form(
                       key: controller.otpFormKey,
                       child: Container(
@@ -58,7 +58,7 @@ class OtpScreenView extends GetView<OtpScreenController> {
                           child: Column(children: [
                             VectorDescriptionWidget(
                                 description: R.strings.ksWeHaveSentAn,
-                                imagePath: R.assets.otpScreen),
+                                imagePath: AppAssets.otpScreen),
                             const SizedBox(height: ksBodyVerticalSpace10),
                             buildEnterCode(),
                             const SizedBox(height: ksBodyVerticalSpace10),
@@ -78,27 +78,26 @@ class OtpScreenView extends GetView<OtpScreenController> {
     return Container(
         alignment: Alignment.topLeft,
         child: Text(R.strings.ksCodeHasBeenSend,
-            style: R.styles.txt14sizeW500CaptionLightGray));
+            style: AppStyles.txt14sizeW500CaptionLightGray));
   }
 
   buildEnterCode() {
     return Container(
         alignment: Alignment.topLeft,
         child: Text(R.strings.ksEnterTheCode,
-            style:
-                R.styles.txt18sizeWithW600.copyWith(color: R.colors.kcWhite)));
+            style: AppStyles.txt18sizeWithW600
+                .copyWith(color: AppColors.kcWhite)));
   }
 
   buildResendOtpText() {
     return RichText(
         text: TextSpan(
             text: R.strings.ksDontReceiveTheOtp,
-            style: R.styles.txt14sizeW600ckcWhite,
+            style: AppStyles.txt14sizeW600ckcWhite,
             children: <TextSpan>[
-          TextSpan(text: ' ', style: R.styles.txt14sizeW600ckcWhite),
           TextSpan(
               text: R.strings.ksResendOtp,
-              style: R.styles.txt14sizeWithW600Underline,
+              style: AppStyles.txt14sizeWithW600Underline,
               recognizer: TapGestureRecognizer()..onTap = () {})
         ]));
   }
@@ -116,22 +115,20 @@ class OtpScreenView extends GetView<OtpScreenController> {
         controller: controller.otpController,
         appContext: Get.context!,
         length: 6,
-        errorTextDirection: TextDirection.ltr,
-        obscureText: false,
-        textStyle: R.styles.txt14sizeW500CaptionLightGray,
+        textStyle: AppStyles.txt14sizeW500CaptionLightGray,
         animationType: AnimationType.fade,
         pinTheme: PinTheme(
             shape: PinCodeFieldShape.box,
             borderRadius: BorderRadius.circular(Get.height * 0.01),
             fieldHeight: Get.height * 0.06,
             fieldWidth: Get.width * 0.13,
-            activeFillColor: R.colors.kcCaptionLightGray.withOpacity(0.2),
-            activeColor: R.colors.kcTransparent,
-            inactiveFillColor: R.colors.kcCaptionLightGray.withOpacity(0.2),
-            inactiveColor: R.colors.kcTransparent,
-            selectedColor: R.colors.kcTransparent,
-            selectedFillColor: R.colors.kcCaptionLightGray.withOpacity(0.2)),
-        cursorColor: R.colors.kcCaptionLightGray,
+            activeFillColor: AppColors.kcCaptionLightGray.withOpacity(0.2),
+            activeColor: AppColors.kcTransparent,
+            inactiveFillColor: AppColors.kcCaptionLightGray.withOpacity(0.2),
+            inactiveColor: AppColors.kcTransparent,
+            selectedColor: AppColors.kcTransparent,
+            selectedFillColor: AppColors.kcCaptionLightGray.withOpacity(0.2)),
+        cursorColor: AppColors.kcCaptionLightGray,
         animationDuration: const Duration(milliseconds: 300),
         enableActiveFill: true,
         keyboardType: TextInputType.number,

@@ -29,6 +29,7 @@ abstract class Routes {
   Routes._();
 
   static const splash = _Paths.splash;
+  static const onBoard = _Paths.onBoard;
   static const selectLanguage = _Paths.selectLanguage;
   static const welcomeScreen = _Paths.welcomeScreen;
   static const loginScreen = _Paths.loginScreen;
@@ -42,6 +43,7 @@ abstract class _Paths {
   _Paths._();
 
   static const splash = '/splash';
+  static const onBoard = '/onBoard';
   static const selectLanguage = '/selectLanguage';
   static const welcomeScreen = '/welcomeScreen';
   static const loginScreen = '/loginScreen';

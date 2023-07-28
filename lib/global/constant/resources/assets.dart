@@ -25,14 +25,16 @@
 /*
   We can add our images and icons here path wise
  */
-class Assets {
-  static var assetFromImagesPath = "assets/images/";
-  static var assetFromIconsPath = "assets/icons/";
-  final appLogo = "${assetFromImagesPath}img_app_logo.png";
-  final welcomeBg4x = "${assetFromImagesPath}img_welcome_bg.jpg";
-  final passwordHide = "${assetFromIconsPath}ic_password_hide.png";
-  final passwordShow = "${assetFromIconsPath}ic_password_show.png";
-  final forgotPasswordVector = "${assetFromImagesPath}img_forgot_password.png";
-  final otpScreen = "${assetFromImagesPath}img_otp_verification.png";
-  final icWhiteBack = "${assetFromIconsPath}ic_back.png";
+class AppAssets {
+  static const assetFromImagesPath = "assets/images/";
+  static const assetFromIconsPath = "assets/icons/";
+  static const appLogo = "${assetFromImagesPath}img_app_logo.png";
+  static const welcomeBg4x = "${assetFromImagesPath}img_welcome_bg.jpg";
+  static const passwordHide = "${assetFromIconsPath}ic_password_hide.png";
+  static const passwordShow = "${assetFromIconsPath}ic_password_show.png";
+  static const forgotPasswordVector =
+      "${assetFromImagesPath}img_forgot_password.png";
+  static const otpScreen = "${assetFromImagesPath}img_otp_verification.png";
+  static const icWhiteBack = "${assetFromIconsPath}ic_back.png";
+  static const introVector1 = "${assetFromImagesPath}img_intro_vector.png";
 }

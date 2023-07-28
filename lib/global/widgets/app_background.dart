@@ -24,7 +24,8 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:flutter_setup/global/constant/resources/resources.dart';
+
+import '../constant/resources/import_resources.dart';
 
 class AppBackground extends StatelessWidget {
   const AppBackground({Key? key}) : super(key: key);
@@ -35,11 +36,11 @@ class AppBackground extends StatelessWidget {
       SizedBox(
           height: double.infinity,
           width: double.infinity,
-          child: Image.asset(R.assets.welcomeBg4x, fit: BoxFit.fill)),
+          child: Image.asset(AppAssets.welcomeBg4x, fit: BoxFit.fill)),
       Center(
           child: Padding(
               padding: const EdgeInsets.all(ksBodyVerticalSpace30),
-              child: Image.asset(R.assets.appLogo)))
+              child: Image.asset(AppAssets.appLogo)))
     ]);
   }
 }

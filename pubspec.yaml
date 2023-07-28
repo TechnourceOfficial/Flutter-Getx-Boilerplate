@@ -11,8 +11,8 @@ dependencies:
   get_storage: ^2.0.3
   google_fonts:
   overlay_support: ^2.0.1
-  flutter_localization: ^0.1.10
   pin_code_fields: ^7.4.0
+  flutter_localization: ^0.1.13
 
 
   flutter: 

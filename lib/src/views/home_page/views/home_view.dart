@@ -25,7 +25,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../../global/constant/resources/resources.dart';
+import '../../../../global/constant/resources/import_resources.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -36,13 +36,13 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: R.colors.kcWhite,
+        backgroundColor: AppColors.kcWhite,
         body: SafeArea(
             child: Center(
               child: Text(
           R.strings.ksWelcomeBack,
-          style: R.styles.txt32sizeWithW700
-                .copyWith(color: R.colors.kcPrimaryColor),
+          style: AppStyles.txt32sizeWithW700
+                .copyWith(color: AppColors.kcPrimaryColor),
         ),
             )));
   }

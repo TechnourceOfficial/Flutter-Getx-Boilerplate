@@ -29,8 +29,11 @@ import 'package:get_storage/get_storage.dart';
 ///TO manage Logged in user's session
 class AppSession {
   static GetStorage? sessionData;
+  static GetStorage? introScreenData;
 
   static void init() {
+    introScreenData = GetStorage();
+
     sessionData = GetStorage();
   }
 
@@ -38,6 +41,7 @@ class AppSession {
     sessionData!.erase();
     init();
   }
+
   static void setSelectedLanguageId(String? value) {
     sessionData!.write(UserSessionDetail.kSelectedLanguageId, value);
   }
@@ -45,6 +49,7 @@ class AppSession {
   static String getSelectedLanguageId() {
     return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? "";
   }
+
   static void setAccessToken(String? value) {
     sessionData!.write(UserSessionDetail.kAccessToken, value);
   }
@@ -52,6 +57,7 @@ class AppSession {
   static String getAccessToken() {
     return sessionData?.read(UserSessionDetail.kAccessToken) ?? "";
   }
+
   static bool isAuthenticationDone() {
     bool isAuthDone = AppSession.getAccessToken().isNotEmpty &&
         AppSession.getAccessToken() != "";
@@ -59,5 +65,13 @@ class AppSession {
       return true;
     }
     return isAuthDone;
+  }
+
+  static bool isIntroScreenDone() {
+    return introScreenData!.read(UserSessionDetail.kIsIntroScreenDone) ?? false;
+  }
+
+  static setIsIntroScreenDone(bool isDone) {
+    introScreenData!.write(UserSessionDetail.kIsIntroScreenDone, isDone);
   }
 }
