@@ -134,10 +134,12 @@ class AppStrings {
   String get ksSkip => 'intro_skip'.toTranslate();
 
   String get ksNext => 'intro_next'.toTranslate();
+
   String get ksBottomMenu => 'menu_text'.toTranslate();
+
   String get ksExitApp => 'exit_app'.toTranslate();
 
-
+  String get ksSearchText => 'search_text'.toTranslate();
 }
 
 /// Validation message will be added here

@@ -26,6 +26,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_setup/src/views/dashboard/model/bottom_navigation_item_model.dart';
+import 'package:flutter_setup/src/views/home_page/home_page_view.dart';
 import 'package:get/get.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:flutter_setup/global/constant/resources/import_resources.dart';
@@ -38,7 +39,7 @@ class DashboardController extends GetxController {
   RxInt currentTabIndex = 0.obs;
 
   RxList<Widget> widgetOptions = <Widget>[
-    const BottomNavigationChild(index: 1),
+     HomePageView(),
     const BottomNavigationChild(index: 2),
     const BottomNavigationChild(index: 3),
     const BottomNavigationChild(index: 4),
