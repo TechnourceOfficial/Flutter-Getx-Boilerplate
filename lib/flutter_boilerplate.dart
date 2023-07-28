@@ -29,11 +29,11 @@ import 'package:flutter_setup/global/app_localization/app_localization.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 import 'package:overlay_support/overlay_support.dart';
-import '../../global/theme/light_theme.dart';
-import '../../global/utils/config.dart';
+import 'package:flutter_setup/global/theme/light_theme.dart';
+import 'package:flutter_setup/global/utils/config.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 class FlutterBoilerPlateApp extends StatelessWidget {
   const FlutterBoilerPlateApp({super.key});

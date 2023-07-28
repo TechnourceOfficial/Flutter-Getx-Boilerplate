@@ -26,10 +26,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
-import '../../../../../global/component/country_code.dart';
-import '../../../../../global/component/country_item.dart';
-import '../../../../../global/constant/resources/resources.dart';
-import '../../../../../global/utils/utils.dart';
+import 'package:flutter_setup/global/component/country_code.dart';
+import 'package:flutter_setup/global/component/country_item.dart';
+import 'package:flutter_setup/global/constant/resources/resources.dart';
+import 'package:flutter_setup/global/utils/utils.dart';
 
 class SignupScreenController extends GetxController {
   static SignupScreenController get to => Get.put(SignupScreenController());
@@ -53,7 +53,7 @@ class SignupScreenController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    countryCodeController.text = "+32";
+    countryCodeController.text = '+32';
   }
 
   @override
@@ -70,7 +70,7 @@ class SignupScreenController extends GetxController {
         Utils.errorSnackBar(message: R.strings.ksAcceptTermAndConditionError);
       }
     } else {
-      debugPrint("Invalidate");
+      debugPrint('Invalidate');
     }
   }
 
@@ -78,7 +78,7 @@ class SignupScreenController extends GetxController {
     CountryCodePicker.openCountryBottomSheet(
         countrys: countryList,
         onSelect: (country) {
-          countryCodeController.text = "+${country.phoneCode!}";
+          countryCodeController.text = '+${country.phoneCode!}';
           selectedCont.value = country;
         });
   }

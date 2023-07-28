@@ -28,9 +28,9 @@ import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:flutter_setup/src/views/authorization/onboard/components/dot_indicator_item.dart';
 import 'package:get/get.dart';
 
-import '../../../../global/constant/resources/import_resources.dart';
-import 'components/page_view_item.dart';
-import 'controller/onboard_controller.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/src/views/authorization/onboard/components/page_view_item.dart';
+import 'package:flutter_setup/src/views/authorization/onboard/controller/onboard_controller.dart';
 
 const ksWidgetHorizontalSpace15 = 15.0;
 const ksWidgetVerticalSpace15 = 15.0;
@@ -44,7 +44,7 @@ class OnBoardView extends GetView<OnBoardController> {
     return Scaffold(
         backgroundColor: AppColors.kcPrimaryColor,
         body: SafeArea(
-            child: Container(
+            child: ColoredBox(
                 color: AppColors.kcPrimaryColor,
                 child: Container(
                     margin: const EdgeInsets.symmetric(

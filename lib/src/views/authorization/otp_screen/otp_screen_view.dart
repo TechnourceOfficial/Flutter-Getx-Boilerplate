@@ -29,10 +29,10 @@ import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import '../../../../global/constant/resources/import_resources.dart';
-import '../../../../global/utils/validator.dart';
-import '../../../../global/widgets/vector_description_widget.dart';
-import 'controller/otp_controller.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/utils/validator.dart';
+import 'package:flutter_setup/global/widgets/vector_description_widget.dart';
+import 'package:flutter_setup/src/views/authorization/otp_screen/controller/otp_controller.dart';
 
 const ksBodyVerticalSpace10 = 10.0;
 const ksWidgetVerticalSpace15 = 15.0;
@@ -47,7 +47,7 @@ class OtpScreenView extends GetView<OtpScreenController> {
         backgroundColor: AppColors.kcPrimaryColor,
         body: SafeArea(
           child: SingleChildScrollView(
-              child: Container(
+              child: ColoredBox(
                   color: AppColors.kcPrimaryColor,
                   child: Form(
                       key: controller.otpFormKey,

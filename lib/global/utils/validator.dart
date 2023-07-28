@@ -25,18 +25,18 @@
 
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import '../constant/resources/resources.dart';
+import 'package:flutter_setup/global/constant/resources/resources.dart';
 
 class Validator {
   static RegExp alphaNumberRic =
       RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
 
   static List<TextInputFormatter>? nameFormatterWithSpecialChar = [
-    FilteringTextInputFormatter.allow(RegExp("[a-zA-Z0-9@#\$%^&*()_-]")),
+    FilteringTextInputFormatter.allow(RegExp('[a-zA-Z0-9@#\$%^&*()_-]')),
   ];
 
   static List<TextInputFormatter>? mobileNumberFormatter = [
-    FilteringTextInputFormatter.allow(RegExp("[0-9-_+]"))
+    FilteringTextInputFormatter.allow(RegExp('[0-9-_+]'))
   ];
 
   static String? passwordValid(String? v) {

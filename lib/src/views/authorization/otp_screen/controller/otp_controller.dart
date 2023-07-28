@@ -25,7 +25,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import '../../../../../global/utils/utils.dart';
+import 'package:flutter_setup/global/utils/utils.dart';
 
 class OtpScreenController extends GetxController {
   TextEditingController otpController = TextEditingController();
@@ -33,17 +33,17 @@ class OtpScreenController extends GetxController {
 
   validAll() {
     if (otpFormKey.currentState!.validate()) {
-      Utils.logPrint("validate");
+      Utils.logPrint('validate');
     } else {
-      Utils.logPrint("invalidate");
+      Utils.logPrint('invalidate');
     }
   }
 
   void otpValidation() async {
     if (otpFormKey.currentState!.validate()) {
-      Utils.logPrint("validate");
+      Utils.logPrint('validate');
     } else {
-      Utils.logPrint("invalidate");
+      Utils.logPrint('invalidate');
     }
   }
 }

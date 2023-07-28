@@ -25,7 +25,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 class CommonLogo extends StatelessWidget {
   const CommonLogo({Key? key}) : super(key: key);

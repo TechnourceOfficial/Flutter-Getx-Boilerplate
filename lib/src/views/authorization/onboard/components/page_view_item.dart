@@ -26,8 +26,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../../global/constant/resources/styles.dart';
-import '../model/on_board_item_model.dart';
+import 'package:flutter_setup/global/constant/resources/styles.dart';
+import 'package:flutter_setup/src/views/authorization/onboard/model/on_board_item_model.dart';
 
 const ksWidgetVerticalSpace40 = 40.0;
 

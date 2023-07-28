@@ -25,7 +25,7 @@
 
 import 'package:get/get.dart';
 
-import '../controller/select_language_controller.dart';
+import 'package:flutter_setup/src/views/authorization/select_language_screen/controller/select_language_controller.dart';
 
 class SelectLanguageBinding extends Bindings{
   @override

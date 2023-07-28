@@ -26,10 +26,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/import_resources.dart';
-import '../../../../global/widgets/app_background.dart';
-import '../../../routes/app_pages.dart';
-import 'controller/welcome_screen_controller.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/widgets/app_background.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
+import 'package:flutter_setup/src/views/authorization/welcome_screen/controller/welcome_screen_controller.dart';
 
 class WelcomeScreenView extends GetView<WelcomeScreenController> {
   const WelcomeScreenView({super.key});

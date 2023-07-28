@@ -26,25 +26,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 import 'package:get/get.dart';
-import '../../../../../global/preference/user_preference.dart';
-import '../../../../routes/app_pages.dart';
-import '../model/on_board_item_model.dart';
+import 'package:flutter_setup/global/preference/user_preference.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
+import 'package:flutter_setup/src/views/authorization/onboard/model/on_board_item_model.dart';
 
 class OnBoardController extends GetxController {
   PageController pageController = PageController();
   RxList<OnBoardItemModel> onboardItemList = <OnBoardItemModel>[
     OnBoardItemModel(
-        title: "${R.strings.ksTitle} 1",
+        title: '${R.strings.ksTitle} 1',
         imgPath: AppAssets.introVector1,
-        description: "${R.strings.ksDescription} 1"),
+        description: '${R.strings.ksDescription} 1'),
     OnBoardItemModel(
-        title: "${R.strings.ksTitle} 2",
+        title: '${R.strings.ksTitle} 2',
         imgPath: AppAssets.introVector1,
-        description: "${R.strings.ksDescription} 2"),
+        description: '${R.strings.ksDescription} 2'),
     OnBoardItemModel(
-        title: "${R.strings.ksTitle} 3",
+        title: '${R.strings.ksTitle} 3',
         imgPath: AppAssets.introVector1,
-        description: "${R.strings.ksDescription} 3"),
+        description: '${R.strings.ksDescription} 3'),
   ].obs;
 
   var selectedIndicator = 0.obs;

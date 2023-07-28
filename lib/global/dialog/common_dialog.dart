@@ -27,8 +27,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/import_resources.dart';
-import '../utils/config.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/utils/config.dart';
 
 class CommonDialog extends StatelessWidget {
   final String? positiveBtnText, negativeBtnText, title;

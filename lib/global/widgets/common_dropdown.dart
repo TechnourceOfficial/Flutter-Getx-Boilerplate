@@ -25,7 +25,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 
 class CommonDropDownWidget extends StatelessWidget {
@@ -62,7 +62,7 @@ class CommonDropDownWidget extends StatelessWidget {
                 isExpanded: true,
                 style: AppStyles.txt10sizeWithW700,
                 onChanged: onChanged,
-                hint: Text(hintText ?? "",
+                hint: Text(hintText ?? '',
                     style: AppStyles.txt16sizeW600CaptionLightGray),
                 items: items)));
   }

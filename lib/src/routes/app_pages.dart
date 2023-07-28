@@ -35,16 +35,18 @@ import 'package:flutter_setup/src/views/authorization/signup_screen/binding/sign
 import 'package:flutter_setup/src/views/authorization/signup_screen/signup_screen_view.dart';
 import 'package:flutter_setup/src/views/authorization/welcome_screen/binding/welcome_screen.dart';
 import 'package:flutter_setup/src/views/authorization/welcome_screen/welcome_screen_view.dart';
+import 'package:flutter_setup/src/views/dashboard/binding/dashboard.dart';
+import 'package:flutter_setup/src/views/dashboard/dashboard_view.dart';
 import 'package:flutter_setup/src/views/home_page/views/home_view.dart';
 import 'package:get/get.dart';
 
-import '../views/authorization/forgot_password/forgot_password_view.dart';
-import '../views/authorization/login_screen/binding/login_screen.dart';
-import '../views/authorization/select_language_screen/binding/select_language_screen.dart';
-import '../views/authorization/select_language_screen/select_language_screen_view.dart';
-import '../views/authorization/splash/bindings/splash_binding.dart';
-import '../views/authorization/splash/views/splash_view.dart';
-import '../views/home_page/bindings/home_binding.dart';
+import 'package:flutter_setup/src/views/authorization/forgot_password/forgot_password_view.dart';
+import 'package:flutter_setup/src/views/authorization/login_screen/binding/login_screen.dart';
+import 'package:flutter_setup/src/views/authorization/select_language_screen/binding/select_language_screen.dart';
+import 'package:flutter_setup/src/views/authorization/select_language_screen/select_language_screen_view.dart';
+import 'package:flutter_setup/src/views/authorization/splash/bindings/splash_binding.dart';
+import 'package:flutter_setup/src/views/authorization/splash/views/splash_view.dart';
+import 'package:flutter_setup/src/views/home_page/bindings/home_binding.dart';
 
 part 'app_routes.dart';
 
@@ -90,14 +92,19 @@ class AppPages {
         transition: Transition.downToUp,
         binding: ForgotPasswordScreenBinding()),
     GetPage(
+        name: Routes.otpScreen,
+        page: () => const OtpScreenView(),
+        transition: Transition.downToUp,
+        binding: OtpScreenBinding()),
+    GetPage(
+        name: Routes.dashboardScreen,
+        page: () => DashboardScreen(),
+        transition: Transition.downToUp,
+        binding: DashboradBinding()),
+    GetPage(
         name: Routes.homeScreen,
         page: () => HomeView(),
         transition: Transition.downToUp,
         binding: HomeViewBinding()),
-    GetPage(
-        name: Routes.otpScreen,
-        page: () => const OtpScreenView(),
-        transition: Transition.downToUp,
-        binding: OtpScreenBinding())
   ];
 }

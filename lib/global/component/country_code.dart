@@ -26,10 +26,10 @@
 import 'package:flutter_setup/global/extention/string_extensions.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import '../constant/resources/colors.dart';
-import '../constant/resources/resources.dart';
-import '../utils/utils.dart';
-import 'country_item.dart';
+import 'package:flutter_setup/global/constant/resources/colors.dart';
+import 'package:flutter_setup/global/constant/resources/resources.dart';
+import 'package:flutter_setup/global/utils/utils.dart';
+import 'package:flutter_setup/global/component/country_item.dart';
 
 class CountryCodePicker {
   static var countryList = <CountryItem>[].obs;
@@ -219,13 +219,13 @@ class CountryItemView extends StatelessWidget {
                                     color: Colors.red.withOpacity(0.7)))))),
                 Expanded(
                     child: Row(children: [
-                  Text("+ ${country.phoneCode!} - ",
+                  Text('+ ${country.phoneCode!} - ',
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                       )),
                   Expanded(
-                      child: Text("${country.name!} (${country.code!}) ",
+                      child: Text('${country.name!} (${country.code!}) ',
                           style: const TextStyle(
                               fontSize: 14, fontWeight: FontWeight.w400)))
                 ]))

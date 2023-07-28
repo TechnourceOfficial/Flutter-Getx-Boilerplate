@@ -55,7 +55,7 @@ class CountryList {
   List<CountryItem>? get data => _data;
 
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
+    var map = <String, dynamic>{};
     map['message'] = _message;
     if (_data != null) {
       map['data'] = _data?.map((v) => v.toJson()).toList();
@@ -104,7 +104,7 @@ class CountryItem {
   String? get phoneCode => _phoneCode;
 
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
+    var map = <String, dynamic>{};
     map['country_code_id'] = _countryId;
     map['name'] = _name;
     map['code'] = _code;

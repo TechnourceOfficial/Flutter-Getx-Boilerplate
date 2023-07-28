@@ -28,11 +28,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/import_resources.dart';
-import '../../../../global/utils/validator.dart';
-import '../../../../global/widgets/custom_text_field.dart';
-import '../../../routes/app_pages.dart';
-import 'controller/signup_screen_controller.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/global/utils/validator.dart';
+import 'package:flutter_setup/global/widgets/custom_text_field.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
+import 'package:flutter_setup/src/views/authorization/signup_screen/controller/signup_screen_controller.dart';
 
 class SignupScreenView extends GetView<SignupScreenController> {
   const SignupScreenView({super.key});
@@ -144,7 +144,7 @@ class SignupScreenView extends GetView<SignupScreenController> {
     return Center(
         child: RichText(
             text: TextSpan(
-                text: "${R.strings.ksAlreadyHaveAnAccount} ",
+                text: '${R.strings.ksAlreadyHaveAnAccount} ',
                 style: AppStyles.txt14sizeW600ckcWhite,
                 children: <TextSpan>[
           TextSpan(
@@ -178,7 +178,7 @@ class SignupScreenView extends GetView<SignupScreenController> {
     return Flexible(
         child: RichText(
             text: TextSpan(
-                text: "${R.strings.ksBySigningUpYou} ",
+                text: '${R.strings.ksBySigningUpYou} ',
                 style: AppStyles.txt10sizeWithW500,
                 children: <TextSpan>[
           TextSpan(
@@ -187,7 +187,7 @@ class SignupScreenView extends GetView<SignupScreenController> {
               style:
                   AppStyles.txt14sizeWithW600Underline.copyWith(fontSize: 10)),
           TextSpan(
-              text: " ${R.strings.ksAnd} ", style: AppStyles.txt10sizeWithW500),
+              text: ' ${R.strings.ksAnd} ', style: AppStyles.txt10sizeWithW500),
           TextSpan(
               text: R.strings.ksPrivacyPolicy,
               style:
@@ -212,7 +212,7 @@ class SignupScreenView extends GetView<SignupScreenController> {
             cursorcolor: AppColors.kcWhite,
             textStyle: AppStyles.txt14sizeW600ckcWhite,
             hintText: hintText,
-            errorText: "",
+            errorText: '',
             textEditingController: textEditingController,
             validator: validator,
             inputAction: TextInputAction.next,
@@ -255,7 +255,7 @@ class SignupScreenView extends GetView<SignupScreenController> {
           child: AppTextField(
               maxLines: 1,
               hintText: hintText,
-              errorText: "",
+              errorText: '',
               inputFormatter: Validator.nameFormatterWithSpecialChar,
               textEditingController: textEditingController,
               validator: validator,

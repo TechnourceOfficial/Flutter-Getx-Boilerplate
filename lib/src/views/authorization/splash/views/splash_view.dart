@@ -26,8 +26,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/widgets/app_background.dart';
 import 'package:get/get.dart';
-import '../../../../../global/constant/resources/import_resources.dart';
-import '../controllers/splash_controller.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/src/views/authorization/splash/controllers/splash_controller.dart';
 
 class SplashView extends GetView<SplashController> {
   final SplashController splashController = Get.put(SplashController());

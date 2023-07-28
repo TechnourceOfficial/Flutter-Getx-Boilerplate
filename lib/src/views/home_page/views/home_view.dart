@@ -25,8 +25,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../global/constant/resources/import_resources.dart';
-import '../controllers/home_controller.dart';
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
+import 'package:flutter_setup/src/views/home_page/controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   final HomeController splashController = Get.put(HomeController());

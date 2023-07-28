@@ -26,7 +26,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'common_dialog.dart';
+import 'package:flutter_setup/global/dialog/common_dialog.dart';
 
 class DialogueHelper {
   /// This dialog contains two button yes or no, so It's a confirmation dialogue
@@ -43,7 +43,7 @@ class DialogueHelper {
       required String cancelBtnText,
       required String dialogueMsg}) {
     Get.dialog(CommonDialog(
-        description: description ?? "",
+        description: description ?? '',
         negativeBtnText: cancelBtnText,
         onNegativeTap: onNegativeClick,
         onPositiveTap: onPositiveClick,
