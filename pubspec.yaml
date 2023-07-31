@@ -12,12 +12,14 @@ dependencies:
   google_fonts:
   overlay_support: ^2.0.1
   pin_code_fields: ^7.4.0
-  flutter_localization: ^0.1.13
   flutter_svg:
+  url_launcher: 
+
 
 
   flutter: 
     sdk: flutter
+  flutter_localization: ^0.1.13
 
 dev_dependencies: 
   flutter_lints: 2.0.1

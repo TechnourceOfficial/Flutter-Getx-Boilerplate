@@ -56,4 +56,13 @@ class AppAssets {
 
   static const icTechnourceLogo = '${assetFromIconsPath}ic_technource_logo.png';
   static const icSearchIcon = '${assetFromIconsPath}ic_search_icon.png';
+  static const defaultAvatar = '${assetFromImagesPath}img_default_avatar.png';
+  static const icLogout = '${assetFromIconsPath}ic_logout.svg';
+  static const icMore = '${assetFromIconsPath}ic_more.svg';
+  static const icGithub = '${assetFromIconsPath}ic_github.svg';
+  static const icLanguage = '${assetFromIconsPath}ic_language.svg';
+  static const icBullet = '${assetFromIconsPath}ic_bullet.svg';
+  static const icEdit = '${assetFromIconsPath}ic_edit.png';
+  static const icDeactivateAccount = '${assetFromIconsPath}ic_deactivate_account.svg';
+
 }

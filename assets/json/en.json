@@ -65,5 +65,20 @@
   "intro_skip": "Skip",
   "intro_next": "Next",
   "menu_text": "Bottom Menu",
-  "exit_app": "Press again to exit app"
+  "exit_app": "Press again to exit app",
+  "my_appointment": "My Appointment",
+  "review": "Reviews",
+  "payments": "Payments",
+  "change_password": "Change Password",
+  "change_language": "Change Language",
+  "more": "More",
+  "delete_account": "Delete Account",
+  "log_out": "Log Out",
+  "github_text": "Github Repo",
+  "deactivate_account": "Deactivate account",
+  "yes_text": "Yes",
+  "no_text": "No",
+  "delete_account_description": "Are you sure want to delete account?",
+  "deactivate_account_description": "Are you sure want to logout?",
+  "logout_account_description": "Are you sure want to deactivate account?"
 }

@@ -38,5 +38,6 @@ class Config {
   static String langCountryCodeEn = 'US';
   static String langCountryCodeRu = 'RU';
   static String langCountryCodeFr = 'CA';
+  static String githubRepoLink='https://github.com/vedmant/running-time';
 
 }

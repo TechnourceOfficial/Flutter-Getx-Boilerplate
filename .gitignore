@@ -62,6 +62,6 @@ Thumbs.db
 /ios/Podfile.lock
 /linux/
 /.dart_tool/
-/.flutter-plugins
 .dart_tool
 .flutter-plugins-dependencies
+.flutter-plugins
