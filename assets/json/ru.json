@@ -65,5 +65,20 @@
   "intro_skip": "Пропускать",
   "intro_next": "Следующий",
   "menu_text": "Bottom Menu",
-  "exit_app": "Нажмите еще раз, чтобы выйти из приложения"
+  "exit_app": "Нажмите еще раз, чтобы выйти из приложения",
+  "my_appointment": "Моя встреча",
+  "review": "Отзывы",
+  "payments": "Платежи",
+  "change_password": "Изменить пароль",
+  "change_language": "Изменение языка",
+  "more": "Более",
+  "delete_account": "Удалить аккаунт",
+  "log_out": "Выйти",
+  "deactivate_account": "Деактивировать аккаунт",
+  "github_text": "Репозиторий Github",
+  "yes_text": "Да",
+  "no_text": "Нет",
+  "delete_account_description": "Вы уверены, что хотите удалить аккаунт?",
+  "deactivate_account_description": "Вы уверены, что хотите выйти?",
+  "logout_account_description": "Вы уверены, что хотите деактивировать аккаунт?"
 }

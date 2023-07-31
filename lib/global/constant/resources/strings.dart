@@ -140,6 +140,40 @@ class AppStrings {
   String get ksExitApp => 'exit_app'.toTranslate();
 
   String get ksSearchText => 'search_text'.toTranslate();
+
+  get ksChangeLanguage => 'change_language'.toTranslate();
+
+  get ksGitHub => 'github_text'.toTranslate();
+
+  /// Drawer HomePage
+  String get ksMyAppointment => 'my_appointment'.toTranslate();
+
+  String get ksReview => 'review'.toTranslate();
+
+  String get ksPayments => 'payments'.toTranslate();
+
+  String get ksChangePassword => 'change_password'.toTranslate();
+
+  String get ksMore => 'more'.toTranslate();
+
+  String get ksDeactivateAccount => 'deactivate_account'.toTranslate();
+
+  String get ksLogOut => 'log_out'.toTranslate();
+
+  String get ksDeleteAccount => 'delete_account'.toTranslate();
+
+  String get ksDeleteAccountDescription =>
+      'delete_account_description'.toTranslate();
+
+  String get ksLogoutAccountDescription =>
+      'logout_account_description'.toTranslate();
+
+  String get ksDeactivateAccountDescription =>
+      'deactivate_account_description'.toTranslate();
+
+  String get ksYes => 'yes_text'.toTranslate();
+
+  String get ksNo => 'no_text'.toTranslate();
 }
 
 /// Validation message will be added here

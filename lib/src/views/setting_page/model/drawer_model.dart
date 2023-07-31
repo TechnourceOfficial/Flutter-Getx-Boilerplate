@@ -23,9 +23,16 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:get/get.dart';
 
-class HomePageController extends GetxController {
-  static HomePageController get to => Get.find();
-  RxBool isSearch = false.obs;
+class DrawerModel {
+  final String icon;
+  final String title;
+  String? path;
+  final int selectedTile;
+
+  DrawerModel(
+      {required this.icon,
+      required this.title,
+      this.path,
+      required this.selectedTile});
 }

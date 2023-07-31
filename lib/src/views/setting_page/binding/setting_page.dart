@@ -23,9 +23,14 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
+import 'package:flutter_setup/src/views/home_page/controller/home_page_controller.dart';
 import 'package:get/get.dart';
 
-class HomePageController extends GetxController {
-  static HomePageController get to => Get.find();
-  RxBool isSearch = false.obs;
+
+class SettingPageBinding extends Bindings{
+  @override
+  void dependencies() {
+    Get.lazyPut<HomePageController>(() => HomePageController());
+  }
+
 }

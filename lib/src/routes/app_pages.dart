@@ -37,6 +37,7 @@ import 'package:flutter_setup/src/views/authorization/welcome_screen/binding/wel
 import 'package:flutter_setup/src/views/authorization/welcome_screen/welcome_screen_view.dart';
 import 'package:flutter_setup/src/views/dashboard/binding/dashboard.dart';
 import 'package:flutter_setup/src/views/dashboard/dashboard_view.dart';
+import 'package:flutter_setup/src/views/setting_page/setting_page_view.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_setup/src/views/authorization/forgot_password/forgot_password_view.dart';
@@ -48,6 +49,8 @@ import 'package:flutter_setup/src/views/authorization/splash/views/splash_view.d
 
 import 'package:flutter_setup/src/views/home_page/binding/home_page.dart';
 import 'package:flutter_setup/src/views/home_page/home_page_view.dart';
+
+import 'package:flutter_setup/src/views/setting_page/binding/setting_page.dart';
 
 part 'app_routes.dart';
 
@@ -104,8 +107,13 @@ class AppPages {
         binding: DashboradBinding()),
     GetPage(
         name: Routes.homeScreen,
-        page: () =>  HomePageView(),
+        page: () => HomePageView(),
         transition: Transition.downToUp,
         binding: HomePageBinding()),
+    GetPage(
+        name: Routes.settingScreen,
+        page: () => SettingPageView(),
+        transition: Transition.downToUp,
+        binding: SettingPageBinding())
   ];
 }

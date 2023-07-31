@@ -65,5 +65,20 @@
   "intro_skip": "Sauter",
   "intro_next": "Suivant",
   "menu_text": "Bottom Menu",
-  "exit_app": "Appuyez à nouveau pour quitter l'application"
+  "exit_app": "Appuyez à nouveau pour quitter l'application",
+  "my_appointment": "Mon rendez-vous",
+  "review": "Commentaires",
+  "payments": "Paiements",
+  "change_password": "Changer le mot de passe",
+  "change_language": "Changer de langue",
+  "more": "Plus",
+  "delete_account": "Supprimer le compte",
+  "log_out": "Se déconnecter",
+  "deactivate_account": "Désactiver le compte",
+  "github_text": "Dépôt Github",
+  "yes_text": "Oui",
+  "no_text": "Non",
+  "delete_account_description": "Voulez-vous vraiment supprimer le compte?",
+  "deactivate_account_description": "Voulez-vous vraiment vous déconnecter?",
+  "logout_account_description": "Voulez-vous vraiment désactiver le compte?"
 }

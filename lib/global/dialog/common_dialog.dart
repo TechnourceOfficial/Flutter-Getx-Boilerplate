@@ -68,7 +68,6 @@ class CommonDialog extends StatelessWidget {
                                 horizontal: ksWidgetHorizontalSpace15,
                                 vertical: ksWidgetVerticalSpace15),
                             child: Column(children: [
-                              const SizedBox(height: ksBodyVerticalSpace30),
                               buildDesc(description: description),
                               const SizedBox(height: ksBodyVerticalSpace30),
                               buildBtn(),
@@ -106,17 +105,15 @@ class CommonDialog extends StatelessWidget {
 
   buildDialogueHeader() {
     return ListTile(
-      title: Text(title == null ? Config.appName : title!,
-          textAlign: TextAlign.center,
-          style: AppStyles.txt16sizeW600CaptionLightGray
-              .copyWith(color: AppColors.kcBlack)),
-      trailing: InkWell(
-          onTap:() =>
-            Get.back(),
-          child: const Padding(
-              padding: EdgeInsets.only(bottom: 10.0),
-              child: Icon(Icons.clear,
-                  size: 25, color: AppColors.kcCaptionLightGray)))
-    );
+        title: Center(
+            child: Text(title == null ? Config.appName : title!,
+                style: AppStyles.txt16sizeW600CaptionLightGray
+                    .copyWith(color: AppColors.kcBlack))),
+        trailing: InkWell(
+            onTap: () => Get.back(),
+            child: const Padding(
+                padding: EdgeInsets.only(bottom: 10.0),
+                child: Icon(Icons.clear,
+                    size: 25, color: AppColors.kcCaptionLightGray))));
   }
 }

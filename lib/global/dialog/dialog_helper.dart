@@ -40,8 +40,7 @@ class DialogueHelper {
       required String positiveBtnText,
       description,
       String? title,
-      required String cancelBtnText,
-      required String dialogueMsg}) {
+      required String cancelBtnText}) {
     Get.dialog(CommonDialog(
         description: description ?? '',
         negativeBtnText: cancelBtnText,

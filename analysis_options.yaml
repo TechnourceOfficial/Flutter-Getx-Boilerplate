@@ -19,7 +19,6 @@ linter:
     - unnecessary_const
     - unnecessary_new
     - unnecessary_null_in_if_null_operators
-    - always_use_package_imports
     - empty_statements
     - invariant_booleans
     - always_put_control_body_on_new_line

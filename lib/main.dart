@@ -40,7 +40,7 @@ Future<void> main() async {
     // Specifies the set of orientations
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-    runApp(const FlutterBoilerPlateApp());
+    runApp( const FlutterBoilerPlateApp());
   }, (error, stackTrace) {
     Utils.logPrint(error.toString());
   });
