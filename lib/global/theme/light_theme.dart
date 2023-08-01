@@ -25,12 +25,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 /// To customize the app theme need to changes things in this method
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData(
+    splashColor: Colors.transparent,
       textSelectionTheme:
           const TextSelectionThemeData(cursorColor: AppColors.kcCaptionLightGray),
       primaryColor: AppColors.kcPrimaryColor,

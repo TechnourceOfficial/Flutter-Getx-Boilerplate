@@ -174,6 +174,50 @@ class AppStrings {
   String get ksYes => 'yes_text'.toTranslate();
 
   String get ksNo => 'no_text'.toTranslate();
+
+  //Edit Profile Screen String
+  String get ksEditProfileAppbarTitle =>
+      "edit_profile_appbar_text".toTranslate();
+
+  String get ksEditProfileNameHint => "edit_profile_name_hint".toTranslate();
+
+  String get ksEditProfileLNameHint =>
+      "edit_profile_lastname_hint".toTranslate();
+
+  String get ksEditProfileEmailHint => "edit_profile_email_hint".toTranslate();
+
+  String get ksEditProfileUserNameHint =>
+      "edit_profile_username_hint".toTranslate();
+
+  String get ksEditProfileCountryCodeHint =>
+      "edit_profile_countrycode_hint".toTranslate();
+
+  String get ksEditProfilePhoneHint => "edit_profile_phone_hint".toTranslate();
+
+  String get ksEditProfileAddressHint =>
+      "edit_profile_address_hint".toTranslate();
+
+  String get ksEditProfileOfficeAddressHint =>
+      "edit_profile_office_address_hint".toTranslate();
+
+  String get ksEditProfileDilogueTitleHint =>
+      "edit_profile_dilogue_title".toTranslate();
+
+  String get ksEditProfileDilogueParaHint =>
+      "edit_profile_dilogue_para".toTranslate();
+
+  String get ksEditProfileButtonText =>
+      "edit_profile_button_text".toTranslate();
+
+  String get ksEmailDilogueButtonText =>
+      "email_dilogue_button_text".toTranslate();
+
+  String get ksFillAlldetails => "fill_all_details".toTranslate();
+
+  String get ksCamera => "select_camera".toTranslate();
+  String get ksGallery => "select_gallery".toTranslate();
+  String get ksPdf => "select_pdf".toTranslate();
+  String get ksRemove => "select_remove".toTranslate();
 }
 
 /// Validation message will be added here
@@ -206,4 +250,10 @@ class AppStringsValidation {
       'change_password_valid_new_password'.toTranslate();
 
   String get ksEnter6DigitOpt => 'enter_6_digits_otp'.toTranslate();
+
+
+  String get ksEmptyHomeAddress => "empty_home_address".toTranslate();
+  String get ksEmptyOfficeAddress => "empty_office_address".toTranslate();
+
+
 }

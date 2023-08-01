@@ -12,6 +12,10 @@ dependencies:
   google_fonts:
   overlay_support: ^2.0.1
   pin_code_fields: ^7.4.0
+  image_picker: ^0.8.5+3
+  file_picker:
+  permission_handler: ^10.0.0
+  image_cropper: ^3.0.0
   flutter_svg:
   url_launcher: 
 

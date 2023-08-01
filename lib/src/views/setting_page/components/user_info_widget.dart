@@ -24,6 +24,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 import '../../../../global/constant/resources/import_resources.dart';
@@ -49,7 +50,9 @@ class UserInfoWidget extends StatelessWidget {
               child: Text('John Deo',
                   style: AppStyles.txt14sizeW600ckcWhite, maxLines: 3)),
           InkWell(
-              onTap: () {},
+              onTap: () {
+                Get.toNamed(Routes.editProfileScreen);
+              },
               child: Image.asset(AppAssets.icEdit, height: Get.height * 0.03))
         ]));
   }

@@ -80,5 +80,20 @@
   "no_text": "No",
   "delete_account_description": "Are you sure want to delete account?",
   "deactivate_account_description": "Are you sure want to logout?",
-  "logout_account_description": "Are you sure want to deactivate account?"
+  "logout_account_description": "Are you sure want to deactivate account?",
+
+  "edit_profile_name_hint": "First Name",
+  "edit_profile_lastname_hint": "Last Name",
+  "edit_profile_email_hint": "E-mail Id",
+  "edit_profile_username_hint": "Username",
+  "edit_profile_countrycode_hint": "+32",
+  "edit_profile_phone_hint": "Mobile Number",
+  "edit_profile_address_hint": "Enter Home Address",
+  "edit_profile_office_address_hint": "Enter Office Address",
+  "edit_profile_appbar_text": "Edit Profile",
+  "edit_profile_button_text": "Save",
+  "select_gallery": "Gallery",
+  "select_camera": "camera",
+  "select_pdf": "pdf",
+  "select_remove": "Remove"
 }
