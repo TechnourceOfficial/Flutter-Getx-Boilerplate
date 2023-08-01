@@ -39,7 +39,7 @@ class AppColors {
   static const kcRed = Colors.red;
   static const kcTransparent = Colors.transparent;
   static const kcYellow = Color(0xffFFD933);
-  static const kcInputFilled = Color(0xffA2A8B5);
+  static Color kcInputFilled = const Color(0xffA2A8B5).withOpacity(0.2);
   static const kcCaptionLightGray = Color(0xffA2A8B5);
   static const kcGrey = Color(0xffEEEEEE);
 }

@@ -64,5 +64,7 @@ class AppAssets {
   static const icBullet = '${assetFromIconsPath}ic_bullet.svg';
   static const icEdit = '${assetFromIconsPath}ic_edit.png';
   static const icDeactivateAccount = '${assetFromIconsPath}ic_deactivate_account.svg';
-
+  static const icCameraIcon = '${assetFromIconsPath}ic_camera.png';
+  static const icBack = "${assetFromIconsPath}ic_back.svg";
+  static const icLocationIcon = "${assetFromIconsPath}ic_location.png";
 }

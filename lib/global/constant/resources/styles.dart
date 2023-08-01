@@ -28,6 +28,9 @@ import 'package:flutter_setup/global/constant/resources/colors.dart';
 
 /// Definer text style,decoration style, card style in this file
 class AppStyles {
+  static const TextStyle txt18sizeW600White = TextStyle(
+      color: AppColors.kcWhite, fontSize: 18, fontWeight: FontWeight.w600);
+
   static const TextStyle txt10sizeWithW700 = TextStyle(
       fontSize: 10,
       color: AppColors.kcPrimaryColor,
@@ -80,4 +83,7 @@ class AppStyles {
       color: AppColors.kcCaptionLightGray,
       fontWeight: FontWeight.w600,
       fontSize: 8);
+
+  static const txt14sizeWithW500HintGrey = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w500, color: AppColors.hintColor);
 }

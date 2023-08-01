@@ -40,6 +40,7 @@ abstract class Routes {
 
   static const homeScreen = _Paths.homeScreen;
   static const settingScreen = _Paths.settingScreen;
+  static const editProfileScreen = _Paths.editProfileScreen;
 }
 
 abstract class _Paths {
@@ -54,7 +55,7 @@ abstract class _Paths {
   static const forgetPasswordScreen = '/forgetPasswordScreen';
   static const otpScreen = '/otpScreen';
   static const dashboardScreen = '/dashboardScreen';
-
   static const homeScreen = '/homeScreen';
   static const settingScreen = '/settingScreen';
+  static const editProfileScreen = '/editProfileScreen';
 }

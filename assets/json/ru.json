@@ -80,5 +80,15 @@
   "no_text": "Нет",
   "delete_account_description": "Вы уверены, что хотите удалить аккаунт?",
   "deactivate_account_description": "Вы уверены, что хотите выйти?",
-  "logout_account_description": "Вы уверены, что хотите деактивировать аккаунт?"
+  "logout_account_description": "Вы уверены, что хотите деактивировать аккаунт?",
+  "edit_profile_name_hint": "Имя",
+  "edit_profile_lastname_hint": "Фамилия",
+  "edit_profile_email_hint": "Email ID",
+  "edit_profile_username_hint": "Имя пользователя",
+  "edit_profile_countrycode_hint": "32",
+  "edit_profile_phone_hint": "Номер мобильного телефона",
+  "edit_profile_address_hint": "Введите домашний адрес",
+  "edit_profile_office_address_hint": "Введите адрес офиса",
+  "edit_profile_appbar_text": "Редактировать профиль",
+  "edit_profile_button_text": "Сохранять"
 }

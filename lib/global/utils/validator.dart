@@ -114,4 +114,21 @@ class Validator {
       return null;
     }
   }
+
+
+  static String? validHomeAddress(String? v) {
+    if (v!.toString().trim().isEmpty) {
+      return R.validation.ksEmptyHomeAddress;
+    } else {
+      return null;
+    }
+  }
+
+  static String? validOfficeAddress(String? v) {
+    if (v!.toString().trim().isEmpty) {
+      return R.validation.ksEmptyOfficeAddress;
+    } else {
+      return null;
+    }
+  }
 }

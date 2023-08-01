@@ -80,5 +80,17 @@
   "no_text": "Non",
   "delete_account_description": "Voulez-vous vraiment supprimer le compte?",
   "deactivate_account_description": "Voulez-vous vraiment vous déconnecter?",
-  "logout_account_description": "Voulez-vous vraiment désactiver le compte?"
+  "logout_account_description": "Voulez-vous vraiment désactiver le compte?",
+
+  "edit_profile_appbar_text": "Editer le profil",
+  "edit_profile_button_text": "Sauvegarder",
+
+  "edit_profile_name_hint": "Prénom",
+  "edit_profile_lastname_hint": "Nom de famille",
+  "edit_profile_email_hint": "Identifiant de messagerie",
+  "edit_profile_username_hint": "Nom d'utilisateur",
+  "edit_profile_countrycode_hint": "32",
+  "edit_profile_phone_hint": "Numéro de portable",
+  "edit_profile_address_hint": "Entrez l'adresse du domicile",
+  "edit_profile_office_address_hint": "Entrez l'adresse du bureau"
 }
