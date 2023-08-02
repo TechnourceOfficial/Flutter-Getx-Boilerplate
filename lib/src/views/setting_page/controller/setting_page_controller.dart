@@ -27,6 +27,7 @@ import 'dart:ui';
 
 import 'package:flutter_setup/global/constant/resources/assets.dart';
 import 'package:flutter_setup/global/utils/config.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:flutter_setup/src/views/setting_page/model/drawer_model.dart';
 import 'package:get/get.dart';
 import 'package:flutter_setup/global/constant/resources/resources.dart';
@@ -43,42 +44,8 @@ class SettingPageController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    drawerList.add(DrawerModel(
-        icon: AppAssets.icBullet,
-        title: '${R.strings.ksBottomMenu} 1',
-        selectedTile: 0));
-    drawerList.add(DrawerModel(
-        icon: AppAssets.icBullet,
-        title: '${R.strings.ksBottomMenu} 2',
-        selectedTile: 1));
-    drawerList.add(DrawerModel(
-        icon: AppAssets.icBullet,
-        title: '${R.strings.ksBottomMenu} 3',
-        selectedTile: 2));
-    drawerList.add(DrawerModel(
-        icon: AppAssets.icBullet,
-        title: '${R.strings.ksBottomMenu} 4',
-        selectedTile: 3));
-    drawerList.add(DrawerModel(
-        icon: AppAssets.icLanguage,
-        title: R.strings.ksChangeLanguage,
-        selectedTile: 4));
-    drawerList.add(DrawerModel(
-        icon: AppAssets.icGithub, title: R.strings.ksGitHub, selectedTile: 5));
-    drawerList.add(DrawerModel(
-        icon: AppAssets.icMore, title: R.strings.ksMore, selectedTile: 6));
-    drawerBottomList.add(DrawerModel(
-        icon: AppAssets.icLogout,
-        title: R.strings.ksDeleteAccount,
-        selectedTile: 0));
-    drawerBottomList.add(DrawerModel(
-        icon: AppAssets.icDeactivateAccount,
-        title: R.strings.ksDeactivateAccount,
-        selectedTile: 1));
-    drawerBottomList.add(DrawerModel(
-        icon: AppAssets.icDeactivateAccount,
-        title: R.strings.ksLogOut,
-        selectedTile: 2));
+    drawerList.addAll(getTopDrawerList());
+    drawerBottomList.addAll(getBottomDrawerList());
   }
 
   onDrawerItemTap({required DrawerModel drawerModel}) {
@@ -104,6 +71,7 @@ class SettingPageController extends GetxController {
         openGithub(url: Config.githubRepoLink);
         break;
       case 6:
+        Get.toNamed(Routes.moreScreen);
         Utils.logPrint(drawerModel.title);
         break;
     }

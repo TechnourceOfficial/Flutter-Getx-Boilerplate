@@ -36,4 +36,3 @@ linter:
     - prefer_is_empty
     - prefer_contains
     - prefer_adjacent_string_concatenation
-

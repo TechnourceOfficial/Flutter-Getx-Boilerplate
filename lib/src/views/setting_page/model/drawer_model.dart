@@ -23,6 +23,7 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
+import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 
 class DrawerModel {
   final String icon;
@@ -35,4 +36,50 @@ class DrawerModel {
       required this.title,
       this.path,
       required this.selectedTile});
+}
+
+List<DrawerModel> getTopDrawerList() {
+  return [
+    DrawerModel(
+        icon: AppAssets.icBullet,
+        title: '${R.strings.ksBottomMenu} 1',
+        selectedTile: 0),
+    DrawerModel(
+        icon: AppAssets.icBullet,
+        title: '${R.strings.ksBottomMenu} 2',
+        selectedTile: 1),
+    DrawerModel(
+        icon: AppAssets.icBullet,
+        title: '${R.strings.ksBottomMenu} 3',
+        selectedTile: 2),
+    DrawerModel(
+        icon: AppAssets.icBullet,
+        title: '${R.strings.ksBottomMenu} 4',
+        selectedTile: 3),
+    DrawerModel(
+        icon: AppAssets.icLanguage,
+        title: R.strings.ksChangeLanguage,
+        selectedTile: 4),
+    DrawerModel(
+        icon: AppAssets.icGithub, title: R.strings.ksGitHub, selectedTile: 5),
+    DrawerModel(
+        icon: AppAssets.icMore, title: R.strings.ksMore, selectedTile: 6)
+  ];
+}
+
+List<DrawerModel> getBottomDrawerList() {
+  return [
+    DrawerModel(
+        icon: AppAssets.icLogout,
+        title: R.strings.ksDeleteAccount,
+        selectedTile: 0),
+    DrawerModel(
+        icon: AppAssets.icDeactivateAccount,
+        title: R.strings.ksDeactivateAccount,
+        selectedTile: 1),
+    DrawerModel(
+        icon: AppAssets.icDeactivateAccount,
+        title: R.strings.ksLogOut,
+        selectedTile: 2)
+  ];
 }

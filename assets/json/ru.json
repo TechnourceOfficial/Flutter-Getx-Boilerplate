@@ -90,5 +90,10 @@
   "edit_profile_address_hint": "Введите домашний адрес",
   "edit_profile_office_address_hint": "Введите адрес офиса",
   "edit_profile_appbar_text": "Редактировать профиль",
-  "edit_profile_button_text": "Сохранять"
+  "edit_profile_button_text": "Сохранять",
+
+  "about_us": "О нас",
+  "terms_and_condition": "Условия",
+  "rate_us": "Оцените нас",
+  "contact_us": "Связаться с нами"
 }

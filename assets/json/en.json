@@ -95,5 +95,9 @@
   "select_gallery": "Gallery",
   "select_camera": "camera",
   "select_pdf": "pdf",
-  "select_remove": "Remove"
+  "select_remove": "Remove",
+  "about_us": "About Us",
+  "terms_and_condition": "Terms & Conditions",
+  "rate_us": "Rate Us",
+  "contact_us": "Contact Us"
 }
