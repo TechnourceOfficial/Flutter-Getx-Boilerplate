@@ -41,6 +41,7 @@ import 'package:flutter_setup/src/views/setting_page/components/edit_profile/bin
 import 'package:flutter_setup/src/views/setting_page/components/edit_profile/edit_profile_view.dart';
 import 'package:flutter_setup/src/views/setting_page/components/more_screen/binding/more_screen_binding.dart';
 import 'package:flutter_setup/src/views/setting_page/components/more_screen/more_screen_view.dart';
+import 'package:flutter_setup/src/views/setting_page/components/more_screen/web_pages/web_pages_view.dart';
 import 'package:flutter_setup/src/views/setting_page/setting_page_view.dart';
 import 'package:get/get.dart';
 
@@ -55,6 +56,8 @@ import 'package:flutter_setup/src/views/home_page/binding/home_page.dart';
 import 'package:flutter_setup/src/views/home_page/home_page_view.dart';
 
 import 'package:flutter_setup/src/views/setting_page/binding/setting_page.dart';
+
+import '../views/setting_page/components/more_screen/web_pages/binding/web_pages_binding.dart';
 
 part 'app_routes.dart';
 
@@ -128,6 +131,11 @@ class AppPages {
         name: Routes.moreScreen,
         page: () => const MoreScreenView(),
         transition: Transition.downToUp,
-        binding: MoreScreenBinding())
+        binding: MoreScreenBinding()),
+    GetPage(
+        name: Routes.termsPrivacyScreen,
+        page: () => const WebPagesView(),
+        transition: Transition.downToUp,
+        binding: WebPagesBinding())
   ];
 }

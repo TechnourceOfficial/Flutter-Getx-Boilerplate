@@ -224,6 +224,7 @@ class AppStrings {
   String get ksTermsAndCondition => "terms_and_condition".toTranslate();
   String get ksRateUs => "rate_us".toTranslate();
   String get ksContactUs => "contact_us".toTranslate();
+  String get ksAboutUsAppbarTitle => "aboutus_appbar_title".toTranslate();
 }
 
 /// Validation message will be added here
@@ -260,6 +261,8 @@ class AppStringsValidation {
 
   String get ksEmptyHomeAddress => "empty_home_address".toTranslate();
   String get ksEmptyOfficeAddress => "empty_office_address".toTranslate();
+
+
 
 
 }

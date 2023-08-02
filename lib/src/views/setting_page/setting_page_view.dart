@@ -126,20 +126,6 @@ class SettingPageView extends GetView<SettingPageController> {
         onTap: () => controller.onBottomItemTap(drawerModel: drawerModel)));
   }
 
-  /*buildBottomDrawerItem(
-      {required DrawerModel drawerBottomItemModel,
-      required GestureTapCallback onTap}) {
-    return Obx(() {
-      return DrawerListItemWidget(
-          displayLang: false,
-          isDecorated: controller.selectedBottomDrawerMenu.value ==
-              drawerBottomItemModel.selectedTile,
-          iconPath: drawerBottomItemModel.icon,
-          title: drawerBottomItemModel.title,
-          onTap: onTap);
-    });
-  }*/
-
   buildBoxDecoration() {
     return BoxDecoration(
         color: const Color.fromRGBO(162, 168, 181, 0.35),

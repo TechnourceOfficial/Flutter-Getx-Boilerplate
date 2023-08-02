@@ -16,6 +16,7 @@ dependencies:
   file_picker:
   permission_handler: ^10.0.0
   image_cropper: ^3.0.0
+  webview_flutter: ^3.0.4
   flutter_svg:
   url_launcher: 
 
