@@ -16,16 +16,18 @@ class WebPagesView extends GetView<WebPagesController> {
     return Scaffold(
         backgroundColor: AppColors.kcWhite,
         appBar: buildCommonWhiteAppbar(),
-        body: Stack(children: [
-          Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: ksBodyHorizontalSpace15,
-                  vertical: ksBodyVerticalSpace15),
-              child: buildWebView()),
-          Visibility(
-              visible: controller.isLoading.value,
-              child: const CustomProgressIndicatorWidget())
-        ]));
+        body: Obx(
+          () => Stack(children: [
+            Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: ksBodyHorizontalSpace15,
+                    vertical: ksBodyVerticalSpace15),
+                child: buildWebView()),
+            Visibility(
+                visible: controller.isLoading.value,
+                child: const CustomProgressIndicatorWidget())
+          ]),
+        ));
   }
 
   buildWebView() {
