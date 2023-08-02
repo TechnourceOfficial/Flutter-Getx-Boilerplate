@@ -26,10 +26,10 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/component/country_code.dart';
+import 'package:flutter_setup/global/component/country_item.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 
-import '../../../../../global/component/country_item.dart';
 
 class EditProfileController extends GetxController {
   static EditProfileController get to => Get.find();

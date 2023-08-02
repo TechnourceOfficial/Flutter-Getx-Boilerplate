@@ -22,54 +22,44 @@
  *  Email: support@technource.com
  *  Developed by Technource (https://www.technource.com)
  */
-
 import 'package:flutter/material.dart';
-import 'package:flutter_setup/global/constant/resources/assets.dart';
+import 'package:flutter_setup/global/constant/resources/colors.dart';
+import 'package:flutter_setup/global/widgets/common_widgets.dart';
 import 'package:get/get.dart';
-import 'package:loading_indicator/loading_indicator.dart';
-import '../constant/resources/colors.dart';
+import '../../../../../global/constant/resources/resources.dart';
+import '../../../../../global/widgets/common_appbar_white.dart';
+import 'component/more_screen_list_item.dart';
+import 'controller/more_screen_controller.dart';
 
-//This is File is Contains created widgets which are used multiple times in all over project.
-
-class BuildAvtarPlaceHolder extends StatelessWidget {
-  final double width;
-  final double height;
-  const BuildAvtarPlaceHolder(
-      {Key? key, required this.width, required this.height})
-      : super(key: key);
+class MoreScreenView extends GetView<MoreScreenController> {
+  const MoreScreenView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        width: width,
-        height: height,
-        child: Image.asset(AppAssets.defaultAvatar, fit: BoxFit.cover));
+    return Scaffold(
+        backgroundColor: AppColors.kcWhite,
+        appBar: buildCommonWhiteAppbar(),
+        body: SafeArea(
+            child: Container(
+                margin: const EdgeInsets.symmetric(
+                    horizontal: ksBodyHorizontalSpace15),
+                child: buildMoreScreenView())));
   }
-}
 
-class BuildLoaderPlaceHolder extends StatelessWidget {
-  const BuildLoaderPlaceHolder({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-        width: Get.height * 0.02,
-        height: Get.height * 0.02,
-        child: LoadingIndicator(
-          indicatorType: Indicator.ballSpinFadeLoader,
-          colors: [Colors.grey.shade100, AppColors.kcPrimaryColor],
-        ));
+  buildMoreScreenView() {
+    return Obx(() => ListView.builder(
+        itemCount: controller.moreMenuList.length,
+        itemBuilder: (context, index) {
+          return MoreScreenListItem(
+              menuItem: controller.moreMenuList[index],
+              onTap: () {
+                controller.selectMoreScreenItem(
+                    item: controller.moreMenuList[index]);
+              });
+        }));
   }
-}
 
-class BuildGreyDivider extends StatelessWidget {
-  final double? opacity;
-  const BuildGreyDivider({Key? key, this.opacity}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Divider(
-        color: AppColors.kcCaptionLightGray.withOpacity(opacity ?? 1),
-        thickness: 2);
+  buildCommonWhiteAppbar() {
+    return CommonWhiteAppbar(title: R.strings.ksMore, appBar: AppBar());
   }
 }

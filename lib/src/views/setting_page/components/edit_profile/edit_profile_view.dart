@@ -30,13 +30,13 @@ import 'package:flutter_setup/global/constant/resources/colors.dart';
 import 'package:flutter_setup/global/constant/resources/resources.dart';
 import 'package:flutter_setup/global/constant/resources/styles.dart';
 import 'package:flutter_setup/global/utils/utils.dart';
+import 'package:flutter_setup/global/utils/validator.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_appbar_white.dart';
 import 'package:flutter_setup/global/widgets/custom_text_field.dart';
 import 'package:flutter_setup/global/widgets/user_profile_view.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
-import '../../../../global/utils/validator.dart';
 import 'controller/edit_profile_controller.dart';
 
 var _ksWidgetVerticalSpace = Get.height * 0.02;

@@ -37,7 +37,7 @@ class CommonWhiteAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final AppBar appBar;
   final VoidCallback? onTap;
-  final List<Widget>? widgets;
+  final List<Widget>? actionWidgets;
   final TabBar? tabBar;
   final double? height;
   final TextStyle? style;
@@ -51,7 +51,7 @@ class CommonWhiteAppbar extends StatelessWidget implements PreferredSizeWidget {
       {super.key,
       required this.title,
       required this.appBar,
-      this.widgets,
+      this.actionWidgets,
       this.elevation,
       this.statusBarColor,
       this.backgroundColor,
@@ -76,12 +76,15 @@ class CommonWhiteAppbar extends StatelessWidget implements PreferredSizeWidget {
                     fontWeight: FontWeight.w700)),
             textAlign: TextAlign.center),
         backgroundColor: backgroundColor ?? AppColors.kcWhite,
-        actions: widgets,
+        actions: actionWidgets,
         bottom: tabBar,
         leading: isLeading == true
             ? null
             : GestureDetector(
-                onTap: onTap,
+                onTap: onTap ??
+                    () {
+                      Get.back();
+                    },
                 child: Padding(
                     padding: EdgeInsets.only(left: Get.width * 0.05),
                     child: SvgPicture.asset(AppAssets.icBack,

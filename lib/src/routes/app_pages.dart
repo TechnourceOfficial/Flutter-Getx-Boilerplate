@@ -37,8 +37,10 @@ import 'package:flutter_setup/src/views/authorization/welcome_screen/binding/wel
 import 'package:flutter_setup/src/views/authorization/welcome_screen/welcome_screen_view.dart';
 import 'package:flutter_setup/src/views/dashboard/binding/dashboard.dart';
 import 'package:flutter_setup/src/views/dashboard/dashboard_view.dart';
-import 'package:flutter_setup/src/views/setting_page/edit_profile/binding/edit_profile_binding.dart';
-import 'package:flutter_setup/src/views/setting_page/edit_profile/edit_profile_view.dart';
+import 'package:flutter_setup/src/views/setting_page/components/edit_profile/binding/edit_profile_binding.dart';
+import 'package:flutter_setup/src/views/setting_page/components/edit_profile/edit_profile_view.dart';
+import 'package:flutter_setup/src/views/setting_page/components/more_screen/binding/more_screen_binding.dart';
+import 'package:flutter_setup/src/views/setting_page/components/more_screen/more_screen_view.dart';
 import 'package:flutter_setup/src/views/setting_page/setting_page_view.dart';
 import 'package:get/get.dart';
 
@@ -121,6 +123,11 @@ class AppPages {
         name: Routes.editProfileScreen,
         page: () => EditProfileView(),
         transition: Transition.downToUp,
-        binding: EditProfileBinding())
+        binding: EditProfileBinding()),
+    GetPage(
+        name: Routes.moreScreen,
+        page: () => const MoreScreenView(),
+        transition: Transition.downToUp,
+        binding: MoreScreenBinding())
   ];
 }

@@ -218,6 +218,12 @@ class AppStrings {
   String get ksGallery => "select_gallery".toTranslate();
   String get ksPdf => "select_pdf".toTranslate();
   String get ksRemove => "select_remove".toTranslate();
+
+  ///More Screen
+  String get ksAboutUs => "about_us".toTranslate();
+  String get ksTermsAndCondition => "terms_and_condition".toTranslate();
+  String get ksRateUs => "rate_us".toTranslate();
+  String get ksContactUs => "contact_us".toTranslate();
 }
 
 /// Validation message will be added here

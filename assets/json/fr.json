@@ -92,5 +92,10 @@
   "edit_profile_countrycode_hint": "32",
   "edit_profile_phone_hint": "Numéro de portable",
   "edit_profile_address_hint": "Entrez l'adresse du domicile",
-  "edit_profile_office_address_hint": "Entrez l'adresse du bureau"
+  "edit_profile_office_address_hint": "Entrez l'adresse du bureau",
+
+  "about_us": "À propos de nous",
+  "terms_and_condition": "Conditions",
+  "rate_us": "Évaluez nous",
+  "contact_us": "Contactez-nous"
 }
