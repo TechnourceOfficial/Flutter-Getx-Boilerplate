@@ -37,6 +37,8 @@ import 'package:flutter_setup/src/views/authorization/welcome_screen/binding/wel
 import 'package:flutter_setup/src/views/authorization/welcome_screen/welcome_screen_view.dart';
 import 'package:flutter_setup/src/views/dashboard/binding/dashboard.dart';
 import 'package:flutter_setup/src/views/dashboard/dashboard_view.dart';
+import 'package:flutter_setup/src/views/setting_page/components/change_language_screen/binding/change_language_binding.dart';
+import 'package:flutter_setup/src/views/setting_page/components/change_language_screen/change_language_screen_view.dart';
 import 'package:flutter_setup/src/views/setting_page/components/edit_profile/binding/edit_profile_binding.dart';
 import 'package:flutter_setup/src/views/setting_page/components/edit_profile/edit_profile_view.dart';
 import 'package:flutter_setup/src/views/setting_page/components/more_screen/binding/more_screen_binding.dart';
@@ -136,6 +138,11 @@ class AppPages {
         name: Routes.termsPrivacyScreen,
         page: () => const WebPagesView(),
         transition: Transition.downToUp,
-        binding: WebPagesBinding())
+        binding: WebPagesBinding()),
+    GetPage(
+        name: Routes.changeLanguageScreen,
+        page: () => const ChangeLanguageScreenView(),
+        transition: Transition.downToUp,
+        binding: ChangeLanguageBinding())
   ];
 }

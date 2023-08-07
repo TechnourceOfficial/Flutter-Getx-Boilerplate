@@ -137,6 +137,7 @@ class AppStrings {
 
   String get ksBottomMenu => 'menu_text'.toTranslate();
 
+
   String get ksExitApp => 'exit_app'.toTranslate();
 
   String get ksSearchText => 'search_text'.toTranslate();
@@ -225,6 +226,8 @@ class AppStrings {
   String get ksRateUs => "rate_us".toTranslate();
   String get ksContactUs => "contact_us".toTranslate();
   String get ksAboutUsAppbarTitle => "aboutus_appbar_title".toTranslate();
+
+  String get ksSelectLanguageHint => "select_language_hint".toTranslate();
 }
 
 /// Validation message will be added here

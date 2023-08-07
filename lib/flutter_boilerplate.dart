@@ -26,6 +26,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_setup/global/app_localization/app_localization.dart';
+import 'package:flutter_setup/global/preference/user_preference.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 import 'package:overlay_support/overlay_support.dart';
@@ -49,7 +50,7 @@ class FlutterBoilerPlateApp extends StatelessWidget {
                 statusBarBrightness: Brightness.light),
             child: GetMaterialApp(
                 title: Config.appName,
-                locale: Locale(Config.setLocale.value),
+                locale: Locale(AppSession.getSelectedLanguageId()),
                 localizationsDelegates: const [
                   AppLocalizationsDelegate(),
                   GlobalMaterialLocalizations.delegate,

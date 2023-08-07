@@ -24,6 +24,7 @@
  */
 
 import 'package:flutter_setup/global/preference/session_keys.dart';
+import 'package:flutter_setup/global/utils/config.dart';
 import 'package:get_storage/get_storage.dart';
 
 ///TO manage Logged in user's session
@@ -47,7 +48,7 @@ class AppSession {
   }
 
   static String getSelectedLanguageId() {
-    return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? '';
+    return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? Config.langCodeEn;
   }
 
   static void setAccessToken(String? value) {
