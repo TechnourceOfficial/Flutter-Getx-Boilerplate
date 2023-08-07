@@ -25,7 +25,6 @@
 
 import 'dart:ui';
 
-import 'package:flutter_setup/global/constant/resources/assets.dart';
 import 'package:flutter_setup/global/utils/config.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:flutter_setup/src/views/setting_page/model/drawer_model.dart';
@@ -64,6 +63,7 @@ class SettingPageController extends GetxController {
         Utils.logPrint(drawerModel.title);
         break;
       case 4:
+        Get.toNamed(Routes.changeLanguageScreen);
         Utils.logPrint(drawerModel.title);
         break;
       case 5:

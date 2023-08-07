@@ -23,42 +23,33 @@
  *  Developed by Technource (https://www.technource.com)
  */
 import 'package:flutter/material.dart';
-import 'package:flutter_setup/global/constant/resources/colors.dart';
+import 'package:flutter_setup/global/preference/user_preference.dart';
+import 'package:flutter_setup/global/utils/config.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
-import '../../../../../global/constant/resources/resources.dart';
-import '../../../../../global/widgets/common_appbar_white.dart';
-import 'component/more_screen_list_item.dart';
-import 'controller/more_screen_controller.dart';
+import '../../../../authorization/select_language_screen/model/get_language_list_model.dart';
 
-class MoreScreenView extends GetView<MoreScreenController> {
-  const MoreScreenView({super.key});
+class ChangeLanguageController extends GetxController {
+  var languageList = <LanguageData>[].obs;
+  LanguageData? selectedLanguage;
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: AppColors.kcWhite,
-        appBar: buildCommonWhiteAppbar(),
-        body: SafeArea(
-            child: Container(
-                margin: const EdgeInsets.symmetric(
-                    horizontal: ksBodyHorizontalSpace15),
-                child: buildMoreScreenView())));
+  void onInit() {
+    super.onInit();
+    languageList.addAll(getLanguages());
+    selectedLanguage = languageList.firstWhere(
+        (element) => element.langCode == AppSession.getSelectedLanguageId());
   }
 
-  buildMoreScreenView() {
-    return Obx(() => ListView.builder(
-        itemCount: controller.moreMenuList.length,
-        itemBuilder: (context, index) {
-          return MoreScreenListItem(
-              menuItem: controller.moreMenuList[index],
-              onTap: () {
-                controller.selectMoreScreenItem(
-                    item: controller.moreMenuList[index]);
-              });
-        }));
+  selectedLanguageOnTap({required LanguageData item}) async {
+    selectedLanguage = item;
+    Config.setLocale.value = item.langCode.toString();
+    AppSession.setSelectedLanguageId(Config.setLocale.value);
+    Get.updateLocale(Locale(Config.setLocale.value));
+    update();
   }
 
-  buildCommonWhiteAppbar() {
-    return CommonWhiteAppbar(title: R.strings.ksMore, appBar: AppBar());
+  Future<bool> onWillPopTap() async {
+    return await Get.offAllNamed(Routes.dashboardScreen);
   }
 }

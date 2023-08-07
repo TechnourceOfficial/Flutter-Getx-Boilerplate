@@ -29,7 +29,6 @@ import 'package:flutter_setup/global/constant/resources/colors.dart';
 import 'package:flutter_setup/global/constant/resources/styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import '../constant/resources/resources.dart';
 
 //This is common app bar for different pages of same style and pattern
 class CommonWhiteAppbar extends StatelessWidget implements PreferredSizeWidget {

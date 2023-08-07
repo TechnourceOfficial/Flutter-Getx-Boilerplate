@@ -26,7 +26,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 import 'package:flutter_setup/global/widgets/common_widgets.dart';
-import 'package:flutter_setup/src/views/setting_page/components/more_screen/controller/more_screen_controller.dart';
 import 'package:flutter_setup/src/views/setting_page/components/more_screen/model/more_menu_model.dart';
 import 'package:get/get.dart';
 

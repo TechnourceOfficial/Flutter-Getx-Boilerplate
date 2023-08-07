@@ -46,6 +46,7 @@ class DrawerListItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint("Text======>${drawerModel.title}");
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
       decoration: isDecorated != null && isDecorated == true

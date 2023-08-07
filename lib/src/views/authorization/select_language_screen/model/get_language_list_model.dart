@@ -23,6 +23,8 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
+import 'package:flutter_setup/global/utils/config.dart';
+
 class GetLanguageListModel {
   GetLanguageListModel({
     this.message,
@@ -80,4 +82,12 @@ class LanguageData {
     map['lang_name'] = langName;
     return map;
   }
+}
+
+List<LanguageData> getLanguages() {
+  return [
+    LanguageData(langId: '1', langName: 'English', langCode: Config.langCodeEn),
+    LanguageData(langId: '2', langName: 'French', langCode: Config.langCodeFr),
+    LanguageData(langId: '3', langName: 'Russian', langCode: Config.langCodeRu)
+  ];
 }
