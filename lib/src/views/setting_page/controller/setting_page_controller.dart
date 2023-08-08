@@ -25,7 +25,9 @@
 
 import 'dart:ui';
 
+import 'package:flutter_setup/global/preference/user_preference.dart';
 import 'package:flutter_setup/global/utils/config.dart';
+import 'package:flutter_setup/global/utils/logger.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:flutter_setup/src/views/setting_page/model/drawer_model.dart';
 import 'package:get/get.dart';
@@ -51,28 +53,28 @@ class SettingPageController extends GetxController {
     selectedDrawerMenu.value = drawerModel.selectedTile;
     switch (drawerModel.selectedTile) {
       case 0:
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         break;
       case 1:
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         break;
       case 2:
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         break;
       case 3:
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         break;
       case 4:
         Get.toNamed(Routes.changeLanguageScreen);
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         break;
       case 5:
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         openGithub(url: Config.githubRepoLink);
         break;
       case 6:
         Get.toNamed(Routes.moreScreen);
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         break;
     }
   }
@@ -81,20 +83,23 @@ class SettingPageController extends GetxController {
     selectedBottomDrawerMenu.value = drawerModel.selectedTile;
     switch (drawerModel.selectedTile) {
       case 0:
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         showCommonDialogue(
             title: R.strings.ksDeleteAccount,
             description: R.strings.ksDeleteAccountDescription);
         break;
       case 1:
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         showCommonDialogue(
             title: R.strings.ksDeactivateAccount,
             description: R.strings.ksDeactivateAccountDescription);
         break;
       case 2:
-        Utils.logPrint(drawerModel.title);
+        Logger.logPrint(drawerModel.title);
         showCommonDialogue(
+            onPositiveButtonTap: () {
+              AppSession.logoutUser();
+            },
             title: R.strings.ksLogOut,
             description: R.strings.ksLogoutAccountDescription);
         break;
@@ -114,8 +119,14 @@ class SettingPageController extends GetxController {
       VoidCallback? onPositiveButtonTap,
       onNegativeButtonTap}) {
     DialogueHelper.showCommonDialogue(
-      onPositiveClick: () => onPositiveButtonTap ?? Get.back(),
-      onNegativeClick: () => onNegativeButtonTap ?? Get.back(),
+      onPositiveClick: onPositiveButtonTap ??
+          () {
+            Get.back();
+          },
+      onNegativeClick: onNegativeButtonTap ??
+          () {
+            Get.back();
+          },
       title: title,
       description: description,
       positiveBtnText: R.strings.ksYes,

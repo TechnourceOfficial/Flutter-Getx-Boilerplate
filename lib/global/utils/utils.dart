@@ -27,13 +27,11 @@ import 'dart:developer' as logging;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:overlay_support/overlay_support.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 class Utils {
-  static logPrint(String msg) {
-    logging.log('fromLog: $msg');
-  }
-
-  /// When we want to show error to the user this method can be user and we also have message param
+    /// When we want to show error to the user this method can be user and we also have message param
   /// so we can make it dynamic message
   static errorSnackBar({String title = 'Error', required String message}) {
     Get.log('[$title] $message', isError: true);
@@ -50,6 +48,7 @@ class Utils {
           duration: const Duration(seconds: 3)));
     }
   }
+
   /// When we want to show success message to the user this method can be user and we also have message param
   /// so we can make it dynamic message
   static successSnackBar({String title = 'Success', required String message}) {

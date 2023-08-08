@@ -24,6 +24,7 @@
  */
 
 import 'package:flutter_setup/global/extention/string_extensions.dart';
+import 'package:flutter_setup/global/utils/logger.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/constant/resources/colors.dart';
@@ -61,7 +62,7 @@ class CountryCodePicker {
                             topLeft: Radius.circular(15),
                             topRight: Radius.circular(15))),
                     child: Center(
-                        child: Text(R.strings.ksSelectCountryCode.toTranslate(),
+                        child: Text(R.strings.ksSelectCountryCode,
                             style: Get.textTheme.headlineSmall!
                                 .merge(const TextStyle(color: Colors.white))))),
                 Card(
@@ -174,7 +175,7 @@ class CountryCodePicker {
         searchResult.add(country);
       }
     }
-    Utils.logPrint(searchResult.length.toString());
+    Logger.logPrint(searchResult.length.toString());
   }
 
   static countryItem({required CountryItem country}) {

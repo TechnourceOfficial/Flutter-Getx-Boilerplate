@@ -97,5 +97,7 @@
   "about_us": "À propos de nous",
   "terms_and_condition": "Conditions",
   "rate_us": "Évaluez nous",
-  "contact_us": "Contactez-nous"
+  "contact_us": "Contactez-nous",
+  "no_internet": "Pas de connexion Internet",
+  "pls_check_net": "Pas de connexion Internet"
 }

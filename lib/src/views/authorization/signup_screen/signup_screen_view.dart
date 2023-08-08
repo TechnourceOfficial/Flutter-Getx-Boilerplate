@@ -25,6 +25,7 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_setup/global/utils/config.dart';
 import 'package:flutter_setup/global/widgets/app_button.dart';
 import 'package:flutter_setup/global/widgets/common_logo.dart';
 import 'package:get/get.dart';
@@ -168,8 +169,8 @@ class SignupScreenView extends GetView<SignupScreenController> {
               controller.isAcceptPolicy.value = checkboxValue.value;
             },
             activeColor: AppColors.kcPrimaryColor,
-            side: MaterialStateBorderSide.resolveWith((states) =>
-                const BorderSide(color: AppColors.kcWhite)),
+            side: MaterialStateBorderSide.resolveWith(
+                (states) => const BorderSide(color: AppColors.kcWhite)),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4.0)))));
   }
@@ -182,7 +183,10 @@ class SignupScreenView extends GetView<SignupScreenController> {
                 style: AppStyles.txt10sizeWithW500,
                 children: <TextSpan>[
           TextSpan(
-              recognizer: TapGestureRecognizer()..onTap = () {},
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  toWebScreen(slug: Config.cmsTermsCondition);
+                },
               text: R.strings.ksTermsAndConditions,
               style:
                   AppStyles.txt14sizeWithW600Underline.copyWith(fontSize: 10)),
@@ -192,8 +196,17 @@ class SignupScreenView extends GetView<SignupScreenController> {
               text: R.strings.ksPrivacyPolicy,
               style:
                   AppStyles.txt14sizeWithW600Underline.copyWith(fontSize: 10),
-              recognizer: TapGestureRecognizer()..onTap = () {})
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  toWebScreen(slug: Config.cmsPrivacyPolicy);
+                })
         ])));
+  }
+
+  toWebScreen({required String slug}) {
+    Get.toNamed(Routes.termsPrivacyScreen, arguments: [
+      {Config.argSlug: slug}
+    ]);
   }
 
   buildTextField(

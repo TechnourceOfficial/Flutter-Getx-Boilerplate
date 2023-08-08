@@ -31,6 +31,9 @@ class AppStyles {
   static const TextStyle txt18sizeW600White = TextStyle(
       color: AppColors.kcWhite, fontSize: 18, fontWeight: FontWeight.w600);
 
+  static const TextStyle txt18sizeW600BlackColor = TextStyle(
+      color: AppColors.kcDefaultText, fontSize: 18, fontWeight: FontWeight.w600);
+
   static const TextStyle txt10sizeWithW700 = TextStyle(
       fontSize: 10,
       color: AppColors.kcPrimaryColor,

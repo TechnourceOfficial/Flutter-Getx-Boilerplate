@@ -25,6 +25,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_setup/global/utils/logger.dart';
 import 'package:flutter_setup/src/views/dashboard/model/bottom_navigation_item_model.dart';
 import 'package:flutter_setup/src/views/home_page/home_page_view.dart';
 import 'package:flutter_setup/src/views/setting_page/setting_page_view.dart';
@@ -81,13 +82,13 @@ class DashboardController extends GetxController {
   changeTabIndex(int index) {
     currentTabIndex.value = index;
     if (currentTabIndex.value == 0) {
-      Utils.logPrint('Bottom Menu-1');
+      Logger.logPrint('Bottom Menu-1');
     } else if (currentTabIndex.value == 1) {
-      Utils.logPrint('Bottom Menu-2');
+      Logger.logPrint('Bottom Menu-2');
     } else if (currentTabIndex.value == 2) {
-      Utils.logPrint('Bottom Menu-3');
+      Logger.logPrint('Bottom Menu-3');
     } else if (currentTabIndex.value == 3) {
-      Utils.logPrint('Bottom Menu-4');
+      Logger.logPrint('Bottom Menu-4');
     }
   }
 }
