@@ -67,4 +67,7 @@ class AppAssets {
   static const icCameraIcon = '${assetFromIconsPath}ic_camera.png';
   static const icBack = "${assetFromIconsPath}ic_back.svg";
   static const icLocationIcon = "${assetFromIconsPath}ic_location.png";
+
+  //Lottie Images
+  static const icNoInternet = "assets/json/no_internet_lottie.json";
 }

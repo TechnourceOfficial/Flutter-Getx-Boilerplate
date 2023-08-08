@@ -17,6 +17,8 @@ dependencies:
   permission_handler: ^10.0.0
   image_cropper: ^3.0.0
   webview_flutter: ^3.0.4
+  connectivity_plus: ^4.0.2
+  lottie: ^2.3.2
   flutter_svg:
   url_launcher: 
 

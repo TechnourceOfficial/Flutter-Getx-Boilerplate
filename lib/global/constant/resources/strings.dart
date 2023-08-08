@@ -228,6 +228,10 @@ class AppStrings {
   String get ksAboutUsAppbarTitle => "aboutus_appbar_title".toTranslate();
 
   String get ksSelectLanguageHint => "select_language_hint".toTranslate();
+
+  String get ksNoInternet => "no_internet".toTranslate();
+
+  String get ksPleaseCheckInternet => "pls_check_net".toTranslate();
 }
 
 /// Validation message will be added here

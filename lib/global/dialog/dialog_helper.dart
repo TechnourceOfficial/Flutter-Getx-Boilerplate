@@ -35,7 +35,7 @@ class DialogueHelper {
   /// It is also dynamic dialogue so we can set button text according to our need.
   /// @Param positiveBtnText,cancelBtnText
   static showCommonDialogue(
-      {required VoidCallback onPositiveClick,
+      {required GestureTapCallback onPositiveClick,
       required VoidCallback onNegativeClick,
       required String positiveBtnText,
       description,

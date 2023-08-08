@@ -27,6 +27,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/constant/resources/resources.dart';
+import 'package:flutter_setup/global/utils/logger.dart';
 import 'package:flutter_setup/global/utils/utils.dart';
 import 'package:get/get.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -65,13 +66,13 @@ class FilePickerController extends GetxController {
           }
         }
       } else {
-        Utils.logPrint('No image selected.');
+        Logger.logPrint('No image selected.');
       }
-      Utils.logPrint('Permission Granted');
+      Logger.logPrint('Permission Granted');
     } else if (status == PermissionStatus.denied) {
-      Utils.logPrint('Permission denied');
+      Logger.logPrint('Permission denied');
     } else if (status == PermissionStatus.permanentlyDenied) {
-      Utils.logPrint('Permission Permanently Denied');
+      Logger.logPrint('Permission Permanently Denied');
       await openAppSettings();
     }
   }
@@ -87,7 +88,7 @@ class FilePickerController extends GetxController {
       if (pickedFile != null) {
         File imagePath = File(pickedFile.path);
         image = imagePath;
-        Utils.logPrint('Image: $image');
+        Logger.logPrint('Image: $image');
         if (isCrop) {
           CroppedFile filePath = await _cropImage(imagePath.path);
           onGallery!(File(filePath.path));
@@ -95,13 +96,13 @@ class FilePickerController extends GetxController {
           onGallery!(image);
         }
       } else {
-        Utils.logPrint('No image selected.');
+        Logger.logPrint('No image selected.');
       }
-      Utils.logPrint('Permission Granted');
+      Logger.logPrint('Permission Granted');
     } else if (status == PermissionStatus.denied) {
-      Utils.logPrint('Permission denied');
+      Logger.logPrint('Permission denied');
     } else if (status == PermissionStatus.permanentlyDenied) {
-      Utils.logPrint('Permission Permanently Denied');
+      Logger.logPrint('Permission Permanently Denied');
       await openAppSettings();
     }
   }

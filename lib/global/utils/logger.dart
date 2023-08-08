@@ -23,42 +23,20 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter_setup/global/utils/config.dart';
-import 'package:flutter_setup/global/utils/logger.dart';
-import 'package:flutter_setup/global/utils/utils.dart';
-import 'package:flutter_setup/src/routes/app_pages.dart';
-import 'package:flutter_setup/src/views/setting_page/components/more_screen/model/more_menu_model.dart';
-import 'package:get/get.dart';
+import 'dart:developer';
 
-class MoreScreenController extends GetxController {
-  var moreMenuList = <MoreMenuModel>[].obs;
+enum LogMode { debug, live }
 
-  @override
-  void onInit() {
-    super.onInit();
-    moreMenuList.addAll(getMoreMenu());
+class Logger {
+  static LogMode _logMode = LogMode.debug;
+
+  static void init(LogMode mode) {
+    Logger._logMode = mode;
   }
 
-  Future<void> selectMoreScreenItem({required MoreMenuModel item}) async {
-    switch (item.id) {
-      case 1:
-        toWebScreen(slug: Config.cmsAboutUsUrl);
-        break;
-      case 2:
-        toWebScreen(slug: Config.cmsTermsCondition);
-        break;
-      case 3:
-        toWebScreen(slug: Config.cmsPrivacyPolicy);
-        break;
-      default:
-        Logger.logPrint("default");
-        break;
+  static void logPrint(dynamic data, {StackTrace? stackTrace}) {
+    if (_logMode == LogMode.debug) {
+      log("my-tag: $data");
     }
-  }
-
-  toWebScreen({required String slug}) {
-    Get.toNamed(Routes.termsPrivacyScreen, arguments: [
-      {Config.argSlug: slug}
-    ]);
   }
 }

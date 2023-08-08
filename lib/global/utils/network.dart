@@ -23,42 +23,46 @@
  *  Developed by Technource (https://www.technource.com)
  */
 
-import 'package:flutter_setup/global/utils/config.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter_setup/global/constant/resources/resources.dart';
 import 'package:flutter_setup/global/utils/logger.dart';
 import 'package:flutter_setup/global/utils/utils.dart';
-import 'package:flutter_setup/src/routes/app_pages.dart';
-import 'package:flutter_setup/src/views/setting_page/components/more_screen/model/more_menu_model.dart';
-import 'package:get/get.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
-class MoreScreenController extends GetxController {
-  var moreMenuList = <MoreMenuModel>[].obs;
+class Network {
+  static RxBool isInternetConnected = false.obs;
+  static Network? instance;
 
-  @override
-  void onInit() {
-    super.onInit();
-    moreMenuList.addAll(getMoreMenu());
+  static Network? getInstance() {
+    instance ??= Network._();
+    return instance;
   }
 
-  Future<void> selectMoreScreenItem({required MoreMenuModel item}) async {
-    switch (item.id) {
-      case 1:
-        toWebScreen(slug: Config.cmsAboutUsUrl);
-        break;
-      case 2:
-        toWebScreen(slug: Config.cmsTermsCondition);
-        break;
-      case 3:
-        toWebScreen(slug: Config.cmsPrivacyPolicy);
-        break;
-      default:
-        Logger.logPrint("default");
-        break;
+  Network._() {
+    Connectivity().onConnectivityChanged.listen(_updateConnectionStatus);
+  }
+
+  Future<void> _updateConnectionStatus(ConnectivityResult result) async {
+    Logger.logPrint("result_connectionStatus $result");
+    if (result == ConnectivityResult.mobile ||
+        result == ConnectivityResult.wifi) {
+      isInternetConnected.value = true;
+      Logger.logPrint("result_connectionStatus 26 $result");
+    } else if (result == ConnectivityResult.none) {
+      isInternetConnected.value = false;
+      Logger.logPrint("result_connectionStatus 29 $result");
     }
+    Logger.logPrint("isInternetConnected $isInternetConnected");
   }
 
-  toWebScreen({required String slug}) {
-    Get.toNamed(Routes.termsPrivacyScreen, arguments: [
-      {Config.argSlug: slug}
-    ]);
+  static isNetworkConnected() {
+    if (!isInternetConnected.value) {
+      noInternetMessage(formHere: "isNetworkConnected()");
+    }
+    return isInternetConnected;
+  }
+
+  static void noInternetMessage({String? formHere}) {
+    Utils.errorSnackBar(message: R.strings.ksPleaseCheckInternet);
   }
 }

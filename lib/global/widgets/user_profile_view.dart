@@ -27,6 +27,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/constant/resources/assets.dart';
+import 'package:flutter_setup/global/utils/logger.dart';
 import 'package:flutter_setup/global/utils/utils.dart';
 import 'package:flutter_setup/global/widgets/common_widgets.dart';
 import 'package:flutter_setup/global/widgets/select_file.dart';
@@ -61,14 +62,14 @@ class UserProfile extends StatelessWidget {
               onCamera: (file) {
                 if (file != null) {
                   selectedFile.value = file;
-                  Utils.logPrint(file.path.toString());
+                  Logger.logPrint(file.path.toString());
                 }
               },
               isCrop: true,
               onGallery: (file) {
                 if (file != null) {
                   selectedFile.value = file;
-                  Utils.logPrint(file.path.toString());
+                  Logger.logPrint(file.path.toString());
                 }
               });
         },

@@ -29,6 +29,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/global/preference/user_preference.dart';
+import 'package:flutter_setup/global/utils/logger.dart';
 import 'package:flutter_setup/src/routes/app_pages.dart';
 import 'package:get/get.dart';
 import 'package:flutter_setup/global/constant/resources/resources.dart';
@@ -55,7 +56,7 @@ class LoginScreenController extends GetxController {
       Utils.successSnackBar(message: R.strings.scLoginMsg);
       Get.offAllNamed(Routes.dashboardScreen);
     } else {
-      Utils.logPrint('invalidate');
+      Logger.logPrint('invalidate');
     }
   }
 }

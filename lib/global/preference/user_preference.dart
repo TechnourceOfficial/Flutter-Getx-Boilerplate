@@ -25,6 +25,8 @@
 
 import 'package:flutter_setup/global/preference/session_keys.dart';
 import 'package:flutter_setup/global/utils/config.dart';
+import 'package:flutter_setup/src/routes/app_pages.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 ///TO manage Logged in user's session
@@ -48,7 +50,8 @@ class AppSession {
   }
 
   static String getSelectedLanguageId() {
-    return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ?? Config.langCodeEn;
+    return sessionData?.read(UserSessionDetail.kSelectedLanguageId) ??
+        Config.langCodeEn;
   }
 
   static void setAccessToken(String? value) {
@@ -74,5 +77,12 @@ class AppSession {
 
   static setIsIntroScreenDone(bool isDone) {
     introScreenData!.write(UserSessionDetail.kIsIntroScreenDone, isDone);
+  }
+
+  static Future<void> logoutUser() async {
+    AppSession.clearStorage();
+    AppSession.init();
+    AppSession.setAccessToken("");
+    Get.offAllNamed(Routes.loginScreen);
   }
 }
