@@ -62,24 +62,22 @@ class SettingPageView extends GetView<SettingPageController> {
 
   buildDrawerContainer(controller) {
     return Expanded(
-        flex: 70,
-        child: SingleChildScrollView(
-          child: Container(
-              margin: EdgeInsets.symmetric(horizontal: Get.width * 0.03),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const UserInfoWidget(),
-                    dividerColorCapitalLightGray(),
-                    const SizedBox(height: ksWidgetVerticalSpace15),
-                    buildDrawerList(),
-                    const SizedBox(height: ksWidgetVerticalSpace15),
-                    dividerColorCapitalLightGray(),
-                    const SizedBox(height: ksWidgetVerticalSpace15),
-                    buildDrawerBottomList(),
-                    const SizedBox(height: ksWidgetVerticalSpace15)
-                  ])),
-        ));
+        flex: 80,
+        child: Container(
+            height: Get.height,
+            margin: EdgeInsets.symmetric(horizontal: Get.width * 0.03),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              const UserInfoWidget(),
+              dividerColorCapitalLightGray(),
+              const SizedBox(height: ksWidgetVerticalSpace15),
+              buildDrawerList(),
+              const Expanded(child: SizedBox()),
+              dividerColorCapitalLightGray(),
+              const SizedBox(height: ksWidgetVerticalSpace15),
+              buildDrawerBottomList(),
+              const SizedBox(height: ksWidgetVerticalSpace15),
+            ])));
   }
 
   dividerColorCapitalLightGray({double? opacity}) {
@@ -101,7 +99,7 @@ class SettingPageView extends GetView<SettingPageController> {
 
   buildTopDrawerItem(DrawerModel drawerModel) {
     return Obx(() => DrawerListItemWidget(
-        displayLang: drawerModel.selectedTile == 4 ? true : false,
+        displayLang: drawerModel.selectedTile == 0 ? true : false,
         isDecorated:
             controller.selectedDrawerMenu.value == drawerModel.selectedTile,
         drawerModel: drawerModel,

@@ -55,7 +55,6 @@ class DashboardScreen extends GetView<DashboardController> {
           type: BottomNavigationBarType.fixed,
           currentIndex: controller.currentTabIndex.value,
           backgroundColor: AppColors.kcPrimaryColor,
-          selectedFontSize: 0,
           items: controller.bottomNavigationList
               .map((e) =>
                   buildBottomNavigationBarItem(bottomNavigationItemModel: e))

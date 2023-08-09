@@ -101,5 +101,9 @@
   "rate_us": "Rate Us",
   "contact_us": "Contact Us",
   "no_internet": "No Internet Connection",
-  "pls_check_net": "Veuillez vérifier la connexion Internet"
+  "pls_check_net": "Veuillez vérifier la connexion Internet",
+  "home": "Home",
+  "order": "Order",
+  "notification": "Notification",
+  "setting": "Setting"
 }

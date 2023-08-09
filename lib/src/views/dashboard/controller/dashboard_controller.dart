@@ -50,19 +50,19 @@ class DashboardController extends GetxController {
   RxList<BottomNavigationItemModel> bottomNavigationList =
       <BottomNavigationItemModel>[
     BottomNavigationItemModel(
-        title: '${R.strings.ksBottomMenu} 1',
+        title: R.strings.ksDashboardHome,
         activeImagePath: AppAssets.icActiveBottomHome,
         deActiveImagePath: AppAssets.icDeActiveBottomHome),
     BottomNavigationItemModel(
-        title: '${R.strings.ksBottomMenu} 2',
+        title: R.strings.ksDashboardOrder,
         activeImagePath: AppAssets.icActiveBottomOrder,
         deActiveImagePath: AppAssets.icDeActiveBottomOrder),
     BottomNavigationItemModel(
-        title: '${R.strings.ksBottomMenu} 3',
+        title: R.strings.ksDashboardNotification,
         activeImagePath: AppAssets.icActiveBottomNotification,
         deActiveImagePath: AppAssets.icDeActiveBottomNotification),
     BottomNavigationItemModel(
-        title: '${R.strings.ksBottomMenu} 4',
+        title: R.strings.ksDashboardSetting,
         activeImagePath: AppAssets.icActiveBottomSetting,
         deActiveImagePath: AppAssets.icDeActiveBottomSetting)
   ].obs;

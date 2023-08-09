@@ -32,9 +32,8 @@ import 'package:flutter_setup/global/constant/resources/import_resources.dart';
 import 'package:flutter_setup/src/views/home_page/controller/home_page_controller.dart';
 
 class HomePageView extends GetView<HomePageController> {
-   HomePageView({super.key});
-  final HomePageController homePageController =
-  Get.put(HomePageController());
+  HomePageView({super.key});
+  final HomePageController homePageController = Get.put(HomePageController());
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -72,7 +71,16 @@ class HomePageView extends GetView<HomePageController> {
                                                   imgPath:
                                                       AppAssets.icSearchIcon))
                                     ]);
-                              })
+                              }),
+                              SizedBox(height: Get.height * 0.3),
+                              SizedBox(
+                                  child: Center(
+                                      child: Text(R.strings.ksDashboardHome,
+                                          style: AppStyles
+                                              .txt24sizeW600kcCaptionLightGray
+                                              .merge(const TextStyle(
+                                                  color: AppColors
+                                                      .kcPrimaryColor))))),
                             ]))))));
   }
 

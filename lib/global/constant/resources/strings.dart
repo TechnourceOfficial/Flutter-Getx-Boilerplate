@@ -232,6 +232,12 @@ class AppStrings {
   String get ksNoInternet => "no_internet".toTranslate();
 
   String get ksPleaseCheckInternet => "pls_check_net".toTranslate();
+
+  //DashboardTab
+  String get ksDashboardHome => "home".toTranslate();
+  String get ksDashboardOrder => "order".toTranslate();
+  String get ksDashboardNotification => "notification".toTranslate();
+  String get ksDashboardSetting => "setting".toTranslate();
 }
 
 /// Validation message will be added here

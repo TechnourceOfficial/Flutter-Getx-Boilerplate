@@ -41,36 +41,20 @@ class DrawerModel {
 List<DrawerModel> getTopDrawerList() {
   return [
     DrawerModel(
-        icon: AppAssets.icBullet,
-        title: '${R.strings.ksBottomMenu} 1',
-        selectedTile: 0),
-    DrawerModel(
-        icon: AppAssets.icBullet,
-        title: '${R.strings.ksBottomMenu} 2',
-        selectedTile: 1),
-    DrawerModel(
-        icon: AppAssets.icBullet,
-        title: '${R.strings.ksBottomMenu} 3',
-        selectedTile: 2),
-    DrawerModel(
-        icon: AppAssets.icBullet,
-        title: '${R.strings.ksBottomMenu} 4',
-        selectedTile: 3),
-    DrawerModel(
         icon: AppAssets.icLanguage,
         title: R.strings.ksChangeLanguage,
-        selectedTile: 4),
+        selectedTile: 0),
     DrawerModel(
-        icon: AppAssets.icGithub, title: R.strings.ksGitHub, selectedTile: 5),
+        icon: AppAssets.icGithub, title: R.strings.ksGitHub, selectedTile: 1),
     DrawerModel(
-        icon: AppAssets.icMore, title: R.strings.ksMore, selectedTile: 6)
+        icon: AppAssets.icMore, title: R.strings.ksMore, selectedTile: 2)
   ];
 }
 
 List<DrawerModel> getBottomDrawerList() {
   return [
     DrawerModel(
-        icon: AppAssets.icLogout,
+        icon: AppAssets.icDeactivateAccount,
         title: R.strings.ksDeleteAccount,
         selectedTile: 0),
     DrawerModel(
@@ -78,7 +62,7 @@ List<DrawerModel> getBottomDrawerList() {
         title: R.strings.ksDeactivateAccount,
         selectedTile: 1),
     DrawerModel(
-        icon: AppAssets.icDeactivateAccount,
+        icon: AppAssets.icLogout,
         title: R.strings.ksLogOut,
         selectedTile: 2)
   ];
