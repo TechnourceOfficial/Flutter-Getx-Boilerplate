@@ -35,7 +35,10 @@ class BottomNavigationChild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Text('${R.strings.ksBottomMenu}-$index',
+        child: Text(
+            index == 2
+                ? R.strings.ksDashboardOrder
+                : R.strings.ksDashboardNotification,
             style: AppStyles.txt24sizeW600kcCaptionLightGray
                 .merge(const TextStyle(color: AppColors.kcPrimaryColor))));
   }

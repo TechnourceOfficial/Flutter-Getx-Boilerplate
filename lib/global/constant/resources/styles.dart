@@ -85,7 +85,7 @@ class AppStyles {
   static const selectedLabelStyle = TextStyle(
       color: AppColors.kcCaptionLightGray,
       fontWeight: FontWeight.w600,
-      fontSize: 8);
+      fontSize: 10);
 
   static const txt14sizeWithW500HintGrey = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: AppColors.hintColor);

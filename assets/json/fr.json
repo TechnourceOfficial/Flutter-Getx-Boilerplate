@@ -99,5 +99,9 @@
   "rate_us": "Évaluez nous",
   "contact_us": "Contactez-nous",
   "no_internet": "Pas de connexion Internet",
-  "pls_check_net": "Pas de connexion Internet"
+  "pls_check_net": "Pas de connexion Internet",
+  "home": "maison",
+  "order": "ordres",
+  "notification": "notifications",
+  "setting": "paramètres"
 }

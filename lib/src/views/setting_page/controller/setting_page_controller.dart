@@ -53,26 +53,14 @@ class SettingPageController extends GetxController {
     selectedDrawerMenu.value = drawerModel.selectedTile;
     switch (drawerModel.selectedTile) {
       case 0:
+        Get.toNamed(Routes.changeLanguageScreen);
         Logger.logPrint(drawerModel.title);
         break;
       case 1:
         Logger.logPrint(drawerModel.title);
-        break;
-      case 2:
-        Logger.logPrint(drawerModel.title);
-        break;
-      case 3:
-        Logger.logPrint(drawerModel.title);
-        break;
-      case 4:
-        Get.toNamed(Routes.changeLanguageScreen);
-        Logger.logPrint(drawerModel.title);
-        break;
-      case 5:
-        Logger.logPrint(drawerModel.title);
         openGithub(url: Config.githubRepoLink);
         break;
-      case 6:
+      case 2:
         Get.toNamed(Routes.moreScreen);
         Logger.logPrint(drawerModel.title);
         break;
