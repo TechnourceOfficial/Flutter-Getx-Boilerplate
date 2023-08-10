@@ -142,9 +142,6 @@ After cloning the project, you can open it in Android Studio by following these 
 - Change Language Screen
 - Logout Screen
 
-
-
-
 ## Application Language
 - English
 - French
