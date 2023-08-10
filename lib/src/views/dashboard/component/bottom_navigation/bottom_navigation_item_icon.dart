@@ -42,7 +42,6 @@ class BottomNavigationItemIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      SizedBox(height: Get.height * 0.02),
       SvgPicture.asset(isActive
           ? bottomNavigationItemModel.activeImagePath
           : bottomNavigationItemModel.deActiveImagePath),
