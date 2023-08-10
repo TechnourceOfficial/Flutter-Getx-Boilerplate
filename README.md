@@ -45,7 +45,7 @@ For help getting started with flutter development, refer to the [official flutte
 
 ## Clone Project:
 
-git clone https://github.com/TechnourceOfficial/New-Flutter-Getx-Boilerplate.git
+git clone https://github.com/TechnourceOfficial/Flutter-Getx-Boilerplate.git
 
 After cloning the project, you can open it in Android Studio by following these steps:
 1. Open Android Studio.
@@ -65,7 +65,7 @@ After cloning the project, you can open it in Android Studio by following these 
 
 ## Folder Structure:
 ```commandline
-├── New-Flutter-Getx-Boilerplate                   
+├──Flutter-Getx-Boilerplate                   
 │   ├── android
 │   ├── assests
 │   ├── build
