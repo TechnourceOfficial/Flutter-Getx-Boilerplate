@@ -25,7 +25,7 @@ For help getting started with flutter development, refer to the [official flutte
 
 
 
-## Software and Version Install flutter (3.7.3) :
+## Software and Version Install flutter:
     - [https://docs.flutter.dev/get-started/install](https://docs.flutter.dev/get-started/install)
 - Install Android Studio : Android Studio Flamingo | 2022.2.1 Patch 2
     - https://developer.android.com/studio/install
@@ -43,7 +43,7 @@ For help getting started with flutter development, refer to the [official flutte
 * [Authentication](#authentication)
 * [Dashboard](#dashboard)
 
-## Clone Project :
+## Clone Project:
 
 git clone https://github.com/TechnourceOfficial/New-Flutter-Getx-Boilerplate.git
 
@@ -125,14 +125,6 @@ After cloning the project, you can open it in Android Studio by following these 
 16. lottie:
     -> Used for Annimated assets.
 
-## Dashboard
-- Dashboard UI with Bottom TabNavigation
-- AboutUs Screen
-- Terms-Conditions Screen
-- Privacy-Policy Screen
-- Change Language Screen
-- Logout Screen
-
 ## Authentication
 - Registration Screen
 - Login Screen
@@ -141,6 +133,16 @@ After cloning the project, you can open it in Android Studio by following these 
 - Reset Password Screen
 - Edit Profile Screen
 - Upload Photo from Camera & Gallery
+
+## Dashboard
+- Dashboard UI with Bottom TabNavigation
+- AboutUs Screen
+- Terms-Conditions Screen
+- Privacy-Policy Screen
+- Change Language Screen
+- Logout Screen
+
+
 
 
 ## Application Language
