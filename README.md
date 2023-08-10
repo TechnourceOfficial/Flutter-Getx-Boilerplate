@@ -147,10 +147,6 @@ After cloning the project, you can open it in Android Studio by following these 
 - French
 - Russian
 
-## Application Preview
-
-https://github.com/TechnourceOfficial/New-Flutter-Getx-Boilerplate/assets/70566076/9aacb463-0a81-47fc-a434-632015052cea
-
 ## License
 
 - This project is licensed under the [MIT License](LICENSE)
