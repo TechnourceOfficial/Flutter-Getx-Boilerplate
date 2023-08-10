@@ -32,6 +32,13 @@ For help getting started with flutter development, refer to the [official flutte
 - Xcode (14.2) Install :
     - https://apps.apple.com/us/app/xcode/id497799835?mt=12
 
+- Android supported version:
+  - compileSdk 33
+  - minSdk 21
+  - targetSdk 33
+  - versionCode 1
+  - versionName "1.0"
+
 ## Features
 * [Authentication](#authentication)
 * [Dashboard](#dashboard)
