@@ -42,7 +42,7 @@ class Config {
   static String langCountryCodeEn = 'US';
   static String langCountryCodeRu = 'RU';
   static String langCountryCodeFr = 'CA';
-  static String githubRepoLink = 'https://github.com/TechnourceOfficial/New-Flutter-Getx-Boilerplate';
+  static String githubRepoLink = 'https://github.com/TechnourceOfficial/Flutter-Getx-Boilerplate';
 
   static String cmsPrivacyPolicy = "privacy-policy";
   static String cmsTermsCondition = "terms-conditions";
