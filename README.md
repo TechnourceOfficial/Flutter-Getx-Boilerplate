@@ -98,7 +98,10 @@ This repository provides a boilerplate codebase for developing flutter applicati
       - English
       - French
       - Russian
-- 
+
+- Demo Video
+
+https://github.com/TechnourceOfficial/New-Flutter-Getx-Boilerplate/assets/70566076/9aacb463-0a81-47fc-a434-632015052cea
 
 
 
